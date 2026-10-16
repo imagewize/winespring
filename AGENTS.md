@@ -49,7 +49,7 @@ WooCommerce are active.
   as the explicit third (source) argument — do **not** `cd` into the demo site first:
   ```bash
   SITE_ROOT=/Users/j/code/imagewize.com/demo/web/app \
-    bash ~/code/wp-ops/scripts/rsync-package-to-site.sh theme marin /Users/j/code/marin
+    bash ~/code/wp-ops/scripts/sync/rsync-package-to-site.sh theme marin /Users/j/code/marin
   ```
 
   **Critical — omitting that source argument wipes the theme.** The script defaults the source to
