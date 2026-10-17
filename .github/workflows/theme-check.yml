@@ -26,7 +26,7 @@ jobs:
       # scripts out of the repo (the demo sync script lives in wp-ops) rather
       # than adding a build step to hide them from the check.
       #
-      # accessible-ready runs the stricter a11y suite. Marin does not claim
+      # accessible-ready runs the stricter a11y suite. Winespring does not claim
       # the accessibility-ready tag in readme.txt, but Elayne runs it the same
       # way — keep both themes held to it rather than only the baseline checks.
       - name: Run Theme Review Tests

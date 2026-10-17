@@ -1,4 +1,4 @@
-=== Marin WordPress Theme ===
+=== Winespring WordPress Theme ===
 Contributors: Rhand
 Tags: e-commerce, full-site-editing, custom-colors, custom-logo, custom-menu, editor-style, featured-images, grid-layout, template-editing, translation-ready, wide-blocks
 Requires at least: 6.6
@@ -10,12 +10,12 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Marin is a lean full-site-editing (FSE) theme for WooCommerce stores, built to speed up client
+Winespring is a lean full-site-editing (FSE) theme for WooCommerce stores, built to speed up client
 e-commerce builds. It provides a design system via `theme.json` (colors, typography, spacing,
 layout), WooCommerce block templates, and style variations. It ships a single page pattern, a store
-front page built from Aludra blocks; other page content is composed directly from blocks. Marin is created from the Aviendha starter theme.
+front page built from Aludra blocks; other page content is composed directly from blocks. Winespring is created from the Aviendha starter theme.
 
-Marin pairs with the [Aludra](https://github.com/imagewize/aludra) block library (mega menu,
+Winespring pairs with the [Aludra](https://github.com/imagewize/aludra) block library (mega menu,
 carousel, FAQ tabs, and more), but doesn't require it — the theme is a plain block theme that
 works with core blocks and any block plugin. WooCommerce is needed for the store templates.
 
@@ -66,7 +66,7 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 * Fixed: the npm lockfile carried an inherited version number; it now matches the theme version.
 
 = 1.0.2 =
-* Changed: package metadata and README now describe Marin as a WooCommerce e-commerce theme rather than a generic starter.
+* Changed: package metadata and README now describe Winespring as a WooCommerce e-commerce theme rather than a generic starter.
 
 = 1.0.1 =
 * Changed: a Winespring logo mark (grape cluster, Material Design Icons) replaces the inherited Aviendha rose, with a dark-mode variant for the README.
@@ -81,7 +81,7 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 * License: Apache License, Version 2.0
 * Source: https://blade-ui-kit.com/blade-icons/mdi-fruit-grapes
 * License URI: https://www.apache.org/licenses/LICENSE-2.0
-* Used in: `assets/logos/marin-winespring-primary.svg` and `assets/logos/marin-winespring-dark.svg`
+* Used in: `assets/logos/winespring-primary.svg` and `assets/logos/winespring-dark.svg`
 * Purpose: The "fruit-grapes" icon is used, unmodified except for recoloring, as the theme's logo mark (the Winespring Inn).
 
 The Apache License 2.0 is GPLv3-compatible.
@@ -118,5 +118,5 @@ The SIL Open Font License is GPL-compatible.
 
 == Copyright ==
 
-Marin WordPress Theme, (C) 2026 Jasper Frumau
-Marin is distributed under the terms of the GNU GPL v3 (or later).
+Winespring WordPress Theme, (C) 2026 Jasper Frumau
+Winespring is distributed under the terms of the GNU GPL v3 (or later).

@@ -1,7 +1,16 @@
 # Changelog
 
-All notable changes to Marin are documented in this file. Marin was created from
+All notable changes to Winespring are documented in this file. Winespring was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
+
+## [Unreleased]
+
+### Changed
+- Renamed the theme from Marin to Winespring, because the `marin` slug is already taken on
+  wordpress.org. The text domain, `winespring_` function prefix, `Winespring` namespace,
+  `winespring/home-store` pattern, `winespring-*` CSS classes and the logo files
+  (`assets/logos/winespring-*.svg`) all follow. Sites running Marin must re-select the theme and
+  re-save any template or template part customisations, which are stored under the old theme slug.
 
 ## [1.4.0] - 2026-10-04
 
@@ -51,15 +60,15 @@ All notable changes to Marin are documented in this file. Marin was created from
 ## [1.2.0] - 2026-10-04
 
 ### Added
-- `patterns/home-store.php` (`marin/home-store`, **Store Home**): a store front page built from Aludra
+- `patterns/home-store.php` (`winespring/home-store`, **Store Home**): a store front page built from Aludra
   blocks and a WooCommerce product grid — hero, trust bar, category cards, newest products, story,
   stats, reviews and a closing call to action. Skincare copy; the shop, category and kit links are
   resolved at render time. Validated with `sentinel` against the demo install.
-- `marin_maybe_unregister_store_home_pattern()` registers the pattern only when WooCommerce is active
+- `winespring_maybe_unregister_store_home_pattern()` registers the pattern only when WooCommerce is active
   and Aludra's blocks are registered, so it is never offered where it would insert unsupported blocks.
 
 ### Changed
-- Docs (README, `readme.txt`, `CLAUDE.md`, `AGENTS.md`, `.agents/code-review.md`) now describe Marin as
+- Docs (README, `readme.txt`, `CLAUDE.md`, `AGENTS.md`, `.agents/code-review.md`) now describe Winespring as
   shipping one page pattern rather than none, and say the pattern needs Aludra.
 
 ## [1.1.0] - 2026-10-04
@@ -69,18 +78,18 @@ All notable changes to Marin are documented in this file. Marin was created from
   sits before the account and mini-cart icons in both `parts/header.html` and
   `parts/header-dark.html`.
 - README: a "Demo content" section pointing to
-  [imagewize/marin-demo-content](https://github.com/imagewize/marin-demo-content), a WP-CLI seeder
+  [imagewize/winespring-demo-content](https://github.com/imagewize/winespring-demo-content), a WP-CLI seeder
   with 16 skincare products and placeholder packshots.
 
 ### Changed
 - Both headers no longer ship the inherited "Start a project" call-to-action button, which made no
-  sense on a store. The `.marin-header__cta` styles were removed with it.
+  sense on a store. The `.winespring-header__cta` styles were removed with it.
 
 ## [1.0.4] - 2026-10-04
 
 ### Changed
 - README: added an Installation section covering the release zip and `composer require
-  imagewize/marin` now that the theme is on Packagist, and corrected the Structure tree (removed the
+  imagewize/winespring` now that the theme is on Packagist, and corrected the Structure tree (removed the
   non-existent `docs/`, added `assets/fonts/`, the dark-header template and the order-confirmation
   template).
 - `CLAUDE.md` and `AGENTS.md`: the template-parts and WooCommerce-template notes now list what
@@ -94,7 +103,7 @@ All notable changes to Marin are documented in this file. Marin was created from
 ## [1.0.2] - 2026-10-04
 
 ### Changed
-- Positioned Marin as a WooCommerce e-commerce theme rather than a generic starter: `composer.json`
+- Positioned Winespring as a WooCommerce e-commerce theme rather than a generic starter: `composer.json`
   and `package.json` descriptions, the `package.json` keywords (`woocommerce`, `e-commerce` replace
   `starter-theme`), the README tagline, feature list and WooCommerce requirement, and the opening
   line of `.agents/code-review.md`.
@@ -102,8 +111,8 @@ All notable changes to Marin are documented in this file. Marin was created from
 ## [1.0.1] - 2026-10-04
 
 ### Changed
-- **Winespring logo mark** (`assets/logos/marin-winespring-primary.svg`): a grape cluster for the
-  Winespring Inn replaces the inherited Aviendha rose. A lighter `marin-winespring-dark.svg` variant
+- **Winespring logo mark** (`assets/logos/winespring-primary.svg`): a grape cluster for the
+  Winespring Inn replaces the inherited Aviendha rose. A lighter `winespring-dark.svg` variant
   serves the README in dark mode via `<picture>`. Material Design Icons credited in readme.txt.
 
 ## [1.0.0] - 2026-10-04
@@ -115,6 +124,6 @@ All notable changes to Marin are documented in this file. Marin was created from
 
 ### Changed
 - Created from Aviendha 1.18.4 and refocused as a WooCommerce theme for client store builds.
-  Description, README, readme.txt and agent guides rewritten for Marin.
+  Description, README, readme.txt and agent guides rewritten for Winespring.
 - Rename workflow: `actions/checkout` now uses `persist-credentials: false`, which fixes the
   rename action's push failing with a duplicate `Authorization` header.
