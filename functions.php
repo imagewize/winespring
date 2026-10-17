@@ -124,6 +124,45 @@ function winespring_woocommerce_hooks() {
 add_action( 'after_setup_theme', __NAMESPACE__ . '\winespring_woocommerce_hooks' );
 
 /**
+ * Remove Aludra's store blocks from templates and template parts when they are
+ * not registered.
+ *
+ * The announcement bar and single product template place `aludra/free-shipping-bar`
+ * and `aludra/sticky-add-to-cart`. Without the Aludra plugin (or without
+ * WooCommerce, which keeps Aludra from registering them) they would render as
+ * unsupported-block placeholders in the editor.
+ *
+ * @param \WP_Block_Template[]|\WP_Block_Template|null $templates Templates, or one template.
+ * @return \WP_Block_Template[]|\WP_Block_Template|null Same, without unavailable blocks.
+ */
+function winespring_strip_unavailable_aludra_blocks( $templates ) {
+	$registry = \WP_Block_Type_Registry::get_instance();
+	$missing  = array_filter(
+		array( 'free-shipping-bar', 'sticky-add-to-cart' ),
+		static function ( $block ) use ( $registry ) {
+			return ! $registry->is_registered( 'aludra/' . $block );
+		}
+	);
+
+	if ( ! $templates || ! $missing ) {
+		return $templates;
+	}
+
+	$pattern = '#<!--\s+wp:aludra/(?:' . implode( '|', $missing ) . ')\b.*?/-->\s*#s';
+	$list    = is_array( $templates ) ? $templates : array( $templates );
+
+	foreach ( $list as $template ) {
+		if ( $template instanceof \WP_Block_Template && is_string( $template->content ) ) {
+			$template->content = (string) preg_replace( $pattern, '', $template->content );
+		}
+	}
+
+	return $templates;
+}
+add_filter( 'get_block_templates', __NAMESPACE__ . '\winespring_strip_unavailable_aludra_blocks' );
+add_filter( 'get_block_file_template', __NAMESPACE__ . '\winespring_strip_unavailable_aludra_blocks' );
+
+/**
  * Hide the store templates, and the store blocks inside template parts, when
  * WooCommerce is not active.
  *
@@ -193,7 +232,7 @@ function winespring_strip_woocommerce_blocks( $content ) {
 	}
 
 	return (string) preg_replace(
-		'#<!--\s+wp:(?:woocommerce/(?:mini-cart|customer-account)|winespring/free-shipping-bar)\b.*?/-->\s*#s',
+		'#<!--\s+wp:(?:woocommerce/(?:mini-cart|customer-account)\b.*?/-->\s*#s',
 		'',
 		$content
 	);

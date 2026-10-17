@@ -1,64 +1,12 @@
 <?php
 /**
- * Store features: free shipping threshold, blocks and product badges.
+ * Store features: product badges.
  *
  * @package Winespring
  * @since   1.5.0
  */
 
 namespace Winespring;
-
-/**
- * Register the theme's blocks. They render server-side; `autoRegister` makes
- * them available in the editor without any editor JavaScript (WordPress 6.7+).
- */
-function winespring_register_blocks() {
-	if ( ! class_exists( 'WooCommerce' ) ) {
-		return;
-	}
-
-	foreach ( array( 'free-shipping-bar', 'sticky-add-to-cart' ) as $block ) {
-		register_block_type( get_template_directory() . '/blocks/' . $block );
-	}
-}
-add_action( 'init', __NAMESPACE__ . '\winespring_register_blocks' );
-
-/**
- * Minimum cart amount for free shipping, from the shipping zone matching the
- * customer's location.
- *
- * @return float Threshold, or 0 when no free shipping method with a minimum applies.
- */
-function winespring_free_shipping_threshold() {
-	$location = wc_get_customer_default_location();
-	$customer = WC()->customer;
-
-	$zone = \WC_Shipping_Zones::get_zone_matching_package(
-		array(
-			'destination' => array(
-				'country'  => $customer && $customer->get_shipping_country() ? $customer->get_shipping_country() : $location['country'],
-				'state'    => $customer && $customer->get_shipping_state() ? $customer->get_shipping_state() : $location['state'],
-				'postcode' => $customer ? $customer->get_shipping_postcode() : '',
-			),
-		)
-	);
-
-	$threshold = 0;
-
-	foreach ( $zone->get_shipping_methods( true ) as $method ) {
-		if ( 'free_shipping' !== $method->id || ! in_array( $method->requires, array( 'min_amount', 'either', 'both' ), true ) ) {
-			continue;
-		}
-
-		$amount = (float) $method->min_amount;
-
-		if ( $amount > 0 && ( 0 === $threshold || $amount < $threshold ) ) {
-			$threshold = $amount;
-		}
-	}
-
-	return (float) apply_filters( 'winespring_free_shipping_threshold', $threshold );
-}
 
 /**
  * Show the percentage saved on sale badges instead of the word "Sale".
