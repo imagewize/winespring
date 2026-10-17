@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Marin is a lean full-site-editing (FSE) **WooCommerce theme** for WordPress, created from the
+Winespring is a lean full-site-editing (FSE) **WooCommerce theme** for WordPress, created from the
 **Aviendha** starter (GitHub template repository) to speed up building e-commerce themes for clients.
 It is a companion to Imagewize's **Elayne** and **Nynaeve** themes and is meant to replace Elayne's
 store vertical for client store work. Like Aviendha it is deliberately minimal: **no bundled
@@ -20,7 +20,7 @@ blocks or the [Aludra](https://github.com/imagewize/aludra) block library).
 
 ## Lineage and upstream
 
-Marin was created from `imagewize/aviendha` on 2026-10-04 via **Use this template** plus
+Winespring (originally named Marin, renamed because the `marin` slug is taken on wordpress.org) was created from `imagewize/aviendha` on 2026-10-04 via **Use this template** plus
 `.github/workflows/template-rename.yml` (run from the Actions tab; `persist-credentials: false` on
 checkout was added here because the rename action's push otherwise fails with a duplicate
 `Authorization` header). Aviendha stays the neutral starter; improvements that are not store-specific
@@ -28,10 +28,10 @@ checkout was added here because the rename action's push otherwise fails with a 
 
 **Why (almost) no patterns:** reusable logic lives in Aludra's `aludra/*` blocks, which keeps this
 theme's surface area small. Prefer a **style variation** (`styles/*.json`) over a pattern library for
-new looks. The single exception is `patterns/home-store.php` (`marin/home-store`): a store front page
+new looks. The single exception is `patterns/home-store.php` (`winespring/home-store`): a store front page
 built from Aludra blocks and a WooCommerce product grid, with skincare copy and links resolved at
 render time (shop page, `product_cat` slugs). It is registered only when WooCommerce is active and
-Aludra's blocks are registered (`marin_maybe_unregister_store_home_pattern()` in `functions.php`),
+Aludra's blocks are registered (`winespring_maybe_unregister_store_home_pattern()` in `functions.php`),
 since pattern files otherwise register themselves and would insert unsupported blocks. Its colour
 panels are Aludra's own "replace with a photo" placeholders, so it works without any images. Add new
 vertical-specific page patterns on a branch, not as a growing library. The pattern-validation
@@ -39,8 +39,8 @@ harness (`@imwz/wp-pattern-sentinel`, `npm run validate`) covers it — see
 [Pattern validation](#pattern-validation).
 
 The workflow's `paths-ignore` skips `.github/**`, README/CHANGELOG/readme.txt/agent guides,
-`composer.lock`, `vendor/**` and PNGs. The rename moves `assets/logos/marin-winespring-*.svg` but not the
-references to them in the skipped files; forks of Marin must repoint those by hand.
+`composer.lock`, `vendor/**` and PNGs. The rename moves `assets/logos/winespring-*.svg` but not the
+references to them in the skipped files; forks of Winespring must repoint those by hand.
 
 ## Architecture
 
@@ -65,7 +65,7 @@ Real block markup — not pattern references. Includes core templates (`index`, 
 `product-search-results.html`, `order-confirmation.html` and `coming-soon.html` are also
 theme-provided; see the README for what each ships.
 
-**`page.html` (default) omits `post-title`.** Most Marin pages are composed directly from blocks
+**`page.html` (default) omits `post-title`.** Most Winespring pages are composed directly from blocks
 (or Aludra blocks) whose own heading already serves as the page's title — e.g. `aludra/hero-split`'s
 `<h1>`. Auto-printing `post-title` above that would duplicate it. Use **`page-with-title.html`** (a
 custom template, selectable per-page under Page → Template in the editor) for standard content pages
@@ -88,7 +88,7 @@ The Aludra mega-menu block requires its host theme to register a `menu` template
 `functions.php` does this via the `default_wp_template_part_areas` filter. This makes mega menu
 template parts (created by users in the Site Editor) appear under
 **Appearance → Editor → Patterns → Template Parts → Menus**. Content for those template parts lives
-in the database, not in this theme — Marin ships no menu template part files, matching the
+in the database, not in this theme — Winespring ships no menu template part files, matching the
 "almost no patterns" rule above.
 
 ### Style variations (`styles/`)
@@ -118,7 +118,7 @@ Project-specific code review rules (for the `/code-review` skill or Vibe) live i
 
 ### Pattern validation
 
-Marin ships one pattern (see "Why (almost) no patterns" above) and carries the
+Winespring ships one pattern (see "Why (almost) no patterns" above) and carries the
 `@imwz/wp-pattern-sentinel` harness in `package.json` for it and for forks that add a `patterns/` directory.
 `wp pattern validate`'s PHP `parse_blocks()` pass does **not** run Gutenberg's JavaScript `save()`
 function — issues only the JS serializer produces (class-ordering, attribute defaults like a
@@ -133,20 +133,20 @@ the WordPress instance patterns are actually exercised against:
 npm install
 npm run setup            # npx playwright install chromium, once
 
-# from the theme directory (~/code/marin, or the fork's working copy)
+# from the theme directory (~/code/winespring, or the fork's working copy)
 sentinel --trellis --trellis-dir=$HOME/code/imagewize.com/trellis \
-  --site=demo.imagewize.com --subsite=marin patterns/my-pattern.php   # single file
+  --site=demo.imagewize.com --subsite=winespring patterns/my-pattern.php   # single file
 
 sentinel --trellis --trellis-dir=$HOME/code/imagewize.com/trellis \
-  --site=demo.imagewize.com --subsite=marin patterns/                # everything
+  --site=demo.imagewize.com --subsite=winespring patterns/                # everything
 ```
 
-Swap `--subsite=marin` for the fork's own subsite slug (e.g. `--subsite=ixian`).
+Swap `--subsite=winespring` for the fork's own subsite slug (e.g. `--subsite=ixian`).
 
 ### Where docs and design mockups live
 
 **Not in this repo.** Planning documents, roadmaps and HTML design mockups belong in the
-`imagewize/imagewize.com` repo, under `docs/marin/` and `designs/marin/` — the same
+`imagewize/imagewize.com` repo, under `docs/winespring/` and `designs/winespring/` — the same
 per-project layout Aludra, Elayne and Nynaeve use. Elayne and Nynaeve ship no `docs/` or `designs/`
 directory at all; keep it that way here.
 
@@ -159,7 +159,7 @@ relative to that clone.
 
 Two reasons, beyond consistency: this repo is public and distributable, so mockups carrying client
 names and roadmaps of unshipped work do not belong in it; and a second copy of a design file drifts
-from the first (`marin-redesign.html` was already duplicated in both repos before this rule).
+from the first (`winespring-redesign.html` was already duplicated in both repos before this rule).
 
 Durable rationale for a change belongs in the commit message and in code comments, not in a
 document — that is what makes the split cost nothing. `.distignore` and `.gitattributes` still
@@ -167,8 +167,8 @@ carry `docs/` and `designs/` entries as a guard, so a stray file never reaches a
 
 ### Testing on the demo site
 
-Marin is exercised on the `/marin/` subsite of the local Trellis/Bedrock multisite at
-`~/code/imagewize.com/demo` (`http://demo.imagewize.test/marin/`), alongside the
+Winespring is exercised on the `/winespring/` subsite of the local Trellis/Bedrock multisite at
+`~/code/imagewize.com/demo` (`http://demo.imagewize.test/winespring/`), alongside the
 [Aludra](https://github.com/imagewize/aludra) block library the content is composed from.
 
 Both are pinned Composer dependencies there, **not** symlinks to these working copies. Do not cut
@@ -178,13 +178,13 @@ once if `wp-ops` isn't on your PATH yet):
 
 ```bash
 SITE_ROOT=~/code/imagewize.com/demo/web/app \
-  wp-ops rsync-package-to-site theme marin ~/code/marin
+  wp-ops rsync-package-to-site theme winespring ~/code/winespring
 ```
 
-**Always pass the theme working copy (`~/code/marin`) as the explicit source argument, and do
+**Always pass the theme working copy (`~/code/winespring`) as the explicit source argument, and do
 not `cd` into the demo site to run this.** When the source argument is omitted the script defaults
 it to `$PWD` — so running this from inside the demo site rsyncs the entire Bedrock site *into*
-`themes/marin/`, and because the sync uses `--delete --delete-excluded`, it wipes the real
+`themes/winespring/`, and because the sync uses `--delete --delete-excluded`, it wipes the real
 theme. Preview with `--dry-run` (before the `theme` argument) when unsure; if the output shows it
 deleting WordPress core (`web/wp/...`) or Bedrock files (`.env`, `config/`), the source argument is
 wrong — stop.
@@ -202,7 +202,7 @@ Run one-off WP-CLI commands against it with:
 
 ```bash
 cd ~/code/imagewize.com/trellis
-trellis vm shell --workdir /srv/www/demo.imagewize.com/current -- wp <command> --url=demo.imagewize.test/marin/
+trellis vm shell --workdir /srv/www/demo.imagewize.com/current -- wp <command> --url=demo.imagewize.test/winespring/
 ```
 
 ### CI
@@ -244,7 +244,7 @@ content hash), so a version bump never touches it. `package-lock.json` copies th
 Aviendha's `1.18.3` because the theme has no JS build and nobody runs npm often. Nothing reads that
 value — if you notice drift, fix it by hand or run `npm install`, but it does not block a release.
 
-**License:** Marin uses the GNU GPL v3 (or later) (see `LICENSE.md`), matching Aludra, Elayne and Ixian.
+**License:** Winespring uses the GNU GPL v3 (or later) (see `LICENSE.md`), matching Aludra, Elayne and Ixian.
 
 ## Git Commit Guidelines
 
@@ -270,4 +270,4 @@ one large commit bundling unrelated changes. Makes history easier to review and 
 - `styles/*.json` — style variations
 - `assets/logos/` — Winespring logo mark (light and dark variants for the README `<picture>`) — grape cluster for the Winespring Inn (SVG, Material Design Icons `fruit-grapes` via Blade Icons, Apache 2.0)
 - `composer.json` / `phpcs.xml` — PHP lint/coding-standards tooling
-- `.github/workflows/template-rename.yml` — the fork rename (see [Forking Marin](#forking-marin))
+- `.github/workflows/template-rename.yml` — the fork rename (see [Forking Winespring](#forking-winespring))

@@ -1,11 +1,11 @@
 # Repository Guidelines
 
-Marin is a lean **Full Site Editing (FSE) theme for WooCommerce stores** (WP 6.6+, PHP 8.0+, no build
+Winespring is a lean **Full Site Editing (FSE) theme for WooCommerce stores** (WP 6.6+, PHP 8.0+, no build
 tools — direct HTML block markup and PHP), created from the Aviendha starter and meant to speed up
 client e-commerce builds. `theme.json` is the single source of truth for colors, typography, spacing,
-and layout. Marin ships **no pattern library** — content is composed directly from blocks (core
+and layout. Winespring ships **no pattern library** — content is composed directly from blocks (core
 blocks or the Aludra block library). The one exception is `patterns/home-store.php`
-(`marin/home-store`), a store front page built from Aludra blocks, registered only when Aludra and
+(`winespring/home-store`), a store front page built from Aludra blocks, registered only when Aludra and
 WooCommerce are active.
 
 ## Project Structure & Module Organization
@@ -21,9 +21,9 @@ WooCommerce are active.
 - Shared assets live under `assets/` (`logos/` for the Winespring grape mark, `css/` for the conditional
   WooCommerce stylesheet).
 - Reusable PHP lives in `functions.php` — keep it there, not scattered across templates.
-- Translations live in `languages/` (text domain: `marin`).
+- Translations live in `languages/` (text domain: `winespring`).
 - **No `docs/` or `designs/` directory here.** Planning documents, roadmaps and HTML design mockups
-  live in the `imagewize/imagewize.com` repo under `docs/marin/` and `designs/marin/`, the
+  live in the `imagewize/imagewize.com` repo under `docs/winespring/` and `designs/winespring/`, the
   same per-project layout Aludra, Elayne and Nynaeve use. This repo is public and distributable, so
   mockups carrying client names and roadmaps of unshipped work do not belong in it, and a second
   copy of a design file only drifts from the first.
@@ -35,26 +35,26 @@ WooCommerce are active.
 
 ## Build, Test, and Development Commands
 
-- No JS build pipeline. Activate by placing the folder in `wp-content/themes/marin/` and
-  enabling it in WP Admin, or `wp theme activate marin`.
+- No JS build pipeline. Activate by placing the folder in `wp-content/themes/winespring/` and
+  enabling it in WP Admin, or `wp theme activate winespring`.
 - `composer install` then `composer run lint` / `composer run wpcs:scan` / `composer run wpcs:fix`.
 - Project-specific code review rules live in `.agents/code-review.md` — read that before reviewing
   a change here.
-- Regenerate translations when strings change: `wp i18n make-pot . languages/marin.pot`.
+- Regenerate translations when strings change: `wp i18n make-pot . languages/winespring.pot`.
 - **Testing unreleased changes: sync, don't release.** The theme is a pinned Composer dependency
   on the local demo site (`~/code/imagewize.com/demo`, subsite
-  `http://demo.imagewize.test/marin/`), not a symlink.
+  `http://demo.imagewize.test/winespring/`), not a symlink.
   
   Sync to the demo site by running this **from anywhere**, always passing the theme working copy
   as the explicit third (source) argument — do **not** `cd` into the demo site first:
   ```bash
   SITE_ROOT=/Users/j/code/imagewize.com/demo/web/app \
-    bash ~/code/wp-ops/scripts/sync/rsync-package-to-site.sh theme marin /Users/j/code/marin
+    bash ~/code/wp-ops/scripts/sync/rsync-package-to-site.sh theme winespring /Users/j/code/winespring
   ```
 
   **Critical — omitting that source argument wipes the theme.** The script defaults the source to
   `$PWD`, so running it from inside the demo site rsyncs the whole Bedrock site *into*
-  `themes/marin/` and, because the sync uses `--delete --delete-excluded`, deletes the real
+  `themes/winespring/` and, because the sync uses `--delete --delete-excluded`, deletes the real
   theme. Preview with `--dry-run` (before the `theme` argument) when unsure; if it shows deletions
   of WordPress core (`web/wp/...`) or Bedrock files (`.env`, `config/`), the source is wrong — stop.
   `composer update` on that site restores the released version. See CLAUDE.md → *Testing on the
@@ -102,7 +102,7 @@ keep the two in step):
 site; the other three keep the repo, the WP.org listing and the release tooling honest. Check all
 four before tagging.
 
-**License:** Marin uses the GNU GPL v3 (or later) (see `LICENSE.md`), matching Aludra, Elayne and Ixian.
+**License:** Winespring uses the GNU GPL v3 (or later) (see `LICENSE.md`), matching Aludra, Elayne and Ixian.
 
 ## Commit & Pull Request Guidelines
 
