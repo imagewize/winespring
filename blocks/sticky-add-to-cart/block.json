@@ -1,0 +1,20 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "winespring/sticky-add-to-cart",
+	"title": "Sticky Add to Cart",
+	"category": "woocommerce",
+	"description": "A bar with the product name, price and a button that appears once the main add to cart form has scrolled out of view.",
+	"icon": "cart",
+	"textdomain": "winespring",
+	"usesContext": [ "postId" ],
+	"supports": {
+		"autoRegister": true,
+		"html": false,
+		"color": { "text": true, "background": true },
+		"typography": { "fontSize": true }
+	},
+	"style": "file:./style.css",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
+}
