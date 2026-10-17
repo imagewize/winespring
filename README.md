@@ -33,7 +33,7 @@ It pairs with the [Aludra](https://github.com/imagewize/aludra) block library (m
 - WordPress 6.6+
 - PHP 8.0+
 - WooCommerce (the point of the theme; templates degrade gracefully without it)
-- Aludra plugin (recommended, not required; the Store Home pattern needs it)
+- Aludra plugin 2.39+ (recommended, not required; the Store Home pattern, the free shipping bar and the sticky add to cart bar need it)
 
 ## Features
 
@@ -44,6 +44,8 @@ It pairs with the [Aludra](https://github.com/imagewize/aludra) block library (m
 - **Two page templates** — `page.html` (default) omits `post-title` since most pages get their title from a block's own heading; `page-with-title.html` (selectable per-page under Page → Template) adds the conventional title treatment.
 - **Style variations** — see `styles/` (`twilight.json` — dark, rose-accented; `store.json` — warm retail palette with self-hosted Cormorant Garamond and Jost; `skincare.json` — calm sage and cream palette with the same fonts) for alternate palettes on top of the same design system. Switch between them under **Appearance → Editor → Styles → Browse styles**.
 - **One page pattern, no library** — `winespring/home-store` (**Store Home**) is a front page built from Aludra blocks and a WooCommerce product grid: hero, trust bar, category cards, newest products, story, stats, reviews and a closing call to action. It is registered only when WooCommerce is active **and** the Aludra plugin is installed — without Aludra it is hidden rather than inserting unsupported blocks. Everything else is block-first composition: core's own patterns stay registered, so the inserter is never empty; insert `aludra/*` blocks (or core blocks) directly into pages and templates, then add your own patterns as needed.
+
+- **Store conversion extras** — an announcement bar above the header, a free shipping progress bar and a sticky add to cart bar (both Aludra blocks, removed automatically when Aludra is missing), New / Sold out / Low stock badges on product images, and sale badges that show the percentage saved
 
 ## Installation
 

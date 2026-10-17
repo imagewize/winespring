@@ -3,7 +3,21 @@
 All notable changes to Winespring are documented in this file. Winespring was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
-## [Unreleased]
+## [1.5.0] - 2026-10-17
+
+First release under the Winespring name.
+
+### Added
+- `parts/announcement-bar.html`, shown above both headers: a message plus the
+  `aludra/free-shipping-bar` block.
+- `aludra/sticky-add-to-cart` in `single-product.html`: a bar with name, price and a button that
+  scrolls back to the add to cart form once it leaves the viewport.
+- Both blocks come from the Aludra plugin (2.39.0 or later), because Theme Check rejects block
+  registration in a theme. Without Aludra, or without WooCommerce, the theme removes them from the
+  templates and template parts so nothing renders as an unsupported block.
+- Product image badges for New, Sold out and Low stock (`winespring_new_badge_days` and
+  `winespring_low_stock_amount` filters); sale badges now show the percentage saved.
+- `inc/store-features.php`.
 
 ### Changed
 - Renamed the theme from Marin to Winespring, because the `marin` slug is already taken on

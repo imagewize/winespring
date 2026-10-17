@@ -4,7 +4,7 @@ Tags: e-commerce, full-site-editing, custom-colors, custom-logo, custom-menu, ed
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.4.0
+Stable tag: 1.5.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -37,6 +37,12 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 4. Install and activate WooCommerce for store functionality.
 
 == Changelog ==
+
+= 1.5.0 =
+* Added: first release under the Winespring name (renamed from Marin).
+* Added: announcement bar template part, shown above both headers. With Aludra 2.39 or later it carries a free shipping progress bar.
+* Added: sticky add to cart bar on single products (Aludra 2.39 or later).
+* Added: product image badges for New, Sold out and Low stock, and sale badges show the percentage saved.
 
 = 1.4.0 =
 * Changed: Store Home pattern redesigned, with a light hero and still-life image, illustrated category tiles, richer product cards, a routine section, a light story section, static testimonials and a terracotta closing call to action.

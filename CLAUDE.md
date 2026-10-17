@@ -101,7 +101,7 @@ every text/background pairing in a new palette against WCAG AA (4.5:1) before sh
 
 ## Development
 
-No JS build step — the theme ships no bundled JavaScript or CSS preprocessing.
+No JS build step — the theme ships no bundled JavaScript or CSS preprocessing. Store blocks that need scripts belong in the Aludra plugin: Theme Check rejects `register_block_type()` in a theme as plugin territory.
 
 ```bash
 composer install
