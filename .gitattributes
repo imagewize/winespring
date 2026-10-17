@@ -6,7 +6,7 @@
 
 # Guards, not descriptions: docs/ and designs/ no longer exist here. Planning
 # documents and design mockups live in the private imagewize.com repo, under
-# docs/marin/ and designs/marin/ (see CLAUDE.md). Kept in step with
+# docs/winespring/ and designs/winespring/ (see CLAUDE.md). Kept in step with
 # .distignore so a stray file re-added here stays out of source archives too.
 /docs export-ignore
 /designs export-ignore

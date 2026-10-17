@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="Marin Theme">
-    <description>Coding standards for the Marin theme</description>
+<ruleset name="Winespring Theme">
+    <description>Coding standards for the Winespring theme</description>
 
     <!-- Use WordPress standards -->
     <rule ref="WordPress" />
@@ -24,7 +24,7 @@
     <rule ref="WordPress.WP.I18n">
         <properties>
             <property name="text_domain" type="array">
-                <element value="marin"/>
+                <element value="winespring"/>
             </property>
         </properties>
     </rule>
