@@ -17,7 +17,7 @@
     <exclude-pattern>*/node_modules/*</exclude-pattern>
 
     <!-- Minimum PHP version -->
-    <config name="minimum_supported_wp_version" value="6.7"/>
+    <config name="minimum_supported_wp_version" value="6.6"/>
     <config name="testVersion" value="8.0-"/>
 
     <!-- Text domain check -->

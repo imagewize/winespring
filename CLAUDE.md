@@ -13,7 +13,7 @@ is the retail palette) form the design system; page content is composed directly
 blocks or the [Aludra](https://github.com/imagewize/aludra) block library).
 
 **Requirements:**
-- WordPress 6.7+
+- WordPress 6.6+
 - PHP 8.0+
 - WooCommerce (the point of the theme; templates degrade gracefully without it)
 - Aludra plugin — recommended, not required
@@ -101,7 +101,7 @@ every text/background pairing in a new palette against WCAG AA (4.5:1) before sh
 
 ## Development
 
-No JS build step — no bundler, no CSS preprocessing. The only runtime JS is the unbuilt `view.js` in each `blocks/*` directory (free shipping bar, sticky add to cart), loaded by WordPress only where the block renders. Keep it dependency-free.
+No JS build step — the theme ships no bundled JavaScript or CSS preprocessing. Store blocks that need scripts belong in the Aludra plugin: Theme Check rejects `register_block_type()` in a theme as plugin territory.
 
 ```bash
 composer install
