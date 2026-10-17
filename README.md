@@ -30,7 +30,7 @@ It pairs with the [Aludra](https://github.com/imagewize/aludra) block library (m
 
 ## Requirements
 
-- WordPress 6.6+
+- WordPress 6.7+
 - PHP 8.0+
 - WooCommerce (the point of the theme; templates degrade gracefully without it)
 - Aludra plugin (recommended, not required; the Store Home pattern needs it)
@@ -109,7 +109,7 @@ composer run wpcs:scan   # PHPCS against phpcs.xml
 composer run wpcs:fix    # PHPCBF auto-fix
 ```
 
-No JS build step is required — the theme ships no bundled JavaScript.
+No JS build step is required. The only JavaScript is two small, unbuilt view scripts under `blocks/`, loaded only on pages that contain their block.
 
 ## License
 

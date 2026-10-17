@@ -1,10 +1,10 @@
 === Winespring WordPress Theme ===
 Contributors: Rhand
 Tags: e-commerce, full-site-editing, custom-colors, custom-logo, custom-menu, editor-style, featured-images, grid-layout, template-editing, translation-ready, wide-blocks
-Requires at least: 6.6
+Requires at least: 6.7
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.4.0
+Stable tag: 1.5.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -37,6 +37,15 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 4. Install and activate WooCommerce for store functionality.
 
 == Changelog ==
+
+= 1.5.0 =
+* Added: first release under the Winespring name (renamed from Marin).
+* Added: free shipping progress bar block, fed by the free shipping method in the customer's shipping zone and kept current as the cart changes.
+* Added: announcement bar template part, shown above both headers.
+* Added: sticky add to cart bar on single products, shown once the main add to cart form scrolls out of view.
+* Added: product image badges for New, Sold out and Low stock, and sale badges show the percentage saved.
+* Changed: requires WordPress 6.7 (server-registered blocks without editor JavaScript).
+* Changed: the theme now ships two small unbuilt view scripts, loaded only where their block is on the page.
 
 = 1.4.0 =
 * Changed: Store Home pattern redesigned, with a light hero and still-life image, illustrated category tiles, richer product cards, a routine section, a light story section, static testimonials and a terracotta closing call to action.

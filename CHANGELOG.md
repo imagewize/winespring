@@ -3,9 +3,28 @@
 All notable changes to Winespring are documented in this file. Winespring was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
-## [Unreleased]
+## [1.5.0] - 2026-10-17
+
+First release under the Winespring name.
+
+### Added
+- `winespring/free-shipping-bar` block: shows how far the cart is from free shipping, with a progress
+  bar. The threshold is the lowest minimum on an enabled free shipping method in the customer's
+  shipping zone (override with the block's `threshold` attribute or the
+  `winespring_free_shipping_threshold` filter). Rendered on the server, then kept current from the
+  Store API when items are added or removed.
+- `parts/announcement-bar.html`, shown above both headers, with a message and the free shipping bar.
+- `winespring/sticky-add-to-cart` block, added to `single-product.html`: a bar with name, price and a
+  button that scrolls back to the add to cart form once it leaves the viewport.
+- Product image badges for New, Sold out and Low stock (`winespring_new_badge_days` and
+  `winespring_low_stock_amount` filters); sale badges now show the percentage saved.
+- `inc/store-features.php`.
 
 ### Changed
+- Requires WordPress 6.7, for server-registered blocks that need no editor JavaScript.
+- The theme now ships two small unbuilt view scripts (`blocks/*/view.js`), loaded only where the
+  block is on the page. Still no build step.
+- `composer run wpcs:scan` and `wpcs:fix` skip `.js` files; the WordPress PHP standard misreads them.
 - Renamed the theme from Marin to Winespring, because the `marin` slug is already taken on
   wordpress.org. The text domain, `winespring_` function prefix, `Winespring` namespace,
   `winespring/home-store` pattern, `winespring-*` CSS classes and the logo files
