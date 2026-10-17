@@ -8,6 +8,8 @@
 
 namespace Winespring;
 
+require_once get_template_directory() . '/inc/store-features.php';
+
 /**
  * Set up theme defaults and register various WordPress features.
  */
@@ -191,7 +193,7 @@ function winespring_strip_woocommerce_blocks( $content ) {
 	}
 
 	return (string) preg_replace(
-		'#<!--\s+wp:woocommerce/(?:mini-cart|customer-account)\b.*?/-->\s*#s',
+		'#<!--\s+wp:(?:woocommerce/(?:mini-cart|customer-account)|winespring/free-shipping-bar)\b.*?/-->\s*#s',
 		'',
 		$content
 	);

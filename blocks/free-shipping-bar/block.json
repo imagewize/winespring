@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "winespring/free-shipping-bar",
+	"title": "Free Shipping Progress",
+	"category": "woocommerce",
+	"description": "Shows how far the cart is from free shipping, with a progress bar that updates as items are added or removed.",
+	"icon": "airplane",
+	"textdomain": "winespring",
+	"attributes": {
+		"threshold": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"supports": {
+		"autoRegister": true,
+		"html": false,
+		"align": [ "wide", "full" ],
+		"color": { "text": true, "background": false },
+		"typography": { "fontSize": true }
+	},
+	"style": "file:./style.css",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
+}
