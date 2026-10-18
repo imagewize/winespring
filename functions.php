@@ -10,6 +10,10 @@ namespace Winespring;
 
 require_once get_template_directory() . '/inc/store-features.php';
 
+if ( is_admin() ) {
+	require_once get_template_directory() . '/inc/plugin-recommendations.php';
+}
+
 /**
  * Set up theme defaults and register various WordPress features.
  */

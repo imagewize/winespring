@@ -4,7 +4,7 @@ Tags: e-commerce, full-site-editing, custom-colors, custom-logo, custom-menu, ed
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.6.0
+Stable tag: 1.7.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -27,7 +27,8 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 * Style variations: Twilight (dark), Store (warm retail palette, self-hosted fonts) and Skincare (calm sage and cream, same fonts)
 * Five page patterns: Core Home, About, Contact and FAQ use core blocks only; Store Home needs Aludra and WooCommerce
 * Pairs with the Aludra block library (mega menu, carousel, FAQ tabs, and more)
-* Translation-ready
+* Translation-ready, with a bundled .pot file and a Dutch (nl_NL) translation
+* A dismissible notice suggests WooCommerce and Aludra, shown once to admins who can install plugins
 
 == Installation ==
 
@@ -38,6 +39,10 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 
 == Changelog ==
 
+= 1.7.0 =
+* Added: a dismissible admin notice on the Dashboard and Themes screens suggesting WooCommerce and Aludra. It is shown only to users who can install plugins, only while one of them is missing, and never again once dismissed.
+* Added: Dutch translation (nl_NL).
+* Added: translation template (`languages/winespring.pot`) and the `Domain Path` header.
 = 1.6.0 =
 * Added: Core Home, About, Contact and FAQ page patterns, built from core blocks only so they need no plugins. Core Home lists products when WooCommerce is active and the latest posts otherwise.
 * Added: Winespring Pages pattern category. The Store Home pattern is now titled Store Home (Aludra + WooCommerce) and sits in the same category.

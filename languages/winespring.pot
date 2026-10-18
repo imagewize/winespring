@@ -1,0 +1,660 @@
+# Copyright (C) 2026 Jasper Frumau
+# This file is distributed under the GNU General Public License v3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Winespring 1.7.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/winespring\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-18T05:32:09+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: winespring\n"
+
+#. Theme Name of the theme
+#: style.css
+#: inc/plugin-recommendations.php:102
+msgid "Winespring"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://imagewize.com/themes/winespring"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "Winespring is a lean full-site-editing theme for WooCommerce stores. It ships a design system (theme.json), WooCommerce block templates, and style variations and a small set of page patterns. Content is composed directly from blocks. Built to speed up client e-commerce builds."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Jasper Frumau"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://imagewize.com"
+msgstr ""
+
+#: functions.php:45
+msgid "Menu"
+msgstr ""
+
+#: functions.php:46
+msgid "Template parts for navigation and mega menu content."
+msgstr ""
+
+#: functions.php:60
+msgid "Winespring Pages"
+msgstr ""
+
+#: functions.php:270
+msgid "Add to Cart + Options"
+msgstr ""
+
+#: functions.php:271
+msgid "Add to cart layouts for each product type."
+msgstr ""
+
+#. translators: %s: plugin name.
+#: inc/plugin-recommendations.php:88
+#, php-format
+msgid "Activate %s"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: inc/plugin-recommendations.php:92
+#, php-format
+msgid "Install %s"
+msgstr ""
+
+#: inc/plugin-recommendations.php:103
+msgid "works on its own. For the full store experience, add the plugins below."
+msgstr ""
+
+#: inc/plugin-recommendations.php:108
+msgid "Dismiss"
+msgstr ""
+
+#. translators: %d: discount percentage.
+#: inc/store-features.php:34
+#, php-format
+msgid "-%d%%"
+msgstr ""
+
+#: inc/store-features.php:60
+msgid "Sold out"
+msgstr ""
+
+#: inc/store-features.php:65
+msgid "Low stock"
+msgstr ""
+
+#: inc/store-features.php:73
+msgid "New"
+msgstr ""
+
+#: patterns/home-core.php
+msgctxt "Pattern title"
+msgid "Core Home"
+msgstr ""
+
+#: patterns/home-core.php
+msgctxt "Pattern description"
+msgid "A front page built from core blocks only: hero, three feature highlights, a product or post grid, a brand story and a closing call to action. Needs no plugins."
+msgstr ""
+
+#: patterns/home-core.php:21
+msgid "Shop the collection"
+msgstr ""
+
+#: patterns/home-core.php:21
+msgid "Read the journal"
+msgstr ""
+
+#: patterns/home-core.php:22
+msgid "New arrivals"
+msgstr ""
+
+#: patterns/home-core.php:22
+msgid "Latest from the journal"
+msgstr ""
+
+#: patterns/home-core.php:28
+msgid "Considered goods, made to be kept"
+msgstr ""
+
+#: patterns/home-core.php:32
+msgid "A short introduction to your brand. Say what you make, who it is for and why it is worth choosing."
+msgstr ""
+
+#: patterns/home-core.php:58
+msgid "Free delivery"
+msgstr ""
+
+#: patterns/home-core.php:62
+msgid "Describe your shipping promise in a sentence or two."
+msgstr ""
+
+#: patterns/home-core.php:72
+msgid "Easy returns"
+msgstr ""
+
+#: patterns/home-core.php:76
+msgid "Explain how customers can send something back."
+msgstr ""
+
+#: patterns/home-core.php:86
+msgid "Responsibly made"
+msgstr ""
+
+#: patterns/home-core.php:90
+msgid "Share what goes into your products and where they come from."
+msgstr ""
+
+#: patterns/home-core.php:110
+msgid "Nothing to show yet."
+msgstr ""
+
+#: patterns/home-core.php:126
+msgid "Our story"
+msgstr ""
+
+#: patterns/home-core.php:130
+msgid "Tell visitors how the business began and what you stand for. Two or three short paragraphs are plenty."
+msgstr ""
+
+#: patterns/home-core.php:138
+msgid "Ready when you are"
+msgstr ""
+
+#: patterns/home-store.php
+msgctxt "Pattern title"
+msgid "Store Home (Aludra + WooCommerce)"
+msgstr ""
+
+#: patterns/home-store.php
+msgctxt "Pattern description"
+msgid "A skincare store front page built from Aludra blocks: hero, trust bar, category cards, newest products, brand story, stats, reviews and a closing call to action. Registered only when Aludra and WooCommerce are active."
+msgstr ""
+
+#: patterns/page-about.php
+msgctxt "Pattern title"
+msgid "About"
+msgstr ""
+
+#: patterns/page-about.php
+msgctxt "Pattern description"
+msgid "An About page built from core blocks: introduction, image and story, three values, a team grid and a call to contact."
+msgstr ""
+
+#: patterns/page-about.php:19
+msgid "About us"
+msgstr ""
+
+#: patterns/page-about.php:23
+msgid "A short line about who you are and what you care about."
+msgstr ""
+
+#: patterns/page-about.php:37
+msgid "How it started"
+msgstr ""
+
+#: patterns/page-about.php:41
+msgid "Tell the story of the business: why it began, who started it and what has changed since."
+msgstr ""
+
+#: patterns/page-about.php:45
+msgid "A second paragraph is a good place for what you are working towards next."
+msgstr ""
+
+#: patterns/page-about.php:53
+msgid "What we stand for"
+msgstr ""
+
+#: patterns/page-about.php:59
+msgid "Quality"
+msgstr ""
+
+#: patterns/page-about.php:63
+#: patterns/page-about.php:73
+#: patterns/page-about.php:83
+msgid "Describe a value and what it means in practice."
+msgstr ""
+
+#: patterns/page-about.php:69
+msgid "Honesty"
+msgstr ""
+
+#: patterns/page-about.php:79
+msgid "Care"
+msgstr ""
+
+#: patterns/page-about.php:91
+msgid "Meet the team"
+msgstr ""
+
+#: patterns/page-about.php:103
+#: patterns/page-about.php:119
+#: patterns/page-about.php:135
+msgid "Name Surname"
+msgstr ""
+
+#: patterns/page-about.php:107
+#: patterns/page-about.php:123
+#: patterns/page-about.php:139
+msgid "Role"
+msgstr ""
+
+#: patterns/page-about.php:147
+msgid "Want to know more?"
+msgstr ""
+
+#: patterns/page-about.php:152
+#: patterns/page-faq.php:66
+msgid "Get in touch"
+msgstr ""
+
+#: patterns/page-contact.php
+msgctxt "Pattern title"
+msgid "Contact"
+msgstr ""
+
+#: patterns/page-contact.php
+msgctxt "Pattern description"
+msgid "A Contact page built from core blocks: introduction, address, email and opening hours beside a space for your contact form."
+msgstr ""
+
+#: patterns/page-contact.php:19
+msgid "Contact us"
+msgstr ""
+
+#: patterns/page-contact.php:23
+msgid "We would love to hear from you. Send a message or drop by."
+msgstr ""
+
+#: patterns/page-contact.php:31
+msgid "Visit us"
+msgstr ""
+
+#: patterns/page-contact.php:35
+msgid "123 Example Street, Your Town"
+msgstr ""
+
+#: patterns/page-contact.php:39
+msgid "Email"
+msgstr ""
+
+#: patterns/page-contact.php:47
+msgid "Opening hours"
+msgstr ""
+
+#: patterns/page-contact.php:51
+msgid "Monday to Friday, 9:00 to 17:00"
+msgstr ""
+
+#: patterns/page-contact.php:58
+msgid "Send a message"
+msgstr ""
+
+#: patterns/page-contact.php:62
+msgid "Replace this text with the block from your contact form plugin."
+msgstr ""
+
+#: patterns/page-faq.php
+msgctxt "Pattern title"
+msgid "FAQ"
+msgstr ""
+
+#: patterns/page-faq.php
+msgctxt "Pattern description"
+msgid "A frequently asked questions page built from core Details blocks, with a call to contact below."
+msgstr ""
+
+#: patterns/page-faq.php:19
+msgid "Frequently asked questions"
+msgstr ""
+
+#: patterns/page-faq.php:23
+msgid "Quick answers to the things people ask us most."
+msgstr ""
+
+#: patterns/page-faq.php:29
+msgid "Question 1 goes here?"
+msgstr ""
+
+#: patterns/page-faq.php:30
+#: patterns/page-faq.php:36
+#: patterns/page-faq.php:42
+#: patterns/page-faq.php:48
+#: patterns/page-faq.php:54
+msgid "Write a short, direct answer to the question."
+msgstr ""
+
+#: patterns/page-faq.php:35
+msgid "Question 2 goes here?"
+msgstr ""
+
+#: patterns/page-faq.php:41
+msgid "Question 3 goes here?"
+msgstr ""
+
+#: patterns/page-faq.php:47
+msgid "Question 4 goes here?"
+msgstr ""
+
+#: patterns/page-faq.php:53
+msgid "Question 5 goes here?"
+msgstr ""
+
+#: patterns/page-faq.php:61
+msgid "Still have a question?"
+msgstr ""
+
+#: theme.json
+msgctxt "Border radius size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Border radius size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Border radius size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Border radius size name"
+msgid "Pill"
+msgstr ""
+
+#: theme.json
+#: styles/skincare.json
+#: styles/store.json
+#: styles/twilight.json
+msgctxt "Color name"
+msgid "Base"
+msgstr ""
+
+#: theme.json
+#: styles/skincare.json
+#: styles/store.json
+#: styles/twilight.json
+msgctxt "Color name"
+msgid "Tertiary"
+msgstr ""
+
+#: theme.json
+#: styles/skincare.json
+#: styles/store.json
+#: styles/twilight.json
+msgctxt "Color name"
+msgid "Border Light"
+msgstr ""
+
+#: theme.json
+#: styles/skincare.json
+#: styles/store.json
+#: styles/twilight.json
+msgctxt "Color name"
+msgid "Contrast"
+msgstr ""
+
+#: theme.json
+#: styles/skincare.json
+#: styles/store.json
+#: styles/twilight.json
+msgctxt "Color name"
+msgid "Main"
+msgstr ""
+
+#: theme.json
+#: styles/skincare.json
+#: styles/store.json
+#: styles/twilight.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr ""
+
+#: theme.json
+#: styles/skincare.json
+#: styles/store.json
+#: styles/twilight.json
+msgctxt "Color name"
+msgid "Accent"
+msgstr ""
+
+#: theme.json
+#: styles/skincare.json
+#: styles/store.json
+#: styles/twilight.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr ""
+
+#: theme.json
+#: styles/skincare.json
+#: styles/store.json
+#: styles/twilight.json
+msgctxt "Color name"
+msgid "Main Accent"
+msgstr ""
+
+#: theme.json
+#: styles/skincare.json
+#: styles/store.json
+#: styles/twilight.json
+msgctxt "Color name"
+msgid "Primary Accent"
+msgstr ""
+
+#: theme.json
+#: styles/skincare.json
+#: styles/store.json
+#: styles/twilight.json
+msgctxt "Color name"
+msgid "Primary Alt"
+msgstr ""
+
+#: theme.json
+#: styles/skincare.json
+#: styles/store.json
+#: styles/twilight.json
+msgctxt "Color name"
+msgid "White"
+msgstr ""
+
+#: theme.json
+#: styles/skincare.json
+#: styles/store.json
+#: styles/twilight.json
+msgctxt "Color name"
+msgid "Terracotta"
+msgstr ""
+
+#: theme.json
+#: styles/skincare.json
+#: styles/store.json
+#: styles/twilight.json
+msgctxt "Color name"
+msgid "Sand Deep"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Indigo"
+msgstr ""
+
+#: theme.json
+#: styles/twilight.json
+msgctxt "Gradient name"
+msgid "Rose Bloom"
+msgstr ""
+
+#: theme.json
+#: styles/twilight.json
+msgctxt "Gradient name"
+msgid "Sunset"
+msgstr ""
+
+#: theme.json
+#: styles/twilight.json
+msgctxt "Gradient name"
+msgid "Sand"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2X-Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "X-Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "X-Large"
+msgstr ""
+
+#: theme.json
+#: styles/skincare.json
+#: styles/store.json
+msgctxt "Font family name"
+msgid "Primary"
+msgstr ""
+
+#: theme.json
+#: styles/skincare.json
+#: styles/store.json
+msgctxt "Font family name"
+msgid "Display"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Mono"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "XX-Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "X-Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Base"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "X-Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "XX-Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Display"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page With Title"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page (Dark Header)"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header (Dark)"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Announcement Bar"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Simple Product Add to Cart"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Variable Product Add to Cart"
+msgstr ""
+
+#: styles/skincare.json
+msgctxt "Style variation name"
+msgid "Skincare"
+msgstr ""
+
+#: styles/store.json
+msgctxt "Style variation name"
+msgid "Store"
+msgstr ""
+
+#: styles/twilight.json
+msgctxt "Style variation name"
+msgid "Twilight"
+msgstr ""

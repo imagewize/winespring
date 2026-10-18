@@ -116,6 +116,7 @@ composer install
 composer run lint       # php-parallel-lint syntax check
 composer run wpcs:scan  # PHPCS against phpcs.xml (WordPress standard)
 composer run wpcs:fix   # PHPCBF auto-fix
+composer run i18n:pot   # regenerate languages/winespring.pot (needs WP-CLI) — run before each release
 ```
 
 `package.json` exists only for the pattern-validation harness below — it is not a build step, and
@@ -273,6 +274,8 @@ one large commit bundling unrelated changes. Makes history easier to review and 
 
 - `theme.json` — design system (single source of truth)
 - `functions.php` — theme setup, `menu` template part area registration, WooCommerce hooks
+- `inc/plugin-recommendations.php` — admin-only, dismissible notice recommending WooCommerce and Aludra (wp.org allows a restrained notice; keep it to the Dashboard and Themes screens, capability-gated and per-user dismissible)
+- `languages/winespring.pot` — translation template; regenerate with `composer run i18n:pot` before each release. `languages/nl_NL.po`/`.mo` is the Dutch translation (informal "je"); after regenerating the template run `msgmerge -U languages/nl_NL.po languages/winespring.pot`, translate any new strings, then `msgfmt --check -o languages/nl_NL.mo languages/nl_NL.po`
 - `templates/*.html` — FSE templates, including WooCommerce single-product/archive-product
 - `parts/*.html` — header, dark header, footer and add-to-cart template parts
 - `styles/*.json` — style variations
