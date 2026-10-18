@@ -335,15 +335,15 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:group -->
 
 <!-- wp:aludra/stat-rail -->
-<div class="wp-block-aludra-stat-rail alignfull" style="margin-top:0;margin-bottom:0"><div class="stat-rail__shell"><!-- wp:aludra/stat-item {"number":"<?php echo esc_attr( trim( wp_json_encode( __( '3 steps', 'winespring' ) ), '"' ) ); ?>","caption":"<?php echo esc_attr( trim( wp_json_encode( __( 'To a complete routine', 'winespring' ) ), '"' ) ); ?>","good":true} -->
+<div class="wp-block-aludra-stat-rail alignfull" style="margin-top:0;margin-bottom:0"><div class="stat-rail__shell"><!-- wp:aludra/stat-item {"number":"<?php echo esc_attr__( '3 steps', 'winespring' ); ?>","caption":"<?php echo esc_attr__( 'To a complete routine', 'winespring' ); ?>","good":true} -->
 <div class="wp-block-aludra-stat-item stat-rail__item is-good"><div class="stat-rail__num"><?php esc_html_e( '3 steps', 'winespring' ); ?></div><div class="stat-rail__cap"><?php esc_html_e( 'To a complete routine', 'winespring' ); ?></div></div>
 <!-- /wp:aludra/stat-item -->
 
-<!-- wp:aludra/stat-item {"number":"16","caption":"<?php echo esc_attr( trim( wp_json_encode( __( 'Products in the range', 'winespring' ) ), '"' ) ); ?>"} -->
+<!-- wp:aludra/stat-item {"number":"16","caption":"<?php echo esc_attr__( 'Products in the range', 'winespring' ); ?>"} -->
 <div class="wp-block-aludra-stat-item stat-rail__item"><div class="stat-rail__num">16</div><div class="stat-rail__cap"><?php esc_html_e( 'Products in the range', 'winespring' ); ?></div></div>
 <!-- /wp:aludra/stat-item -->
 
-<!-- wp:aludra/stat-item {"number":"<?php echo esc_attr( trim( wp_json_encode( __( '30 days', 'winespring' ) ), '"' ) ); ?>","caption":"<?php echo esc_attr( trim( wp_json_encode( __( 'Free returns', 'winespring' ) ), '"' ) ); ?>"} -->
+<!-- wp:aludra/stat-item {"number":"<?php echo esc_attr__( '30 days', 'winespring' ); ?>","caption":"<?php echo esc_attr__( 'Free returns', 'winespring' ); ?>"} -->
 <div class="wp-block-aludra-stat-item stat-rail__item"><div class="stat-rail__num"><?php esc_html_e( '30 days', 'winespring' ); ?></div><div class="stat-rail__cap"><?php esc_html_e( 'Free returns', 'winespring' ); ?></div></div>
 <!-- /wp:aludra/stat-item --></div></div>
 <!-- /wp:aludra/stat-rail -->
