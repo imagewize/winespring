@@ -314,7 +314,7 @@ function winespring_unregister_woocommerce_patterns() {
  * Disable WooCommerce's full-composability pattern toolkit.
  *
  * Its onboarding flow offers to assemble pages from patterns and overwrite the
- * theme's templates, neither of which fits a theme that ships one hand-built pattern.
+ * theme's templates, neither of which fits a theme that ships its own hand-built patterns.
  *
  * @param array $features Enabled WooCommerce admin features.
  * @return array Features without the pattern toolkit.

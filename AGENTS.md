@@ -3,10 +3,11 @@
 Winespring is a lean **Full Site Editing (FSE) theme for WooCommerce stores** (WP 6.6+, PHP 8.0+, no build
 tools — direct HTML block markup and PHP), created from the Aviendha starter and meant to speed up
 client e-commerce builds. `theme.json` is the single source of truth for colors, typography, spacing,
-and layout. Winespring ships **no pattern library** — content is composed directly from blocks (core
-blocks or the Aludra block library). The one exception is `patterns/home-store.php`
+and layout. Winespring ships a **small, curated set of page patterns**, not a library: `home-core`,
+`page-about`, `page-contact` and `page-faq` (core blocks only, no plugins needed) and `home-store`
 (`winespring/home-store`), a store front page built from Aludra blocks, registered only when Aludra and
-WooCommerce are active.
+WooCommerce are active. Other content is composed directly from blocks (core blocks or the Aludra block
+library).
 
 ## Project Structure & Module Organization
 

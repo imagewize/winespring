@@ -7,8 +7,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Winespring is a lean full-site-editing (FSE) **WooCommerce theme** for WordPress, created from the
 **Aviendha** starter (GitHub template repository) to speed up building e-commerce themes for clients.
 It is a companion to Imagewize's **Elayne** and **Nynaeve** themes and is meant to replace Elayne's
-store vertical for client store work. Like Aviendha it is deliberately minimal: **no bundled
-patterns**. `theme.json`, WooCommerce block templates, and style variations (`styles/store.json`
+store vertical for client store work. Like Aviendha it is deliberately minimal: **a small,
+curated set of patterns, not a library**. `theme.json`, WooCommerce block templates, and style variations (`styles/store.json`
 is the retail palette) form the design system; page content is composed directly from blocks (core
 blocks or the [Aludra](https://github.com/imagewize/aludra) block library).
 
@@ -26,16 +26,24 @@ checkout was added here because the rename action's push otherwise fails with a 
 `Authorization` header). Aviendha stays the neutral starter; improvements that are not store-specific
 (theme.json fixes, template bugs, grid rules) belong upstream there too — port them by hand.
 
-**Why (almost) no patterns:** reusable logic lives in Aludra's `aludra/*` blocks, which keeps this
-theme's surface area small. Prefer a **style variation** (`styles/*.json`) over a pattern library for
-new looks. The single exception is `patterns/home-store.php` (`winespring/home-store`): a store front page
-built from Aludra blocks and a WooCommerce product grid, with skincare copy and links resolved at
-render time (shop page, `product_cat` slugs). It is registered only when WooCommerce is active and
-Aludra's blocks are registered (`winespring_maybe_unregister_store_home_pattern()` in `functions.php`),
-since pattern files otherwise register themselves and would insert unsupported blocks. Its colour
-panels are Aludra's own "replace with a photo" placeholders, so it works without any images. Add new
-vertical-specific page patterns on a branch, not as a growing library. The pattern-validation
-harness (`@imwz/wp-pattern-sentinel`, `npm run validate`) covers it — see
+**Why a small, curated set of patterns:** reusable logic lives in Aludra's `aludra/*` blocks, which keeps
+this theme's surface area small. Prefer a **style variation** (`styles/*.json`) over more patterns for
+new looks. The theme ships five page patterns, all in the `winespring-pages` category (registered in
+`functions.php`), so a fresh install has a working front page and the standard content pages, and so the
+wp.org theme preview has patterns to show:
+
+- `winespring/home-core`, `page-about`, `page-contact`, `page-faq` — built from **core blocks only**, so they
+  need no plugins. `home-core` lists products when WooCommerce is active and the latest posts otherwise.
+  The Contact pattern leaves a placeholder for the owner's form plugin, since core has no form block.
+- `winespring/home-store` (**Store Home (Aludra + WooCommerce)**): the store front page built from Aludra
+  blocks and a WooCommerce product grid, with skincare copy and links resolved at render time (shop page,
+  `product_cat` slugs). It is registered only when WooCommerce is active and Aludra's blocks are registered
+  (`winespring_maybe_unregister_store_home_pattern()` in `functions.php`), since pattern files otherwise
+  register themselves and would insert unsupported blocks. Its colour panels are Aludra's own "replace
+  with a photo" placeholders, so it works without any images.
+
+Keep the set small: add vertical-specific page patterns on a branch, not as a growing library. The
+pattern-validation harness (`@imwz/wp-pattern-sentinel`, `npm run validate`) covers all of them — see
 [Pattern validation](#pattern-validation).
 
 The workflow's `paths-ignore` skips `.github/**`, README/CHANGELOG/readme.txt/agent guides,
@@ -89,7 +97,7 @@ The Aludra mega-menu block requires its host theme to register a `menu` template
 template parts (created by users in the Site Editor) appear under
 **Appearance → Editor → Patterns → Template Parts → Menus**. Content for those template parts lives
 in the database, not in this theme — Winespring ships no menu template part files, matching the
-"almost no patterns" rule above.
+"small set of patterns" rule above.
 
 ### Style variations (`styles/`)
 
@@ -118,8 +126,8 @@ Project-specific code review rules (for the `/code-review` skill or Vibe) live i
 
 ### Pattern validation
 
-Winespring ships one pattern (see "Why (almost) no patterns" above) and carries the
-`@imwz/wp-pattern-sentinel` harness in `package.json` for it and for forks that add a `patterns/` directory.
+Winespring ships five patterns (see "Why a small, curated set of patterns" above) and carries the
+`@imwz/wp-pattern-sentinel` harness in `package.json` for them and for forks that add a `patterns/` directory.
 `wp pattern validate`'s PHP `parse_blocks()` pass does **not** run Gutenberg's JavaScript `save()`
 function — issues only the JS serializer produces (class-ordering, attribute defaults like a
 block's own `align`, auto-injected styles) pass that check but still fail block validation in the
