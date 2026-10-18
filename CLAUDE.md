@@ -116,6 +116,7 @@ composer install
 composer run lint       # php-parallel-lint syntax check
 composer run wpcs:scan  # PHPCS against phpcs.xml (WordPress standard)
 composer run wpcs:fix   # PHPCBF auto-fix
+composer run i18n:pot   # regenerate languages/winespring.pot (needs WP-CLI) — run before each release
 ```
 
 `package.json` exists only for the pattern-validation harness below — it is not a build step, and
