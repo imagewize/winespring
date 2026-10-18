@@ -4,7 +4,7 @@ Tags: e-commerce, full-site-editing, custom-colors, custom-logo, custom-menu, ed
 Requires at least: 6.9
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.7.2
+Stable tag: 1.7.3
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -38,6 +38,9 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 4. Install and activate WooCommerce for store functionality.
 
 == Changelog ==
+
+= 1.7.3 =
+* Changed: the release zip now contains a single top-level `winespring/` folder, as the wp.org theme uploader expects, and no longer ships an empty `languages/.gitkeep`.
 
 = 1.7.2 =
 * Changed: minimum WordPress version raised from 6.6 to 6.9, matching Aludra's requirement.
