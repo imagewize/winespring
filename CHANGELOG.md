@@ -3,6 +3,27 @@
 All notable changes to Winespring are documented in this file. Winespring was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [1.6.0] - 2026-10-18
+
+### Added
+- Page patterns built from core blocks only, so they need no plugins: `winespring/home-core`
+  (Core Home), `winespring/page-about`, `winespring/page-contact` and `winespring/page-faq`.
+  Core Home lists products when WooCommerce is active and the latest posts otherwise. The
+  Contact pattern leaves a placeholder for the site owner's form plugin.
+- `winespring-pages` pattern category, registered in `functions.php`.
+- readme.txt licence entry for the illustrations and icons (CC0 1.0).
+
+### Changed
+- Retitled `winespring/home-store` to "Store Home (Aludra + WooCommerce)" and moved it into the
+  `winespring-pages` category. The slug is unchanged.
+- Docs (`CLAUDE.md`, `AGENTS.md`, `.agents/code-review.md`, README, readme.txt, style.css
+  description) now describe a small set of five patterns instead of one.
+
+### Fixed
+- `winespring_strip_woocommerce_blocks()` used a regex with an unbalanced group, so `preg_replace`
+  returned `null` and the header template part rendered empty whenever WooCommerce was inactive.
+- PHPCS alignment warnings in `style.css` and `assets/css/woocommerce.css`.
+
 ## [1.5.1] - 2026-10-18
 
 ### Changed
