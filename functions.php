@@ -48,6 +48,17 @@ function winespring_template_part_areas( $areas ) {
 add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\winespring_template_part_areas' );
 
 /**
+ * Register the pattern category used by the theme's page patterns.
+ */
+function winespring_register_pattern_categories() {
+	register_block_pattern_category(
+		'winespring-pages',
+		array( 'label' => __( 'Winespring Pages', 'winespring' ) )
+	);
+}
+add_action( 'init', __NAMESPACE__ . '\winespring_register_pattern_categories' );
+
+/**
  * Enqueue theme styles.
  */
 function winespring_enqueue_styles() {
@@ -232,7 +243,7 @@ function winespring_strip_woocommerce_blocks( $content ) {
 	}
 
 	return (string) preg_replace(
-		'#<!--\s+wp:(?:woocommerce/(?:mini-cart|customer-account)\b.*?/-->\s*#s',
+		'#<!--\s+wp:woocommerce/(?:mini-cart|customer-account)\b.*?/-->\s*#s',
 		'',
 		$content
 	);
@@ -303,7 +314,7 @@ function winespring_unregister_woocommerce_patterns() {
  * Disable WooCommerce's full-composability pattern toolkit.
  *
  * Its onboarding flow offers to assemble pages from patterns and overwrite the
- * theme's templates, neither of which fits a theme that ships one hand-built pattern.
+ * theme's templates, neither of which fits a theme that ships its own hand-built patterns.
  *
  * @param array $features Enabled WooCommerce admin features.
  * @return array Features without the pattern toolkit.

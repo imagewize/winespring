@@ -1,7 +1,7 @@
 # Code review rules — Winespring
 
-Winespring is a lean full-site-editing **WooCommerce theme** for client stores: one page pattern and no
-pattern library, no
+Winespring is a lean full-site-editing **WooCommerce theme** for client stores: a small set of five page
+patterns (no pattern library), no
 JS build step, no runtime Composer or npm dependencies. `theme.json`, the
 templates in `templates/`, and the style variations in `styles/` are the
 product. These rules are read by the `code-review` skill
@@ -15,10 +15,11 @@ not required.
 - No JS build step. `package.json` exists only for the `@imwz/wp-pattern-sentinel`
   pattern-validation harness (`npm run validate*`) — it is not a build, and the
   theme ships no bundled JavaScript or CSS.
-- **Winespring ships one pattern, `winespring/home-store`** (see CLAUDE.md "Why (almost)
-  no patterns"). A small `patterns/` directory is the design; a growing library
-  is not. The pattern must stay unregistered unless WooCommerce and Aludra's
-  blocks are present. Forks (e.g. Ixian) add their own; the validation harness
+- **Winespring ships five patterns, all in the `winespring-pages` category** (see CLAUDE.md "Why a
+  small, curated set of patterns"). `home-core`, `page-about`, `page-contact` and `page-faq` must use
+  **core blocks only** — a plugin block in them breaks the wp.org theme preview. `winespring/home-store`
+  uses Aludra blocks and must stay unregistered unless WooCommerce and Aludra's blocks are present.
+  A small `patterns/` directory is the design; a growing library is not. Forks (e.g. Ixian) add their own; the validation harness
   in `package.json` covers all of them.
 - `templates/page.html` deliberately **omits** `post-title` — most pages are
   composed from blocks (often Aludra blocks) whose own heading serves as the

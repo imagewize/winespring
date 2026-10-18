@@ -4,7 +4,7 @@ Tags: e-commerce, full-site-editing, custom-colors, custom-logo, custom-menu, ed
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.5.1
+Stable tag: 1.6.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -12,8 +12,8 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Winespring is a lean full-site-editing (FSE) theme for WooCommerce stores, built to speed up client
 e-commerce builds. It provides a design system via `theme.json` (colors, typography, spacing,
-layout), WooCommerce block templates, and style variations. It ships a single page pattern, a store
-front page built from Aludra blocks; other page content is composed directly from blocks. Winespring is created from the Aviendha starter theme.
+layout), WooCommerce block templates, and style variations. It ships five page patterns (Core Home,
+About, Contact, FAQ and a store front page built from Aludra blocks); other page content is composed directly from blocks. Winespring is created from the Aviendha starter theme.
 
 Winespring pairs with the [Aludra](https://github.com/imagewize/aludra) block library (mega menu,
 carousel, FAQ tabs, and more), but doesn't require it — the theme is a plain block theme that
@@ -25,7 +25,7 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 * Solid design system via `theme.json` (colors, typography, spacing, layout)
 * WooCommerce block templates for single product and product archive
 * Style variations: Twilight (dark), Store (warm retail palette, self-hosted fonts) and Skincare (calm sage and cream, same fonts)
-* One page pattern (Store Home, needs Aludra and WooCommerce) — otherwise block-first composition
+* Five page patterns: Core Home, About, Contact and FAQ use core blocks only; Store Home needs Aludra and WooCommerce
 * Pairs with the Aludra block library (mega menu, carousel, FAQ tabs, and more)
 * Translation-ready
 
@@ -38,6 +38,13 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 
 == Changelog ==
 
+= 1.6.0 =
+* Added: Core Home, About, Contact and FAQ page patterns, built from core blocks only so they need no plugins. Core Home lists products when WooCommerce is active and the latest posts otherwise.
+* Added: Winespring Pages pattern category. The Store Home pattern is now titled Store Home (Aludra + WooCommerce) and sits in the same category.
+* Added: licence notice for the bundled illustrations and icons (CC0 1.0).
+* Fixed: with WooCommerce inactive, the header template part could render empty because of a malformed pattern in the block-stripping filter.
+* Fixed: PHPCS alignment warnings in the stylesheets.
+* Changed: documentation now describes the five page patterns.
 = 1.5.1 =
 * Changed: the brand name in the bundled illustrations (hero, story, bottle, jar, serum and kit) is resized to fit its labels. The longer Winespring name overflowed the label artwork made for the old name.
 * Changed: theme screenshot now shows the Winespring Store Home pattern. It was still an Aviendha image.
@@ -95,6 +102,14 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 * Purpose: The "fruit-grapes" icon is used, unmodified except for recoloring, as the theme's logo mark (the Winespring Inn).
 
 The Apache License 2.0 is GPLv3-compatible.
+
+= Theme illustrations and icons =
+* License: CC0 1.0 Universal (public domain dedication)
+* License URI: https://creativecommons.org/publicdomain/zero/1.0/
+* Used in: `assets/illustrations/*.svg` and `assets/icons/*.svg`
+* Purpose: Original artwork created for this theme: the product illustrations and hero/story artwork used by the Store Home pattern, and its trust bar icons. The screenshot (`screenshot.png`) is a capture of the theme itself and uses the same artwork.
+
+CC0 is GPL-compatible.
 
 = Bricolage Grotesque =
 * License: SIL Open Font License, Version 1.1

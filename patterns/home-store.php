@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Store Home
+ * Title: Store Home (Aludra + WooCommerce)
  * Slug: winespring/home-store
- * Categories: featured
+ * Categories: winespring-pages
  * Block Types: core/post-content
  * Description: A skincare store front page built from Aludra blocks: hero, trust bar, category cards, newest products, brand story, stats, reviews and a closing call to action. Registered only when Aludra and WooCommerce are active.
  *

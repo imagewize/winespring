@@ -22,7 +22,7 @@ A lean full-site-editing WooCommerce theme for client e-commerce stores.
 
 ## Description
 
-Winespring is a full-site-editing (FSE) WordPress theme for **e-commerce**, built to speed up client store builds. It provides a design system via `theme.json` (colors, typography, spacing, layout), WooCommerce block templates, and three style variations (`store`, `skincare` and `twilight`), and a single **Store Home** page pattern, but no pattern library — other pages are composed directly from blocks. Fork it per client, or use it as the shared base.
+Winespring is a full-site-editing (FSE) WordPress theme for **e-commerce**, built to speed up client store builds. It provides a design system via `theme.json` (colors, typography, spacing, layout), WooCommerce block templates, and three style variations (`store`, `skincare` and `twilight`), and a small set of five page patterns (Core Home, About, Contact, FAQ and the Aludra-powered Store Home), but no pattern library — other pages are composed directly from blocks. Fork it per client, or use it as the shared base.
 
 It pairs with the [Aludra](https://github.com/imagewize/aludra) block library (mega menu, carousel, FAQ tabs, store bands, and more), but doesn't require it — the theme is a plain block theme that works with core blocks and any block plugin.
 
@@ -37,13 +37,13 @@ It pairs with the [Aludra](https://github.com/imagewize/aludra) block library (m
 
 ## Features
 
-- **Store-first block theme** — built for WooCommerce client stores; fork it per client (it is a template repository) or use it as the shared base, with no pattern library that would need removal
+- **Store-first block theme** — built for WooCommerce client stores; fork it per client (it is a template repository) or use it as the shared base, with no large pattern library that would need removal
 - **Design system** — `theme.json` defines the color palette, typography, spacing, and border radii; color/spacing slugs match what Aludra's own block styles expect (`base`, `contrast`, `secondary`, `main`, `primary`, `accent`, `tertiary`, `border-light`)
 - **WooCommerce templates** — `templates/single-product.html`, `templates/archive-product.html`, `templates/product-search-results.html`, and `templates/coming-soon.html` are theme-provided; cart, checkout, and category-archive templates fall back to WooCommerce's own block-theme defaults. The product archive and search results ship a results count, catalog sorting, a filters sidebar (price, category, availability, rating) and an empty state; the single product template uses the block-based add to cart, with theme layouts for simple and variable products in `parts/`. The coming-soon template wraps WooCommerce's coming-soon block with the theme's header and footer.
 - **Degrades gracefully without WooCommerce** — with the plugin inactive, the store templates and the header's mini cart are filtered out rather than left to render as unsupported blocks. WooCommerce's own bundled `woocommerce-blocks/*` patterns are unregistered when it *is* active — the theme neither designed nor styles them, and they crowd out core's.
 - **Two page templates** — `page.html` (default) omits `post-title` since most pages get their title from a block's own heading; `page-with-title.html` (selectable per-page under Page → Template) adds the conventional title treatment.
 - **Style variations** — see `styles/` (`twilight.json` — dark, rose-accented; `store.json` — warm retail palette with self-hosted Cormorant Garamond and Jost; `skincare.json` — calm sage and cream palette with the same fonts) for alternate palettes on top of the same design system. Switch between them under **Appearance → Editor → Styles → Browse styles**.
-- **One page pattern, no library** — `winespring/home-store` (**Store Home**) is a front page built from Aludra blocks and a WooCommerce product grid: hero, trust bar, category cards, newest products, story, stats, reviews and a closing call to action. It is registered only when WooCommerce is active **and** the Aludra plugin is installed — without Aludra it is hidden rather than inserting unsupported blocks. Everything else is block-first composition: core's own patterns stay registered, so the inserter is never empty; insert `aludra/*` blocks (or core blocks) directly into pages and templates, then add your own patterns as needed.
+- **Five page patterns, no library** — in the **Winespring Pages** pattern category. `winespring/home-core` (**Core Home**), `page-about`, `page-contact` and `page-faq` are built from core blocks only and need no plugins; `home-core` lists products when WooCommerce is active and the latest posts otherwise. `winespring/home-store` (**Store Home (Aludra + WooCommerce)**) is a front page built from Aludra blocks and a WooCommerce product grid: hero, trust bar, category cards, newest products, story, stats, reviews and a closing call to action. It is registered only when WooCommerce is active **and** the Aludra plugin is installed — without Aludra it is hidden rather than inserting unsupported blocks. Everything else is block-first composition: core's own patterns stay registered, so the inserter is never empty.
 
 - **Store conversion extras** — an announcement bar above the header, a free shipping progress bar and a sticky add to cart bar (both Aludra blocks, removed automatically when Aludra is missing), New / Sold out / Low stock badges on product images, and sale badges that show the percentage saved
 
@@ -78,7 +78,7 @@ The rename skips this README, `CHANGELOG.md`, `readme.txt` and the agent guides.
 - Rewrite those files, reset the version to `1.0.0`, and repoint their `assets/logos/winespring-*.svg` references
 - Update the `style.css` header, `screenshot.png` and the logo mark
 - Give the theme its own palette in `theme.json` or a `styles/*.json` variation (start from `store.json`)
-- Rewrite or remove `patterns/home-store.php` (skincare copy), and add more patterns in `patterns/` if needed — the `@imwz/wp-pattern-sentinel` harness is already wired up
+- Rewrite or remove the patterns in `patterns/` (`home-store.php` carries skincare copy), and add more patterns in `patterns/` if needed — the `@imwz/wp-pattern-sentinel` harness is already wired up
 
 ## Structure
 
