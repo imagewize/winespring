@@ -4,16 +4,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Winespring 1.7.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/winespring\n"
+"POT-Creation-Date: 2026-10-18T05:59:40+00:00\n"
+"PO-Revision-Date: 2026-10-18T05:32:09+00:00\n"
 "Last-Translator: Imagewize\n"
 "Language-Team: Dutch\n"
+"Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-18T05:32:09+00:00\n"
-"PO-Revision-Date: 2026-10-18T05:32:09+00:00\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: winespring\n"
-"Language: nl_NL\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Theme Name of the theme
@@ -33,7 +33,12 @@ msgid ""
 "ships a design system (theme.json), WooCommerce block templates, and style "
 "variations and a small set of page patterns. Content is composed directly "
 "from blocks. Built to speed up client e-commerce builds."
-msgstr "Winespring is een compact full-site-editing-thema voor WooCommerce-winkels. Het bevat een ontwerpsysteem (theme.json), WooCommerce-bloksjablonen, stijlvarianten en een kleine set paginapatronen. Inhoud wordt rechtstreeks uit blokken samengesteld. Gebouwd om het bouwen van webwinkels voor klanten te versnellen."
+msgstr ""
+"Winespring is een compact full-site-editing-thema voor WooCommerce-winkels. "
+"Het bevat een ontwerpsysteem (theme.json), WooCommerce-bloksjablonen, "
+"stijlvarianten en een kleine set paginapatronen. Inhoud wordt rechtstreeks "
+"uit blokken samengesteld. Gebouwd om het bouwen van webwinkels voor klanten "
+"te versnellen."
 
 #. Author of the theme
 #: style.css
@@ -79,7 +84,9 @@ msgstr "%s installeren"
 
 #: inc/plugin-recommendations.php:103
 msgid "works on its own. For the full store experience, add the plugins below."
-msgstr "werkt op zichzelf. Voor de volledige winkelervaring voeg je de onderstaande plugins toe."
+msgstr ""
+"werkt op zichzelf. Voor de volledige winkelervaring voeg je de onderstaande "
+"plugins toe."
 
 #: inc/plugin-recommendations.php:108
 msgid "Dismiss"
@@ -114,7 +121,10 @@ msgid ""
 "A front page built from core blocks only: hero, three feature highlights, a "
 "product or post grid, a brand story and a closing call to action. Needs no "
 "plugins."
-msgstr "Een voorpagina die alleen uit kernblokken is opgebouwd: hero, drie kenmerken, een product- of berichtenraster, een merkverhaal en een afsluitende oproep tot actie. Geen plugins nodig."
+msgstr ""
+"Een voorpagina die alleen uit kernblokken is opgebouwd: hero, drie "
+"kenmerken, een product- of berichtenraster, een merkverhaal en een "
+"afsluitende oproep tot actie. Geen plugins nodig."
 
 #: patterns/home-core.php:21
 msgid "Shop the collection"
@@ -124,7 +134,7 @@ msgstr "Bekijk de collectie"
 msgid "Read the journal"
 msgstr "Lees het blog"
 
-#: patterns/home-core.php:22
+#: patterns/home-core.php:22 patterns/home-store.php:156
 msgid "New arrivals"
 msgstr "Nieuw binnen"
 
@@ -140,7 +150,9 @@ msgstr "Doordachte producten, gemaakt om te bewaren"
 msgid ""
 "A short introduction to your brand. Say what you make, who it is for and why "
 "it is worth choosing."
-msgstr "Een korte introductie van je merk. Vertel wat je maakt, voor wie het is en waarom het de moeite waard is."
+msgstr ""
+"Een korte introductie van je merk. Vertel wat je maakt, voor wie het is en "
+"waarom het de moeite waard is."
 
 #: patterns/home-core.php:58
 msgid "Free delivery"
@@ -170,7 +182,7 @@ msgstr "Vertel wat er in je producten zit en waar ze vandaan komen."
 msgid "Nothing to show yet."
 msgstr "Nog niets om te tonen."
 
-#: patterns/home-core.php:126
+#: patterns/home-core.php:126 patterns/home-store.php:361
 msgid "Our story"
 msgstr "Ons verhaal"
 
@@ -178,7 +190,9 @@ msgstr "Ons verhaal"
 msgid ""
 "Tell visitors how the business began and what you stand for. Two or three "
 "short paragraphs are plenty."
-msgstr "Vertel bezoekers hoe het bedrijf is begonnen en waar je voor staat. Twee of drie korte alinea's zijn genoeg."
+msgstr ""
+"Vertel bezoekers hoe het bedrijf is begonnen en waar je voor staat. Twee of "
+"drie korte alinea's zijn genoeg."
 
 #: patterns/home-core.php:138
 msgid "Ready when you are"
@@ -195,7 +209,283 @@ msgid ""
 "A skincare store front page built from Aludra blocks: hero, trust bar, "
 "category cards, newest products, brand story, stats, reviews and a closing "
 "call to action. Registered only when Aludra and WooCommerce are active."
-msgstr "Een voorpagina voor een huidverzorgingswinkel, opgebouwd uit Aludra-blokken: hero, vertrouwensbalk, categoriekaarten, nieuwste producten, merkverhaal, cijfers, reviews en een afsluitende oproep tot actie. Alleen geregistreerd als Aludra en WooCommerce actief zijn."
+msgstr ""
+"Een voorpagina voor een huidverzorgingswinkel, opgebouwd uit Aludra-blokken: "
+"hero, vertrouwensbalk, categoriekaarten, nieuwste producten, merkverhaal, "
+"cijfers, reviews en een afsluitende oproep tot actie. Alleen geregistreerd "
+"als Aludra en WooCommerce actief zijn."
+
+#: patterns/home-store.php:29
+msgid "New: the Essentials Kit"
+msgstr "Nieuw: de Essentials Kit"
+
+#: patterns/home-store.php:33
+msgid "Skincare,"
+msgstr "Huidverzorging,"
+
+#: patterns/home-store.php:33
+msgid "made simple"
+msgstr "eenvoudig gemaakt"
+
+#: patterns/home-store.php:37
+msgid ""
+"Gentle, effective formulas for a three-step routine you will actually keep. "
+"Cleanse, treat, moisturise."
+msgstr "Milde, effectieve formules voor een routine in drie stappen die je echt volhoudt. Reinigen, verzorgen, hydrateren."
+
+#: patterns/home-store.php:42
+msgid "Shop all products"
+msgstr "Bekijk alle producten"
+
+#: patterns/home-store.php:46
+msgid "Browse kits"
+msgstr "Bekijk de kits"
+
+#: patterns/home-store.php:51 patterns/home-store.php:83
+msgid "Free shipping over $50"
+msgstr "Gratis verzending vanaf $50"
+
+#: patterns/home-store.php:51 patterns/home-store.php:93
+msgid "30-day returns"
+msgstr "30 dagen retourneren"
+
+#: patterns/home-store.php:59
+msgid "Sale"
+msgstr "Aanbieding"
+
+#: patterns/home-store.php:63 patterns/home-store.php:441
+msgid "The Essentials Kit"
+msgstr "De Essentials Kit"
+
+#: patterns/home-store.php:103
+msgid "Gentle, fragrance-free options"
+msgstr "Milde, parfumvrije opties"
+
+#: patterns/home-store.php:113
+msgid "Secure checkout"
+msgstr "Veilig afrekenen"
+
+#: patterns/home-store.php:122
+msgid "Shop by category"
+msgstr "Shop per categorie"
+
+#: patterns/home-store.php:126
+msgid "Find your"
+msgstr "Vind je"
+
+#: patterns/home-store.php:126
+msgid "routine"
+msgstr "routine"
+
+#: patterns/home-store.php:134
+msgid "Daily care"
+msgstr "Dagelijkse verzorging"
+
+#: patterns/home-store.php:138
+msgid "Moisturisers"
+msgstr "Moisturisers"
+
+#: patterns/home-store.php:142 patterns/home-store.php:164
+#: patterns/home-store.php:186 patterns/home-store.php:208
+msgid "Explore →"
+msgstr "Ontdek →"
+
+#: patterns/home-store.php:160
+msgid "Serums"
+msgstr "Serums"
+
+#: patterns/home-store.php:178
+msgid "Daily essentials"
+msgstr "Dagelijkse basis"
+
+#: patterns/home-store.php:182
+msgid "Cleansers"
+msgstr "Reinigers"
+
+#: patterns/home-store.php:200
+msgid "Gift ideas"
+msgstr "Cadeau-ideeën"
+
+#: patterns/home-store.php:204
+msgid "Kits"
+msgstr "Kits"
+
+#: patterns/home-store.php:225
+msgid "Best sellers"
+msgstr "Bestsellers"
+
+#: patterns/home-store.php:229
+msgid "Bestsellers"
+msgstr "Bestsellers"
+
+#: patterns/home-store.php:229
+msgid "to try first"
+msgstr "om als eerste te proberen"
+
+#: patterns/home-store.php:235
+msgid "View all"
+msgstr "Bekijk alles"
+
+#: patterns/home-store.php:263
+msgid "No products yet. Add some in WooCommerce to fill this band."
+msgstr "Nog geen producten. Voeg er een paar toe in WooCommerce om deze band te vullen."
+
+#: patterns/home-store.php:272
+msgid "The routine"
+msgstr "De routine"
+
+#: patterns/home-store.php:276
+msgid "Cleanse, treat,"
+msgstr "Reinigen, verzorgen,"
+
+#: patterns/home-store.php:276
+msgid "moisturise"
+msgstr "hydrateren"
+
+#: patterns/home-store.php:287
+msgid "Cleanse"
+msgstr "Reinigen"
+
+#: patterns/home-store.php:291
+msgid "Gentle formulas that clean without the tight, dry feeling."
+msgstr "Milde formules die reinigen zonder het strakke, droge gevoel."
+
+#: patterns/home-store.php:295
+msgid "Shop cleansers →"
+msgstr "Bekijk reinigers →"
+
+#: patterns/home-store.php:305
+msgid "Treat"
+msgstr "Verzorgen"
+
+#: patterns/home-store.php:309
+msgid "Toners and serums that refine, brighten and balance."
+msgstr "Toners en serums die verfijnen, verhelderen en in balans brengen."
+
+#: patterns/home-store.php:313
+msgid "Shop serums →"
+msgstr "Bekijk serums →"
+
+#: patterns/home-store.php:323
+msgid "Moisturise"
+msgstr "Hydrateren"
+
+#: patterns/home-store.php:327
+msgid "Lightweight daily hydration with ceramides and squalane."
+msgstr "Lichte dagelijkse hydratatie met ceramiden en squalaan."
+
+#: patterns/home-store.php:331
+msgid "Shop moisturisers →"
+msgstr "Bekijk moisturisers →"
+
+#: patterns/home-store.php:338 patterns/home-store.php:339
+msgid "3 steps"
+msgstr "3 stappen"
+
+#: patterns/home-store.php:338 patterns/home-store.php:339
+msgid "To a complete routine"
+msgstr "Naar een complete routine"
+
+#: patterns/home-store.php:342 patterns/home-store.php:343
+msgid "Products in the range"
+msgstr "Producten in het assortiment"
+
+#: patterns/home-store.php:346 patterns/home-store.php:347
+msgid "30 days"
+msgstr "30 dagen"
+
+#: patterns/home-store.php:346 patterns/home-store.php:347
+msgid "Free returns"
+msgstr "Gratis retourneren"
+
+#: patterns/home-store.php:365
+msgid "Made"
+msgstr "Eenvoudig"
+
+#: patterns/home-store.php:365
+msgid "simple"
+msgstr "gemaakt"
+
+#: patterns/home-store.php:369
+msgid "Every formula starts with a question: what does skin actually need?"
+msgstr "Elke formule begint met een vraag: wat heeft huid eigenlijk nodig?"
+
+#: patterns/home-store.php:373
+msgid ""
+"We started with a short list: ingredients we can explain, formulas that are "
+"gentle enough for daily use, and nothing in the box you would not keep."
+msgstr "We begonnen met een korte lijst: ingrediënten die we kunnen uitleggen, formules die mild genoeg zijn voor dagelijks gebruik en niets in de doos dat je niet zou houden."
+
+#: patterns/home-store.php:377
+msgid ""
+"Today the range is larger, but the rule is the same. If we would not use it "
+"ourselves, it does not ship."
+msgstr "Tegenwoordig is het assortiment groter, maar de regel is hetzelfde. Als we het zelf niet zouden gebruiken, verlaat het ons magazijn niet."
+
+#: patterns/home-store.php:382
+msgid "Shop the range"
+msgstr "Bekijk het assortiment"
+
+#: patterns/home-store.php:391
+msgid "Loved by our"
+msgstr "Geliefd bij onze"
+
+#: patterns/home-store.php:391
+msgid "customers"
+msgstr "klanten"
+
+#: patterns/home-store.php:397 patterns/home-store.php:411
+#: patterns/home-store.php:425
+msgid "Rated 5 out of 5 stars"
+msgstr "Beoordeeld met 5 van de 5 sterren"
+
+#: patterns/home-store.php:401
+msgid ""
+"Beautifully made and exactly as described. It arrived quickly and I have "
+"used it every day since."
+msgstr "Prachtig gemaakt en precies zoals beschreven. Het kwam snel aan en ik gebruik het sindsdien elke dag."
+
+#: patterns/home-store.php:405
+msgid "London"
+msgstr "Londen"
+
+#: patterns/home-store.php:415
+msgid ""
+"The quality is a step above anything else I have bought in this category. "
+"Easily worth the price."
+msgstr "De kwaliteit is een stap boven alles wat ik in deze categorie heb gekocht. Zeker de prijs waard."
+
+#: patterns/home-store.php:419
+msgid "Melbourne"
+msgstr "Melbourne"
+
+#: patterns/home-store.php:429
+msgid ""
+"Great service from start to finish, and the packaging alone made it feel "
+"like a gift. I will be back."
+msgstr "Geweldige service van begin tot eind, en alleen al de verpakking voelde als een cadeau. Ik kom terug."
+
+#: patterns/home-store.php:433
+msgid "Toronto"
+msgstr "Toronto"
+
+#: patterns/home-store.php:445
+msgid "Not sure where to"
+msgstr "Weet je niet waar je"
+
+#: patterns/home-store.php:445
+msgid "start?"
+msgstr "moet beginnen?"
+
+#: patterns/home-store.php:449
+msgid ""
+"A cleanser, serum and moisturiser in travel sizes: a complete routine in "
+"three steps."
+msgstr "Een reiniger, serum en moisturiser in reisformaat: een complete routine in drie stappen."
+
+#: patterns/home-store.php:454
+msgid "Shop the kit"
+msgstr "Bekijk de set"
 
 #: patterns/page-about.php
 msgctxt "Pattern title"
@@ -207,7 +497,9 @@ msgctxt "Pattern description"
 msgid ""
 "An About page built from core blocks: introduction, image and story, three "
 "values, a team grid and a call to contact."
-msgstr "Een over-onspagina uit kernblokken: introductie, beeld en verhaal, drie waarden, een teamraster en een oproep om contact op te nemen."
+msgstr ""
+"Een over-onspagina uit kernblokken: introductie, beeld en verhaal, drie "
+"waarden, een teamraster en een oproep om contact op te nemen."
 
 #: patterns/page-about.php:19
 msgid "About us"
@@ -225,7 +517,9 @@ msgstr "Hoe het begon"
 msgid ""
 "Tell the story of the business: why it began, who started it and what has "
 "changed since."
-msgstr "Vertel het verhaal van het bedrijf: waarom het begon, wie het startte en wat er sindsdien is veranderd."
+msgstr ""
+"Vertel het verhaal van het bedrijf: waarom het begon, wie het startte en wat "
+"er sindsdien is veranderd."
 
 #: patterns/page-about.php:45
 msgid ""
@@ -285,7 +579,9 @@ msgctxt "Pattern description"
 msgid ""
 "A Contact page built from core blocks: introduction, address, email and "
 "opening hours beside a space for your contact form."
-msgstr "Een contactpagina uit kernblokken: introductie, adres, e-mail en openingstijden naast ruimte voor je contactformulier."
+msgstr ""
+"Een contactpagina uit kernblokken: introductie, adres, e-mail en "
+"openingstijden naast ruimte voor je contactformulier."
 
 #: patterns/page-contact.php:19
 msgid "Contact us"
@@ -333,7 +629,9 @@ msgctxt "Pattern description"
 msgid ""
 "A frequently asked questions page built from core Details blocks, with a "
 "call to contact below."
-msgstr "Een pagina met veelgestelde vragen uit kernblokken (Details), met eronder een oproep om contact op te nemen."
+msgstr ""
+"Een pagina met veelgestelde vragen uit kernblokken (Details), met eronder "
+"een oproep om contact op te nemen."
 
 #: patterns/page-faq.php:19
 msgid "Frequently asked questions"
