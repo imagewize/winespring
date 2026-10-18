@@ -3,6 +3,12 @@
 All notable changes to Winespring are documented in this file. Winespring was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [1.7.2] - 2026-10-18
+
+### Changed
+- Minimum WordPress version raised from 6.6 to 6.9, matching Aludra's requirement, so the Store Home
+  pattern and the Aludra blocks it uses are always available.
+
 ## [1.7.1] - 2026-10-18
 
 ### Fixed

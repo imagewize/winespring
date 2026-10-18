@@ -1,6 +1,6 @@
 # Repository Guidelines
 
-Winespring is a lean **Full Site Editing (FSE) theme for WooCommerce stores** (WP 6.6+, PHP 8.0+, no build
+Winespring is a lean **Full Site Editing (FSE) theme for WooCommerce stores** (WP 6.9+, PHP 8.0+, no build
 tools — direct HTML block markup and PHP), created from the Aviendha starter and meant to speed up
 client e-commerce builds. `theme.json` is the single source of truth for colors, typography, spacing,
 and layout. Winespring ships a **small, curated set of page patterns**, not a library: `home-core`,
