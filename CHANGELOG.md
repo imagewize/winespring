@@ -3,6 +3,15 @@
 All notable changes to Winespring are documented in this file. Winespring was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [1.5.1] - 2026-10-18
+
+### Changed
+- Resized the brand name in the illustrations (`hero`, `story`, `bottle`, `jar`, `serum`, `kit`
+  SVGs in `assets/illustrations/`). The longer Winespring name overflowed the labels drawn for
+  Marin; each now takes about 80% of its label width.
+- Replaced `screenshot.png` with the Winespring Store Home pattern (1200x900). It was still an
+  Aviendha screenshot.
+
 ## [1.5.0] - 2026-10-17
 
 First release under the Winespring name.
