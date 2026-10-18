@@ -26,29 +26,29 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <div class="wp-block-group alignfull has-base-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:72px;padding-right:24px;padding-bottom:88px;padding-left:24px"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"48px","left":"56px"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"52%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:52%"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.16em","fontWeight":"500"},"spacing":{"margin":{"bottom":"24px"}}},"textColor":"accent","fontSize":"small"} -->
-<p class="has-accent-color has-text-color has-small-font-size" style="margin-bottom:24px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase">New: the Essentials Kit</p>
+<p class="has-accent-color has-text-color has-small-font-size" style="margin-bottom:24px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase"><?php esc_html_e( 'New: the Essentials Kit', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":1,"style":{"typography":{"lineHeight":"1","fontWeight":"500"}},"textColor":"contrast","fontSize":"display"} -->
-<h1 class="wp-block-heading has-contrast-color has-text-color has-display-font-size" style="font-weight:500;line-height:1">Skincare, <em><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-accent-color">made simple</mark></em></h1>
+<h1 class="wp-block-heading has-contrast-color has-text-color has-display-font-size" style="font-weight:500;line-height:1"><?php esc_html_e( 'Skincare,', 'winespring' ); ?> <em><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-accent-color"><?php esc_html_e( 'made simple', 'winespring' ); ?></mark></em></h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"28px"}}},"textColor":"secondary","fontSize":"medium"} -->
-<p class="has-secondary-color has-text-color has-medium-font-size" style="margin-top:28px">Gentle, effective formulas for a three-step routine you will actually keep. Cleanse, treat, moisturise.</p>
+<p class="has-secondary-color has-text-color has-medium-font-size" style="margin-top:28px"><?php esc_html_e( 'Gentle, effective formulas for a three-step routine you will actually keep. Cleanse, treat, moisturise.', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"36px"}}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
 <div class="wp-block-buttons" style="margin-top:36px"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $shop_url ); ?>">Shop all products</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $shop_url ); ?>"><?php esc_html_e( 'Shop all products', 'winespring' ); ?></a></div>
 <!-- /wp:button -->
 
 <!-- wp:button {"className":"is-style-outline"} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $cat_url( 'kits' ) ); ?>">Browse kits</a></div>
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $cat_url( 'kits' ) ); ?>"><?php esc_html_e( 'Browse kits', 'winespring' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
 
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"32px"}}},"textColor":"secondary","fontSize":"small"} -->
-<p class="has-secondary-color has-text-color has-small-font-size" style="margin-top:32px">✓ Free shipping over $50&nbsp;&nbsp;&nbsp;✓ 30-day returns</p>
+<p class="has-secondary-color has-text-color has-small-font-size" style="margin-top:32px">✓ <?php esc_html_e( 'Free shipping over $50', 'winespring' ); ?>&nbsp;&nbsp;&nbsp;✓ <?php esc_html_e( '30-day returns', 'winespring' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
@@ -56,11 +56,11 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:48%"><!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/illustrations/hero.svg' ) ); ?>","dimRatio":0,"isUserOverlayColor":false,"minHeight":680,"minHeightUnit":"px","contentPosition":"top left","style":{"border":{"radius":"20px"},"spacing":{"padding":{"top":"20px","right":"20px","bottom":"20px","left":"20px"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-cover has-custom-content-position is-position-top-left" style="border-radius:20px;padding-top:20px;padding-right:20px;padding-bottom:20px;padding-left:20px;min-height:680px"><img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url( get_theme_file_uri( 'assets/illustrations/hero.svg' ) ); ?>" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"spacing":{"padding":{"top":"14px","right":"18px","bottom":"14px","left":"18px"},"blockGap":"2px"},"border":{"radius":"12px"}},"backgroundColor":"base","textColor":"contrast","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"}} -->
 <div class="wp-block-group has-contrast-color has-base-background-color has-text-color has-background" style="border-radius:12px;padding-top:14px;padding-right:18px;padding-bottom:14px;padding-left:18px"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.16em"}},"textColor":"accent","fontSize":"xx-small"} -->
-<p class="has-accent-color has-text-color has-xx-small-font-size" style="letter-spacing:0.16em;text-transform:uppercase">Sale</p>
+<p class="has-accent-color has-text-color has-xx-small-font-size" style="letter-spacing:0.16em;text-transform:uppercase"><?php esc_html_e( 'Sale', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":4,"style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"typography":{"fontSize":"1.375rem","fontWeight":"600","lineHeight":"1.2"},"elements":{"link":{"color":{"text":"var:preset|color|contrast"},"typography":{"textDecoration":"none"}}}},"textColor":"contrast"} -->
-<h4 class="wp-block-heading has-contrast-color has-text-color has-link-color" style="margin-top:0;margin-bottom:0;font-size:1.375rem;font-weight:600;line-height:1.2"><a href="<?php echo esc_url( $kit_url ); ?>">The Essentials Kit</a></h4>
+<h4 class="wp-block-heading has-contrast-color has-text-color has-link-color" style="margin-top:0;margin-bottom:0;font-size:1.375rem;font-weight:600;line-height:1.2"><a href="<?php echo esc_url( $kit_url ); ?>"><?php esc_html_e( 'The Essentials Kit', 'winespring' ); ?></a></h4>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"fontSize":"small"} -->
@@ -80,7 +80,7 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->
-<p>Free shipping over $50</p>
+<p><?php esc_html_e( 'Free shipping over $50', 'winespring' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -90,7 +90,7 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->
-<p>30-day returns</p>
+<p><?php esc_html_e( '30-day returns', 'winespring' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -100,7 +100,7 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->
-<p>Gentle, fragrance-free options</p>
+<p><?php esc_html_e( 'Gentle, fragrance-free options', 'winespring' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -110,7 +110,7 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->
-<p>Secure checkout</p>
+<p><?php esc_html_e( 'Secure checkout', 'winespring' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div></div>
@@ -119,11 +119,11 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"80px","bottom":"80px","left":"24px","right":"24px"},"margin":{"top":"0","bottom":"0"},"blockGap":"48px"}},"backgroundColor":"tertiary","layout":{"type":"constrained","contentSize":"1200px","wideSize":"1200px"}} -->
 <div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:80px;padding-right:24px;padding-bottom:80px;padding-left:24px"><!-- wp:group {"style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"textColor":"primary","fontSize":"small"} -->
-<p class="has-primary-color has-text-color has-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">Shop by category</p>
+<p class="has-primary-color has-text-color has-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase"><?php esc_html_e( 'Shop by category', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"textColor":"contrast","fontSize":"xx-large"} -->
-<h2 class="wp-block-heading has-contrast-color has-text-color has-xx-large-font-size">Find your <em>routine</em></h2>
+<h2 class="wp-block-heading has-contrast-color has-text-color has-xx-large-font-size"><?php esc_html_e( 'Find your', 'winespring' ); ?> <em><?php esc_html_e( 'routine', 'winespring' ); ?></em></h2>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
@@ -131,15 +131,15 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <div class="wp-block-group"><!-- wp:group {"className":"winespring-tile","style":{"dimensions":{"minHeight":"400px"},"spacing":{"padding":{"top":"28px","right":"28px","bottom":"28px","left":"28px"},"blockGap":"16px"},"border":{"radius":"16px"}},"backgroundColor":"primary-accent","textColor":"contrast","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
 <div class="wp-block-group winespring-tile has-contrast-color has-primary-accent-background-color has-text-color has-background" style="border-radius:16px;min-height:400px;padding-top:28px;padding-right:28px;padding-bottom:28px;padding-left:28px"><!-- wp:group {"style":{"spacing":{"blockGap":"6px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"fontSize":"x-small"} -->
-<p class="has-x-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">Daily care</p>
+<p class="has-x-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase"><?php esc_html_e( 'Daily care', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3,"fontSize":"x-large"} -->
-<h3 class="wp-block-heading has-x-large-font-size">Moisturisers</h3>
+<h3 class="wp-block-heading has-x-large-font-size"><?php esc_html_e( 'Moisturisers', 'winespring' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}}},"fontSize":"small"} -->
-<p class="has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'moisturisers' ) ); ?>">Explore →</a></p>
+<p class="has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'moisturisers' ) ); ?>"><?php esc_html_e( 'Explore →', 'winespring' ); ?></a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -153,15 +153,15 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- wp:group {"className":"winespring-tile","style":{"dimensions":{"minHeight":"400px"},"spacing":{"padding":{"top":"28px","right":"28px","bottom":"28px","left":"28px"},"blockGap":"16px"},"border":{"radius":"16px"}},"backgroundColor":"sand-deep","textColor":"contrast","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
 <div class="wp-block-group winespring-tile has-contrast-color has-sand-deep-background-color has-text-color has-background" style="border-radius:16px;min-height:400px;padding-top:28px;padding-right:28px;padding-bottom:28px;padding-left:28px"><!-- wp:group {"style":{"spacing":{"blockGap":"6px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"fontSize":"x-small"} -->
-<p class="has-x-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">New arrivals</p>
+<p class="has-x-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase"><?php esc_html_e( 'New arrivals', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3,"fontSize":"x-large"} -->
-<h3 class="wp-block-heading has-x-large-font-size">Serums</h3>
+<h3 class="wp-block-heading has-x-large-font-size"><?php esc_html_e( 'Serums', 'winespring' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}}},"fontSize":"small"} -->
-<p class="has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'serums' ) ); ?>">Explore →</a></p>
+<p class="has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'serums' ) ); ?>"><?php esc_html_e( 'Explore →', 'winespring' ); ?></a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -175,15 +175,15 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- wp:group {"className":"winespring-tile","style":{"dimensions":{"minHeight":"400px"},"spacing":{"padding":{"top":"28px","right":"28px","bottom":"28px","left":"28px"},"blockGap":"16px"},"border":{"radius":"16px"}},"backgroundColor":"primary","textColor":"base","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
 <div class="wp-block-group winespring-tile has-base-color has-primary-background-color has-text-color has-background" style="border-radius:16px;min-height:400px;padding-top:28px;padding-right:28px;padding-bottom:28px;padding-left:28px"><!-- wp:group {"style":{"spacing":{"blockGap":"6px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"fontSize":"x-small"} -->
-<p class="has-x-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">Daily essentials</p>
+<p class="has-x-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase"><?php esc_html_e( 'Daily essentials', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3,"fontSize":"x-large"} -->
-<h3 class="wp-block-heading has-x-large-font-size">Cleansers</h3>
+<h3 class="wp-block-heading has-x-large-font-size"><?php esc_html_e( 'Cleansers', 'winespring' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"fontSize":"small"} -->
-<p class="has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'cleansers' ) ); ?>">Explore →</a></p>
+<p class="has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'cleansers' ) ); ?>"><?php esc_html_e( 'Explore →', 'winespring' ); ?></a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -197,15 +197,15 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- wp:group {"className":"winespring-tile","style":{"dimensions":{"minHeight":"400px"},"spacing":{"padding":{"top":"28px","right":"28px","bottom":"28px","left":"28px"},"blockGap":"16px"},"border":{"radius":"16px"}},"backgroundColor":"accent","textColor":"base","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch","verticalAlignment":"space-between"}} -->
 <div class="wp-block-group winespring-tile has-base-color has-accent-background-color has-text-color has-background" style="border-radius:16px;min-height:400px;padding-top:28px;padding-right:28px;padding-bottom:28px;padding-left:28px"><!-- wp:group {"style":{"spacing":{"blockGap":"6px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"fontSize":"x-small"} -->
-<p class="has-x-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">Gift ideas</p>
+<p class="has-x-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase"><?php esc_html_e( 'Gift ideas', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3,"fontSize":"x-large"} -->
-<h3 class="wp-block-heading has-x-large-font-size">Kits</h3>
+<h3 class="wp-block-heading has-x-large-font-size"><?php esc_html_e( 'Kits', 'winespring' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"fontSize":"small"} -->
-<p class="has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'kits' ) ); ?>">Explore →</a></p>
+<p class="has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'kits' ) ); ?>"><?php esc_html_e( 'Explore →', 'winespring' ); ?></a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -222,17 +222,17 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <div class="wp-block-group alignfull has-base-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:80px;padding-right:24px;padding-bottom:80px;padding-left:24px"><!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"bottom"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"textColor":"primary","fontSize":"small"} -->
-<p class="has-primary-color has-text-color has-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">Best sellers</p>
+<p class="has-primary-color has-text-color has-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase"><?php esc_html_e( 'Best sellers', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"textColor":"contrast","fontSize":"xx-large"} -->
-<h2 class="wp-block-heading has-contrast-color has-text-color has-xx-large-font-size">Bestsellers <em>to try first</em></h2>
+<h2 class="wp-block-heading has-contrast-color has-text-color has-xx-large-font-size"><?php esc_html_e( 'Bestsellers', 'winespring' ); ?> <em><?php esc_html_e( 'to try first', 'winespring' ); ?></em></h2>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline"} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $shop_url ); ?>">View all</a></div>
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $shop_url ); ?>"><?php esc_html_e( 'View all', 'winespring' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
@@ -260,7 +260,7 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 
 <!-- wp:woocommerce/product-collection-no-results -->
 <!-- wp:paragraph {"style":{"typography":{"textAlign":"center"}},"textColor":"secondary"} -->
-<p class="has-text-align-center has-secondary-color has-text-color">No products yet. Add some in WooCommerce to fill this band.</p>
+<p class="has-text-align-center has-secondary-color has-text-color"><?php esc_html_e( 'No products yet. Add some in WooCommerce to fill this band.', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 <!-- /wp:woocommerce/product-collection-no-results --></div>
 <!-- /wp:woocommerce/product-collection --></div>
@@ -269,11 +269,11 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"96px","bottom":"72px","left":"24px","right":"24px"},"margin":{"top":"0","bottom":"0"},"blockGap":"48px"}},"backgroundColor":"primary-alt","textColor":"base","layout":{"type":"constrained","contentSize":"1200px","wideSize":"1200px"}} -->
 <div class="wp-block-group alignfull has-base-color has-primary-alt-background-color has-text-color has-background" style="margin-top:0;margin-bottom:0;padding-top:96px;padding-right:24px;padding-bottom:72px;padding-left:24px"><!-- wp:group {"style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em"}},"textColor":"sand-deep","fontSize":"small"} -->
-<p class="has-sand-deep-color has-text-color has-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">The routine</p>
+<p class="has-sand-deep-color has-text-color has-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase"><?php esc_html_e( 'The routine', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"textColor":"base","fontSize":"xx-large"} -->
-<h2 class="wp-block-heading has-base-color has-text-color has-xx-large-font-size">Cleanse, treat, <em>moisturise</em></h2>
+<h2 class="wp-block-heading has-base-color has-text-color has-xx-large-font-size"><?php esc_html_e( 'Cleanse, treat,', 'winespring' ); ?> <em><?php esc_html_e( 'moisturise', 'winespring' ); ?></em></h2>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
@@ -284,15 +284,15 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3,"textColor":"base","fontSize":"x-large"} -->
-<h3 class="wp-block-heading has-base-color has-text-color has-x-large-font-size">Cleanse</h3>
+<h3 class="wp-block-heading has-base-color has-text-color has-x-large-font-size"><?php esc_html_e( 'Cleanse', 'winespring' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"primary-accent"} -->
-<p class="has-primary-accent-color has-text-color">Gentle formulas that clean without the tight, dry feeling.</p>
+<p class="has-primary-accent-color has-text-color"><?php esc_html_e( 'Gentle formulas that clean without the tight, dry feeling.', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","fontSize":"small"} -->
-<p class="has-base-color has-text-color has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'cleansers' ) ); ?>">Shop cleansers →</a></p>
+<p class="has-base-color has-text-color has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'cleansers' ) ); ?>"><?php esc_html_e( 'Shop cleansers →', 'winespring' ); ?></a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -302,15 +302,15 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3,"textColor":"base","fontSize":"x-large"} -->
-<h3 class="wp-block-heading has-base-color has-text-color has-x-large-font-size">Treat</h3>
+<h3 class="wp-block-heading has-base-color has-text-color has-x-large-font-size"><?php esc_html_e( 'Treat', 'winespring' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"primary-accent"} -->
-<p class="has-primary-accent-color has-text-color">Toners and serums that refine, brighten and balance.</p>
+<p class="has-primary-accent-color has-text-color"><?php esc_html_e( 'Toners and serums that refine, brighten and balance.', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","fontSize":"small"} -->
-<p class="has-base-color has-text-color has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'serums' ) ); ?>">Shop serums →</a></p>
+<p class="has-base-color has-text-color has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'serums' ) ); ?>"><?php esc_html_e( 'Shop serums →', 'winespring' ); ?></a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -320,31 +320,31 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3,"textColor":"base","fontSize":"x-large"} -->
-<h3 class="wp-block-heading has-base-color has-text-color has-x-large-font-size">Moisturise</h3>
+<h3 class="wp-block-heading has-base-color has-text-color has-x-large-font-size"><?php esc_html_e( 'Moisturise', 'winespring' ); ?></h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"textColor":"primary-accent"} -->
-<p class="has-primary-accent-color has-text-color">Lightweight daily hydration with ceramides and squalane.</p>
+<p class="has-primary-accent-color has-text-color"><?php esc_html_e( 'Lightweight daily hydration with ceramides and squalane.', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","fontSize":"small"} -->
-<p class="has-base-color has-text-color has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'moisturisers' ) ); ?>">Shop moisturisers →</a></p>
+<p class="has-base-color has-text-color has-link-color has-small-font-size"><a href="<?php echo esc_url( $cat_url( 'moisturisers' ) ); ?>"><?php esc_html_e( 'Shop moisturisers →', 'winespring' ); ?></a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
 <!-- wp:aludra/stat-rail -->
-<div class="wp-block-aludra-stat-rail alignfull" style="margin-top:0;margin-bottom:0"><div class="stat-rail__shell"><!-- wp:aludra/stat-item {"number":"3 steps","caption":"To a complete routine","good":true} -->
-<div class="wp-block-aludra-stat-item stat-rail__item is-good"><div class="stat-rail__num">3 steps</div><div class="stat-rail__cap">To a complete routine</div></div>
+<div class="wp-block-aludra-stat-rail alignfull" style="margin-top:0;margin-bottom:0"><div class="stat-rail__shell"><!-- wp:aludra/stat-item {"number":"<?php echo esc_attr( trim( wp_json_encode( __( '3 steps', 'winespring' ) ), '"' ) ); ?>","caption":"<?php echo esc_attr( trim( wp_json_encode( __( 'To a complete routine', 'winespring' ) ), '"' ) ); ?>","good":true} -->
+<div class="wp-block-aludra-stat-item stat-rail__item is-good"><div class="stat-rail__num"><?php esc_html_e( '3 steps', 'winespring' ); ?></div><div class="stat-rail__cap"><?php esc_html_e( 'To a complete routine', 'winespring' ); ?></div></div>
 <!-- /wp:aludra/stat-item -->
 
-<!-- wp:aludra/stat-item {"number":"16","caption":"Products in the range"} -->
-<div class="wp-block-aludra-stat-item stat-rail__item"><div class="stat-rail__num">16</div><div class="stat-rail__cap">Products in the range</div></div>
+<!-- wp:aludra/stat-item {"number":"16","caption":"<?php echo esc_attr( trim( wp_json_encode( __( 'Products in the range', 'winespring' ) ), '"' ) ); ?>"} -->
+<div class="wp-block-aludra-stat-item stat-rail__item"><div class="stat-rail__num">16</div><div class="stat-rail__cap"><?php esc_html_e( 'Products in the range', 'winespring' ); ?></div></div>
 <!-- /wp:aludra/stat-item -->
 
-<!-- wp:aludra/stat-item {"number":"30 days","caption":"Free returns"} -->
-<div class="wp-block-aludra-stat-item stat-rail__item"><div class="stat-rail__num">30 days</div><div class="stat-rail__cap">Free returns</div></div>
+<!-- wp:aludra/stat-item {"number":"<?php echo esc_attr( trim( wp_json_encode( __( '30 days', 'winespring' ) ), '"' ) ); ?>","caption":"<?php echo esc_attr( trim( wp_json_encode( __( 'Free returns', 'winespring' ) ), '"' ) ); ?>"} -->
+<div class="wp-block-aludra-stat-item stat-rail__item"><div class="stat-rail__num"><?php esc_html_e( '30 days', 'winespring' ); ?></div><div class="stat-rail__cap"><?php esc_html_e( 'Free returns', 'winespring' ); ?></div></div>
 <!-- /wp:aludra/stat-item --></div></div>
 <!-- /wp:aludra/stat-rail -->
 
@@ -358,28 +358,28 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 
 <!-- wp:column {"verticalAlignment":"center"} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.16em","fontWeight":"500"},"spacing":{"margin":{"bottom":"14px"}}},"textColor":"primary","fontSize":"small"} -->
-<p class="has-primary-color has-text-color has-small-font-size" style="margin-bottom:14px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase">Our story</p>
+<p class="has-primary-color has-text-color has-small-font-size" style="margin-bottom:14px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase"><?php esc_html_e( 'Our story', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"textColor":"contrast","fontSize":"xx-large"} -->
-<h2 class="wp-block-heading has-contrast-color has-text-color has-xx-large-font-size">Made <em><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-accent-color">simple</mark></em></h2>
+<h2 class="wp-block-heading has-contrast-color has-text-color has-xx-large-font-size"><?php esc_html_e( 'Made', 'winespring' ); ?> <em><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-accent-color"><?php esc_html_e( 'simple', 'winespring' ); ?></mark></em></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic","lineHeight":"1.3"},"spacing":{"margin":{"top":"20px"}}},"textColor":"primary-alt","fontSize":"large","fontFamily":"display"} -->
-<p class="has-primary-alt-color has-text-color has-display-font-family has-large-font-size" style="margin-top:20px;font-style:italic;line-height:1.3">Every formula starts with a question: what does skin actually need?</p>
+<p class="has-primary-alt-color has-text-color has-display-font-family has-large-font-size" style="margin-top:20px;font-style:italic;line-height:1.3"><?php esc_html_e( 'Every formula starts with a question: what does skin actually need?', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"24px"}}},"textColor":"secondary"} -->
-<p class="has-secondary-color has-text-color" style="margin-top:24px">We started with a short list: ingredients we can explain, formulas that are gentle enough for daily use, and nothing in the box you would not keep.</p>
+<p class="has-secondary-color has-text-color" style="margin-top:24px"><?php esc_html_e( 'We started with a short list: ingredients we can explain, formulas that are gentle enough for daily use, and nothing in the box you would not keep.', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"16px"}}},"textColor":"secondary"} -->
-<p class="has-secondary-color has-text-color" style="margin-top:16px">Today the range is larger, but the rule is the same. If we would not use it ourselves, it does not ship.</p>
+<p class="has-secondary-color has-text-color" style="margin-top:16px"><?php esc_html_e( 'Today the range is larger, but the rule is the same. If we would not use it ourselves, it does not ship.', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"32px"}}}} -->
 <div class="wp-block-buttons" style="margin-top:32px"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $shop_url ); ?>">Shop the range</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $shop_url ); ?>"><?php esc_html_e( 'Shop the range', 'winespring' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:column --></div>
@@ -388,49 +388,49 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"80px","bottom":"80px","left":"24px","right":"24px"},"margin":{"top":"0","bottom":"0"},"blockGap":"48px"}},"backgroundColor":"tertiary","layout":{"type":"constrained","contentSize":"1200px","wideSize":"1200px"}} -->
 <div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:80px;padding-right:24px;padding-bottom:80px;padding-left:24px"><!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"textColor":"contrast","fontSize":"xx-large"} -->
-<h2 class="wp-block-heading has-text-align-center has-contrast-color has-text-color has-xx-large-font-size">Loved by our <em>customers</em></h2>
+<h2 class="wp-block-heading has-text-align-center has-contrast-color has-text-color has-xx-large-font-size"><?php esc_html_e( 'Loved by our', 'winespring' ); ?> <em><?php esc_html_e( 'customers', 'winespring' ); ?></em></h2>
 <!-- /wp:heading -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"20px"}},"layout":{"type":"grid","minimumColumnWidth":"18rem"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"padding":{"top":"2.25rem","right":"2.25rem","bottom":"2.25rem","left":"2.25rem"},"blockGap":"1rem"},"border":{"radius":"16px","width":"1px"}},"borderColor":"border-light","backgroundColor":"base","layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:16px;padding-top:2.25rem;padding-right:2.25rem;padding-bottom:2.25rem;padding-left:2.25rem"><!-- wp:paragraph {"style":{"typography":{"letterSpacing":"0.15em"}},"textColor":"accent","fontSize":"medium"} -->
-<p class="has-accent-color has-text-color has-medium-font-size" style="letter-spacing:0.15em"><span class="screen-reader-text">Rated 5 out of 5 stars</span><span aria-hidden="true">★★★★★</span></p>
+<p class="has-accent-color has-text-color has-medium-font-size" style="letter-spacing:0.15em"><span class="screen-reader-text"><?php esc_html_e( 'Rated 5 out of 5 stars', 'winespring' ); ?></span><span aria-hidden="true">★★★★★</span></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic","lineHeight":"1.35"}},"textColor":"contrast","fontSize":"large","fontFamily":"display"} -->
-<p class="has-contrast-color has-text-color has-display-font-family has-large-font-size" style="font-style:italic;line-height:1.35">Beautifully made and exactly as described. It arrived quickly and I have used it every day since.</p>
+<p class="has-contrast-color has-text-color has-display-font-family has-large-font-size" style="font-style:italic;line-height:1.35"><?php esc_html_e( 'Beautifully made and exactly as described. It arrived quickly and I have used it every day since.', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"small"} -->
-<p class="has-small-font-size" style="font-weight:600">Verified buyer, <span style="font-weight:400">London</span></p>
+<p class="has-small-font-size" style="font-weight:600">Verified buyer, <span style="font-weight:400"><?php esc_html_e( 'London', 'winespring' ); ?></span></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"2.25rem","right":"2.25rem","bottom":"2.25rem","left":"2.25rem"},"blockGap":"1rem"},"border":{"radius":"16px","width":"1px"}},"borderColor":"border-light","backgroundColor":"base","layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:16px;padding-top:2.25rem;padding-right:2.25rem;padding-bottom:2.25rem;padding-left:2.25rem"><!-- wp:paragraph {"style":{"typography":{"letterSpacing":"0.15em"}},"textColor":"accent","fontSize":"medium"} -->
-<p class="has-accent-color has-text-color has-medium-font-size" style="letter-spacing:0.15em"><span class="screen-reader-text">Rated 5 out of 5 stars</span><span aria-hidden="true">★★★★★</span></p>
+<p class="has-accent-color has-text-color has-medium-font-size" style="letter-spacing:0.15em"><span class="screen-reader-text"><?php esc_html_e( 'Rated 5 out of 5 stars', 'winespring' ); ?></span><span aria-hidden="true">★★★★★</span></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic","lineHeight":"1.35"}},"textColor":"contrast","fontSize":"large","fontFamily":"display"} -->
-<p class="has-contrast-color has-text-color has-display-font-family has-large-font-size" style="font-style:italic;line-height:1.35">The quality is a step above anything else I have bought in this category. Easily worth the price.</p>
+<p class="has-contrast-color has-text-color has-display-font-family has-large-font-size" style="font-style:italic;line-height:1.35"><?php esc_html_e( 'The quality is a step above anything else I have bought in this category. Easily worth the price.', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"small"} -->
-<p class="has-small-font-size" style="font-weight:600">Verified buyer, <span style="font-weight:400">Melbourne</span></p>
+<p class="has-small-font-size" style="font-weight:600">Verified buyer, <span style="font-weight:400"><?php esc_html_e( 'Melbourne', 'winespring' ); ?></span></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"2.25rem","right":"2.25rem","bottom":"2.25rem","left":"2.25rem"},"blockGap":"1rem"},"border":{"radius":"16px","width":"1px"}},"borderColor":"border-light","backgroundColor":"base","layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-border-color has-border-light-border-color has-base-background-color has-background" style="border-width:1px;border-radius:16px;padding-top:2.25rem;padding-right:2.25rem;padding-bottom:2.25rem;padding-left:2.25rem"><!-- wp:paragraph {"style":{"typography":{"letterSpacing":"0.15em"}},"textColor":"accent","fontSize":"medium"} -->
-<p class="has-accent-color has-text-color has-medium-font-size" style="letter-spacing:0.15em"><span class="screen-reader-text">Rated 5 out of 5 stars</span><span aria-hidden="true">★★★★★</span></p>
+<p class="has-accent-color has-text-color has-medium-font-size" style="letter-spacing:0.15em"><span class="screen-reader-text"><?php esc_html_e( 'Rated 5 out of 5 stars', 'winespring' ); ?></span><span aria-hidden="true">★★★★★</span></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic","lineHeight":"1.35"}},"textColor":"contrast","fontSize":"large","fontFamily":"display"} -->
-<p class="has-contrast-color has-text-color has-display-font-family has-large-font-size" style="font-style:italic;line-height:1.35">Great service from start to finish, and the packaging alone made it feel like a gift. I will be back.</p>
+<p class="has-contrast-color has-text-color has-display-font-family has-large-font-size" style="font-style:italic;line-height:1.35"><?php esc_html_e( 'Great service from start to finish, and the packaging alone made it feel like a gift. I will be back.', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"small"} -->
-<p class="has-small-font-size" style="font-weight:600">Verified buyer, <span style="font-weight:400">Toronto</span></p>
+<p class="has-small-font-size" style="font-weight:600">Verified buyer, <span style="font-weight:400"><?php esc_html_e( 'Toronto', 'winespring' ); ?></span></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
@@ -438,20 +438,20 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"104px","bottom":"104px","left":"24px","right":"24px"},"margin":{"top":"0","bottom":"0"},"blockGap":"24px"}},"backgroundColor":"accent","textColor":"white","layout":{"type":"constrained","contentSize":"760px"}} -->
 <div class="wp-block-group alignfull has-white-color has-accent-background-color has-text-color has-background" style="margin-top:0;margin-bottom:0;padding-top:104px;padding-right:24px;padding-bottom:104px;padding-left:24px"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.12em","textAlign":"center"}},"fontSize":"small"} -->
-<p class="has-text-align-center has-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase">The Essentials Kit</p>
+<p class="has-text-align-center has-small-font-size" style="letter-spacing:0.12em;text-transform:uppercase"><?php esc_html_e( 'The Essentials Kit', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"fontSize":"display"} -->
-<h2 class="wp-block-heading has-text-align-center has-display-font-size">Not sure where to <em>start?</em></h2>
+<h2 class="wp-block-heading has-text-align-center has-display-font-size"><?php esc_html_e( 'Not sure where to', 'winespring' ); ?> <em><?php esc_html_e( 'start?', 'winespring' ); ?></em></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"style":{"typography":{"textAlign":"center"}},"fontSize":"large"} -->
-<p class="has-text-align-center has-large-font-size">A cleanser, serum and moisturiser in travel sizes: a complete routine in three steps.</p>
+<p class="has-text-align-center has-large-font-size"><?php esc_html_e( 'A cleanser, serum and moisturiser in travel sizes: a complete routine in three steps.', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"base","textColor":"contrast","style":{"spacing":{"padding":{"left":"2.25rem","right":"2.25rem","top":"1rem","bottom":"1rem"}}}} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-contrast-color has-base-background-color has-text-color has-background wp-element-button" href="<?php echo esc_url( $kit_url ); ?>" style="padding-top:1rem;padding-right:2.25rem;padding-bottom:1rem;padding-left:2.25rem">Shop the kit</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link has-contrast-color has-base-background-color has-text-color has-background wp-element-button" href="<?php echo esc_url( $kit_url ); ?>" style="padding-top:1rem;padding-right:2.25rem;padding-bottom:1rem;padding-left:2.25rem"><?php esc_html_e( 'Shop the kit', 'winespring' ); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
