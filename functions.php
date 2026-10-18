@@ -48,6 +48,17 @@ function winespring_template_part_areas( $areas ) {
 add_filter( 'default_wp_template_part_areas', __NAMESPACE__ . '\winespring_template_part_areas' );
 
 /**
+ * Register the pattern category used by the theme's page patterns.
+ */
+function winespring_register_pattern_categories() {
+	register_block_pattern_category(
+		'winespring-pages',
+		array( 'label' => __( 'Winespring Pages', 'winespring' ) )
+	);
+}
+add_action( 'init', __NAMESPACE__ . '\winespring_register_pattern_categories' );
+
+/**
  * Enqueue theme styles.
  */
 function winespring_enqueue_styles() {
