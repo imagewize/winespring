@@ -3,6 +3,17 @@
 All notable changes to Winespring are documented in this file. Winespring was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [1.7.1] - 2026-10-18
+
+### Fixed
+- `winespring/home-store`: all visible copy, including the Aludra stat rail attributes, now goes
+  through `esc_html_e()` / `__()`, so the pattern is translation-ready like the other four.
+  Sample prices and the two-digit step numbers stay as they are.
+
+### Changed
+- Regenerated `languages/winespring.pot` and completed `languages/nl_NL.po` / `.mo` for the
+  Store Home strings.
+
 ## [1.7.0] - 2026-10-18
 
 ### Added

@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Winespring 1.7.0\n"
+"Project-Id-Version: Winespring 1.7.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/winespring\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-18T05:32:09+00:00\n"
+"POT-Creation-Date: 2026-10-18T06:09:04+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: winespring\n"
@@ -117,6 +117,7 @@ msgid "Read the journal"
 msgstr ""
 
 #: patterns/home-core.php:22
+#: patterns/home-store.php:156
 msgid "New arrivals"
 msgstr ""
 
@@ -161,6 +162,7 @@ msgid "Nothing to show yet."
 msgstr ""
 
 #: patterns/home-core.php:126
+#: patterns/home-store.php:361
 msgid "Our story"
 msgstr ""
 
@@ -180,6 +182,275 @@ msgstr ""
 #: patterns/home-store.php
 msgctxt "Pattern description"
 msgid "A skincare store front page built from Aludra blocks: hero, trust bar, category cards, newest products, brand story, stats, reviews and a closing call to action. Registered only when Aludra and WooCommerce are active."
+msgstr ""
+
+#: patterns/home-store.php:29
+msgid "New: the Essentials Kit"
+msgstr ""
+
+#: patterns/home-store.php:33
+msgid "Skincare,"
+msgstr ""
+
+#: patterns/home-store.php:33
+msgid "made simple"
+msgstr ""
+
+#: patterns/home-store.php:37
+msgid "Gentle, effective formulas for a three-step routine you will actually keep. Cleanse, treat, moisturise."
+msgstr ""
+
+#: patterns/home-store.php:42
+msgid "Shop all products"
+msgstr ""
+
+#: patterns/home-store.php:46
+msgid "Browse kits"
+msgstr ""
+
+#: patterns/home-store.php:51
+#: patterns/home-store.php:83
+msgid "Free shipping over $50"
+msgstr ""
+
+#: patterns/home-store.php:51
+#: patterns/home-store.php:93
+msgid "30-day returns"
+msgstr ""
+
+#: patterns/home-store.php:59
+msgid "Sale"
+msgstr ""
+
+#: patterns/home-store.php:63
+#: patterns/home-store.php:441
+msgid "The Essentials Kit"
+msgstr ""
+
+#: patterns/home-store.php:103
+msgid "Gentle, fragrance-free options"
+msgstr ""
+
+#: patterns/home-store.php:113
+msgid "Secure checkout"
+msgstr ""
+
+#: patterns/home-store.php:122
+msgid "Shop by category"
+msgstr ""
+
+#: patterns/home-store.php:126
+msgid "Find your"
+msgstr ""
+
+#: patterns/home-store.php:126
+msgid "routine"
+msgstr ""
+
+#: patterns/home-store.php:134
+msgid "Daily care"
+msgstr ""
+
+#: patterns/home-store.php:138
+msgid "Moisturisers"
+msgstr ""
+
+#: patterns/home-store.php:142
+#: patterns/home-store.php:164
+#: patterns/home-store.php:186
+#: patterns/home-store.php:208
+msgid "Explore →"
+msgstr ""
+
+#: patterns/home-store.php:160
+msgid "Serums"
+msgstr ""
+
+#: patterns/home-store.php:178
+msgid "Daily essentials"
+msgstr ""
+
+#: patterns/home-store.php:182
+msgid "Cleansers"
+msgstr ""
+
+#: patterns/home-store.php:200
+msgid "Gift ideas"
+msgstr ""
+
+#: patterns/home-store.php:204
+msgid "Kits"
+msgstr ""
+
+#: patterns/home-store.php:225
+msgid "Best sellers"
+msgstr ""
+
+#: patterns/home-store.php:229
+msgid "Bestsellers"
+msgstr ""
+
+#: patterns/home-store.php:229
+msgid "to try first"
+msgstr ""
+
+#: patterns/home-store.php:235
+msgid "View all"
+msgstr ""
+
+#: patterns/home-store.php:263
+msgid "No products yet. Add some in WooCommerce to fill this band."
+msgstr ""
+
+#: patterns/home-store.php:272
+msgid "The routine"
+msgstr ""
+
+#: patterns/home-store.php:276
+msgid "Cleanse, treat,"
+msgstr ""
+
+#: patterns/home-store.php:276
+msgid "moisturise"
+msgstr ""
+
+#: patterns/home-store.php:287
+msgid "Cleanse"
+msgstr ""
+
+#: patterns/home-store.php:291
+msgid "Gentle formulas that clean without the tight, dry feeling."
+msgstr ""
+
+#: patterns/home-store.php:295
+msgid "Shop cleansers →"
+msgstr ""
+
+#: patterns/home-store.php:305
+msgid "Treat"
+msgstr ""
+
+#: patterns/home-store.php:309
+msgid "Toners and serums that refine, brighten and balance."
+msgstr ""
+
+#: patterns/home-store.php:313
+msgid "Shop serums →"
+msgstr ""
+
+#: patterns/home-store.php:323
+msgid "Moisturise"
+msgstr ""
+
+#: patterns/home-store.php:327
+msgid "Lightweight daily hydration with ceramides and squalane."
+msgstr ""
+
+#: patterns/home-store.php:331
+msgid "Shop moisturisers →"
+msgstr ""
+
+#: patterns/home-store.php:338
+#: patterns/home-store.php:339
+msgid "3 steps"
+msgstr ""
+
+#: patterns/home-store.php:338
+#: patterns/home-store.php:339
+msgid "To a complete routine"
+msgstr ""
+
+#: patterns/home-store.php:342
+#: patterns/home-store.php:343
+msgid "Products in the range"
+msgstr ""
+
+#: patterns/home-store.php:346
+#: patterns/home-store.php:347
+msgid "30 days"
+msgstr ""
+
+#: patterns/home-store.php:346
+#: patterns/home-store.php:347
+msgid "Free returns"
+msgstr ""
+
+#: patterns/home-store.php:365
+msgid "Made"
+msgstr ""
+
+#: patterns/home-store.php:365
+msgid "simple"
+msgstr ""
+
+#: patterns/home-store.php:369
+msgid "Every formula starts with a question: what does skin actually need?"
+msgstr ""
+
+#: patterns/home-store.php:373
+msgid "We started with a short list: ingredients we can explain, formulas that are gentle enough for daily use, and nothing in the box you would not keep."
+msgstr ""
+
+#: patterns/home-store.php:377
+msgid "Today the range is larger, but the rule is the same. If we would not use it ourselves, it does not ship."
+msgstr ""
+
+#: patterns/home-store.php:382
+msgid "Shop the range"
+msgstr ""
+
+#: patterns/home-store.php:391
+msgid "Loved by our"
+msgstr ""
+
+#: patterns/home-store.php:391
+msgid "customers"
+msgstr ""
+
+#: patterns/home-store.php:397
+#: patterns/home-store.php:411
+#: patterns/home-store.php:425
+msgid "Rated 5 out of 5 stars"
+msgstr ""
+
+#: patterns/home-store.php:401
+msgid "Beautifully made and exactly as described. It arrived quickly and I have used it every day since."
+msgstr ""
+
+#: patterns/home-store.php:405
+msgid "London"
+msgstr ""
+
+#: patterns/home-store.php:415
+msgid "The quality is a step above anything else I have bought in this category. Easily worth the price."
+msgstr ""
+
+#: patterns/home-store.php:419
+msgid "Melbourne"
+msgstr ""
+
+#: patterns/home-store.php:429
+msgid "Great service from start to finish, and the packaging alone made it feel like a gift. I will be back."
+msgstr ""
+
+#: patterns/home-store.php:433
+msgid "Toronto"
+msgstr ""
+
+#: patterns/home-store.php:445
+msgid "Not sure where to"
+msgstr ""
+
+#: patterns/home-store.php:445
+msgid "start?"
+msgstr ""
+
+#: patterns/home-store.php:449
+msgid "A cleanser, serum and moisturiser in travel sizes: a complete routine in three steps."
+msgstr ""
+
+#: patterns/home-store.php:454
+msgid "Shop the kit"
 msgstr ""
 
 #: patterns/page-about.php
