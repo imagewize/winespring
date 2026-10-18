@@ -4,7 +4,7 @@ Tags: e-commerce, full-site-editing, custom-colors, custom-logo, custom-menu, ed
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.5.0
+Stable tag: 1.5.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -37,6 +37,10 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 4. Install and activate WooCommerce for store functionality.
 
 == Changelog ==
+
+= 1.5.1 =
+* Changed: the brand name in the bundled illustrations (hero, story, bottle, jar, serum and kit) is resized to fit its labels. The longer Winespring name overflowed the label artwork made for the old name.
+* Changed: theme screenshot now shows the Winespring Store Home pattern. It was still an Aviendha image.
 
 = 1.5.0 =
 * Added: first release under the Winespring name (renamed from Marin).
