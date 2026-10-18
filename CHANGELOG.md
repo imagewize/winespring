@@ -11,6 +11,8 @@ All notable changes to Winespring are documented in this file. Winespring was cr
   plugins and only while one of the two is missing, and a nonce-protected Dismiss link stores
   a per-user flag so it does not return. It links to install or activate each plugin; the
   theme never installs or activates anything itself.
+- Dutch translation (`languages/nl_NL.po` and `.mo`, informal "je"): the theme's own strings,
+  the page pattern text and titles, and the `theme.json` and style variation names.
 - `languages/winespring.pot`, the `Domain Path: /languages` header and a `composer run i18n:pot`
   script to regenerate the template (needs WP-CLI).
 
