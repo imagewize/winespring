@@ -96,6 +96,14 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 
 The Apache License 2.0 is GPLv3-compatible.
 
+= Theme illustrations and icons =
+* License: CC0 1.0 Universal (public domain dedication)
+* License URI: https://creativecommons.org/publicdomain/zero/1.0/
+* Used in: `assets/illustrations/*.svg` and `assets/icons/*.svg`
+* Purpose: Original artwork created for this theme: the product illustrations and hero/story artwork used by the Store Home pattern, and its trust bar icons. The screenshot (`screenshot.png`) is a capture of the theme itself and uses the same artwork.
+
+CC0 is GPL-compatible.
+
 = Bricolage Grotesque =
 * License: SIL Open Font License, Version 1.1
 * Source: https://fonts.google.com/specimen/Bricolage+Grotesque
