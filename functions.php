@@ -232,7 +232,7 @@ function winespring_strip_woocommerce_blocks( $content ) {
 	}
 
 	return (string) preg_replace(
-		'#<!--\s+wp:(?:woocommerce/(?:mini-cart|customer-account)\b.*?/-->\s*#s',
+		'#<!--\s+wp:woocommerce/(?:mini-cart|customer-account)\b.*?/-->\s*#s',
 		'',
 		$content
 	);
