@@ -11,8 +11,17 @@ jobs:
     steps:
     - uses: actions/checkout@v7
 
+    # wp.org's theme uploader expects a single top-level folder named after the
+    # slug. Zip with .distignore first (its patterns are relative to the repo
+    # root), then repack the result inside <slug>/.
     - name: Zip Folder
-      run: zip -r ${{ github.event.repository.name }}.zip . -x@.distignore
+      env:
+        SLUG: ${{ github.event.repository.name }}
+      run: |
+        zip -r "$RUNNER_TEMP/flat.zip" . -x@.distignore
+        mkdir -p "$RUNNER_TEMP/build/$SLUG"
+        unzip -q "$RUNNER_TEMP/flat.zip" -d "$RUNNER_TEMP/build/$SLUG"
+        (cd "$RUNNER_TEMP/build" && zip -rq "$GITHUB_WORKSPACE/$SLUG.zip" "$SLUG")
 
     - name: Release
       uses: softprops/action-gh-release@v3
