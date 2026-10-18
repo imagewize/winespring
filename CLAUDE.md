@@ -13,7 +13,7 @@ is the retail palette) form the design system; page content is composed directly
 blocks or the [Aludra](https://github.com/imagewize/aludra) block library).
 
 **Requirements:**
-- WordPress 6.6+
+- WordPress 6.9+
 - PHP 8.0+
 - WooCommerce (the point of the theme; templates degrade gracefully without it)
 - Aludra plugin — recommended, not required

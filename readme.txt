@@ -1,10 +1,10 @@
 === Winespring WordPress Theme ===
 Contributors: Rhand
 Tags: e-commerce, full-site-editing, custom-colors, custom-logo, custom-menu, editor-style, featured-images, grid-layout, template-editing, translation-ready, wide-blocks
-Requires at least: 6.6
+Requires at least: 6.9
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.7.1
+Stable tag: 1.7.2
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -38,6 +38,9 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 4. Install and activate WooCommerce for store functionality.
 
 == Changelog ==
+
+= 1.7.2 =
+* Changed: minimum WordPress version raised from 6.6 to 6.9, matching Aludra's requirement.
 
 = 1.7.1 =
 * Fixed: the Store Home pattern's copy is now translatable, and the Dutch translation covers it.

@@ -30,7 +30,7 @@ It pairs with the [Aludra](https://github.com/imagewize/aludra) block library (m
 
 ## Requirements
 
-- WordPress 6.6+
+- WordPress 6.9+
 - PHP 8.0+
 - WooCommerce (the point of the theme; templates degrade gracefully without it)
 - Aludra plugin 2.39+ (recommended, not required; the Store Home pattern, the free shipping bar and the sticky add to cart bar need it)
