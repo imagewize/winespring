@@ -3,6 +3,12 @@
 All notable changes to Winespring are documented in this file. Winespring was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [1.7.3] - 2026-10-18
+
+### Changed
+- Release zip is built inside a top-level `winespring/` folder, as the wp.org theme uploader expects.
+- Removed the `languages/.gitkeep` placeholder; the folder holds real files.
+
 ## [1.7.2] - 2026-10-18
 
 ### Changed
