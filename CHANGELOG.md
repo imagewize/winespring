@@ -3,6 +3,17 @@
 All notable changes to Winespring are documented in this file. Winespring was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [1.7.0] - 2026-10-18
+
+### Added
+- `inc/plugin-recommendations.php`: a dismissible admin notice on the Dashboard and Themes
+  screens recommending WooCommerce and Aludra. It is shown only to users who can install
+  plugins and only while one of the two is missing, and a nonce-protected Dismiss link stores
+  a per-user flag so it does not return. It links to install or activate each plugin; the
+  theme never installs or activates anything itself.
+- `languages/winespring.pot`, the `Domain Path: /languages` header and a `composer run i18n:pot`
+  script to regenerate the template (needs WP-CLI).
+
 ## [1.6.0] - 2026-10-18
 
 ### Added
