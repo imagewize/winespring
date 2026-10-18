@@ -12,6 +12,10 @@ not required.
 ## Facts
 
 - Text domain: `winespring`.
+- The only admin UI is the plugin recommendation notice in `inc/plugin-recommendations.php`. It
+  must stay restrained for wp.org: Dashboard and Themes screens only, gated on `install_plugins`,
+  dismissible per user with a nonce, and it must never install or activate anything itself.
+  Flag anything that widens it.
 - No JS build step. `package.json` exists only for the `@imwz/wp-pattern-sentinel`
   pattern-validation harness (`npm run validate*`) — it is not a build, and the
   theme ships no bundled JavaScript or CSS.
