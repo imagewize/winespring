@@ -3,6 +3,14 @@
 All notable changes to Winespring are documented in this file. Winespring was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [1.7.4] - 2026-10-26
+
+### Changed
+- **The `code-review` skill is no longer copied into the theme.** `.agents/skills/code-review/` was an
+  identical copy of `imagewize/mistral-agents` `skills/code-review`; Vibe now loads it from there via
+  `skill_paths`. The project rules in `.agents/code-review.md` stay. Dev tooling only; nothing in the theme
+  zip changes.
+
 ## [1.7.3] - 2026-10-18
 
 ### Changed
