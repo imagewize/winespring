@@ -3,6 +3,16 @@
 All notable changes to Winespring are documented in this file. Winespring was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [1.7.5] - 2026-10-26
+
+### Changed
+- **Version and release steps documented in `CLAUDE.md` and `AGENTS.md`.** Bump `package.json`
+  with `npm version X.Y.Z --no-git-tag-version`, which updates `package-lock.json` in the same step,
+  then tag and run `gh release create vX.Y.Z --verify-tag`. Never move a published tag.
+
+### Fixed
+- `package-lock.json` said `1.3.1`; it now matches the theme version.
+
 ## [1.7.4] - 2026-10-26
 
 ### Changed
