@@ -11,11 +11,30 @@ namespace Winespring;
 /**
  * Show the percentage saved on sale badges instead of the word "Sale".
  *
+ * The percentage is measured against the regular price by default. In the EU a
+ * "from" price must be the lowest price of the 30 days before the discount
+ * (Omnibus Directive), which can be lower than the regular price, so a store
+ * that supplies that price should return it from
+ * `winespring_sale_badge_reference_price`, or turn the percentage off with
+ * `winespring_sale_badge_show_percentage`. The theme keeps no price history
+ * itself, so it cannot know that price.
+ *
  * @param string      $text    Badge text.
  * @param \WC_Product $product Product.
  * @return string Badge text.
  */
 function winespring_sale_badge_text( $text, $product ) {
+	/**
+	 * Filters whether the sale badge shows a percentage. Return false to keep
+	 * WooCommerce's own "Sale" text.
+	 *
+	 * @param bool        $show    Whether to show the percentage. Default true.
+	 * @param \WC_Product $product Product.
+	 */
+	if ( ! apply_filters( 'winespring_sale_badge_show_percentage', true, $product ) ) {
+		return $text;
+	}
+
 	if ( $product->is_type( 'variable' ) ) {
 		$regular = $product->get_variation_regular_price( 'max' );
 		$sale    = $product->get_variation_sale_price( 'max' );
@@ -23,6 +42,20 @@ function winespring_sale_badge_text( $text, $product ) {
 		$regular = $product->get_regular_price();
 		$sale    = $product->get_sale_price();
 	}
+
+	/**
+	 * Filters the price the percentage is measured against. Return the lowest
+	 * price of the previous 30 days to match the EU price-reduction rule.
+	 *
+	 * For a variable product the default is the highest variation regular
+	 * price, compared with the highest variation sale price; the two can come
+	 * from different variations. A reference price returned here applies to
+	 * the whole product, not to a single variation.
+	 *
+	 * @param string|float $reference Reference price. Default: the regular price.
+	 * @param \WC_Product  $product   Product.
+	 */
+	$regular = apply_filters( 'winespring_sale_badge_reference_price', $regular, $product );
 
 	if ( ! is_numeric( $regular ) || ! is_numeric( $sale ) || (float) $regular <= 0 ) {
 		return $text;
