@@ -3,6 +3,15 @@
 All notable changes to Winespring are documented in this file. Winespring was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [Unreleased]
+
+### Added
+- **Two filters for the sale badge percentage.** `winespring_sale_badge_reference_price` changes the
+  price the percentage is measured against, and `winespring_sale_badge_show_percentage` returns the
+  plain "Sale!" text instead. Defaults are unchanged: the badge still compares against the regular price.
+  In the EU a "from" price must be the lowest price of the previous 30 days, which can be lower than the
+  regular price; the theme keeps no price history, so a store (or a price-history plugin) has to supply it.
+
 ## [1.7.5] - 2026-10-26
 
 ### Changed
