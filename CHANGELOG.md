@@ -3,7 +3,7 @@
 All notable changes to Winespring are documented in this file. Winespring was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
-## [Unreleased]
+## [1.8.0] - 2026-10-28
 
 ### Added
 - **Two filters for the sale badge percentage.** `winespring_sale_badge_reference_price` changes the

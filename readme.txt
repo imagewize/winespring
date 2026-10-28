@@ -4,7 +4,7 @@ Tags: e-commerce, full-site-editing, custom-colors, custom-logo, custom-menu, ed
 Requires at least: 6.9
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.7.5
+Stable tag: 1.8.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -38,6 +38,9 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 4. Install and activate WooCommerce for store functionality.
 
 == Changelog ==
+
+= 1.8.0 =
+* Added: two filters for the sale badge percentage, `winespring_sale_badge_reference_price` and `winespring_sale_badge_show_percentage`. In the EU a "from" price must be the lowest price of the previous 30 days, which can be lower than the regular price. Defaults are unchanged.
 
 = 1.7.5 =
 * Changed: development documentation only (version and release steps). Nothing in the installed theme changes.
