@@ -26,7 +26,7 @@ namespace Winespring;
 function winespring_sale_badge_text( $text, $product ) {
 	/**
 	 * Filters whether the sale badge shows a percentage. Return false to keep
-	 * WooCommerce's own "Sale!" text.
+	 * WooCommerce's own "Sale" text.
 	 *
 	 * @param bool        $show    Whether to show the percentage. Default true.
 	 * @param \WC_Product $product Product.
@@ -46,6 +46,11 @@ function winespring_sale_badge_text( $text, $product ) {
 	/**
 	 * Filters the price the percentage is measured against. Return the lowest
 	 * price of the previous 30 days to match the EU price-reduction rule.
+	 *
+	 * For a variable product the default is the highest variation regular
+	 * price, compared with the highest variation sale price; the two can come
+	 * from different variations. A reference price returned here applies to
+	 * the whole product, not to a single variation.
 	 *
 	 * @param string|float $reference Reference price. Default: the regular price.
 	 * @param \WC_Product  $product   Product.
