@@ -3,6 +3,28 @@
 All notable changes to Winespring are documented in this file. Winespring was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [1.9.0] - 2026-11-04
+
+### Fixed
+- **WordPress.org theme review (#295920): no more Aludra plugin blocks in shipped markup.** `patterns/home-store.php`
+  now builds its trust bar and stat rail from core `wp:group` blocks instead of `aludra/trust-bar`,
+  `aludra/stat-rail` and `aludra/stat-item`; `parts/announcement-bar.html` no longer references
+  `aludra/free-shipping-bar` and `templates/single-product.html` no longer references
+  `aludra/sticky-add-to-cart`. The `winespring_strip_unavailable_aludra_blocks()` filter that removed
+  those blocks at runtime is gone with them, and `winespring/home-store` is now registered whenever
+  WooCommerce is active (it places a `woocommerce/product-collection`), not only when Aludra is installed.
+- **WordPress.org theme review: no more interference with WooCommerce's admin.** Removed
+  `winespring_unregister_woocommerce_patterns()` (which unregistered all `woocommerce-blocks/*`
+  patterns) and `winespring_disable_pattern_toolkit()` (which removed a `woocommerce_admin_features`
+  entry).
+- **WordPress.org theme review: plugin references point at WordPress.org.** `readme.txt` links to Aludra
+  at https://wordpress.org/plugins/aludra/ instead of GitHub; the dismissible admin notice already
+  installs it by its WordPress.org slug.
+- **WordPress.org theme review: theme tags match the functionality shipped.** Dropped the `custom-logo`
+  and `custom-colors` tags (no matching support; the header uses the `wp:site-logo` block) and added
+  `add_theme_support( 'post-thumbnails' )` so the `featured-images` tag matches the
+  `wp:post-featured-image` blocks in the templates.
+
 ## [1.8.0] - 2026-10-28
 
 ### Added
