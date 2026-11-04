@@ -20,6 +20,10 @@ Winespring pairs with the [Aludra](https://wordpress.org/plugins/aludra/) block 
 carousel, FAQ tabs, and more), but doesn't require it — the theme is a plain block theme that
 works with core blocks and any block plugin. WooCommerce is needed for the store templates.
 
+With Aludra 2.40.0 or later and WooCommerce active, a free shipping progress bar appears in the
+announcement bar and a sticky add to cart bar on single products. Aludra adds both itself, and you can
+remove either one in the Site Editor.
+
 = Key Features =
 
 * Full Site Editing (FSE) theme for WooCommerce stores
@@ -43,6 +47,7 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 = 1.9.0 =
 * Fixed (WordPress.org theme review): the theme no longer references Aludra plugin blocks in its patterns, template parts or templates — Store Home, the announcement bar and the single product template now use core and WooCommerce blocks only, and the conditional stripping of unavailable Aludra blocks is removed.
 * Fixed (WordPress.org theme review): the theme no longer unregisters WooCommerce's bundled patterns and no longer disables WooCommerce admin features.
+* Changed: the free shipping progress bar and sticky add to cart bar now come from Aludra 2.40.0 or later, which adds them to the announcement bar and single product template itself.
 * Fixed (WordPress.org theme review): Aludra is now referenced via its WordPress.org plugin page (https://wordpress.org/plugins/aludra/).
 * Fixed (WordPress.org theme review): removed the `custom-logo` and `custom-colors` tags, which had no matching theme support, and added `post-thumbnails` support so the `featured-images` tag matches the templates' `wp:post-featured-image` blocks.
 

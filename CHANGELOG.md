@@ -29,6 +29,11 @@ All notable changes to Winespring are documented in this file. Winespring was cr
   `add_theme_support( 'post-thumbnails' )` so the `featured-images` tag matches the
   `wp:post-featured-image` blocks in the templates.
 
+### Changed
+- **Free shipping progress and sticky add to cart now come from Aludra 2.40.0 or later.** Aludra
+  inserts them into the announcement bar and the single product template through the Block Hooks API,
+  so the theme's own markup no longer names them. `readme.txt` says which Aludra version they need.
+
 ## [1.8.0] - 2026-10-28
 
 ### Added
