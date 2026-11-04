@@ -1,10 +1,10 @@
 <?php
 /**
- * Title: Store Home (Aludra + WooCommerce)
+ * Title: Store Home
  * Slug: winespring/home-store
  * Categories: winespring-pages
  * Block Types: core/post-content
- * Description: A skincare store front page built from Aludra blocks: hero, trust bar, category cards, newest products, brand story, stats, reviews and a closing call to action. Registered only when Aludra and WooCommerce are active.
+ * Description: A store front page built from core and WooCommerce blocks: hero, trust bar, category cards, newest products, brand story, stats, reviews and a closing call to action. Registered only when WooCommerce is active.
  *
  * @package Winespring
  */
@@ -72,8 +72,8 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:columns --></div>
 <!-- /wp:group -->
 
-<!-- wp:aludra/trust-bar -->
-<div class="wp-block-aludra-trust-bar alignfull"><div class="trust-bar__inner"><!-- wp:group {"className":"trust-bar__items","style":{"spacing":{"blockGap":"32px"}},"layout":{"type":"flex","flexWrap":"wrap","alignItems":"center","justifyContent":"center"}} -->
+<!-- wp:group {"align":"full","className":"winespring-trust-bar"} -->
+<div class="wp-block-group alignfull winespring-trust-bar"><div class="trust-bar__inner"><!-- wp:group {"className":"trust-bar__items","style":{"spacing":{"blockGap":"32px"}},"layout":{"type":"flex","flexWrap":"wrap","alignItems":"center","justifyContent":"center"}} -->
 <div class="wp-block-group trust-bar__items"><!-- wp:group {"className":"trust-item","style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","alignItems":"center","flexWrap":"nowrap"}} -->
 <div class="wp-block-group trust-item"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
 <figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/icons/truck.svg' ) ); ?>" alt=""/></figure>
@@ -114,7 +114,7 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div></div>
-<!-- /wp:aludra/trust-bar -->
+<!-- /wp:group -->
 
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"80px","bottom":"80px","left":"24px","right":"24px"},"margin":{"top":"0","bottom":"0"},"blockGap":"48px"}},"backgroundColor":"tertiary","layout":{"type":"constrained","contentSize":"1200px","wideSize":"1200px"}} -->
 <div class="wp-block-group alignfull has-tertiary-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:80px;padding-right:24px;padding-bottom:80px;padding-left:24px"><!-- wp:group {"style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
@@ -334,19 +334,19 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
-<!-- wp:aludra/stat-rail -->
-<div class="wp-block-aludra-stat-rail alignfull" style="margin-top:0;margin-bottom:0"><div class="stat-rail__shell"><!-- wp:aludra/stat-item {"number":"<?php echo esc_attr__( '3 steps', 'winespring' ); ?>","caption":"<?php echo esc_attr__( 'To a complete routine', 'winespring' ); ?>","good":true} -->
-<div class="wp-block-aludra-stat-item stat-rail__item is-good"><div class="stat-rail__num"><?php esc_html_e( '3 steps', 'winespring' ); ?></div><div class="stat-rail__cap"><?php esc_html_e( 'To a complete routine', 'winespring' ); ?></div></div>
-<!-- /wp:aludra/stat-item -->
+<!-- wp:group {"align":"full","className":"winespring-stat-rail","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
+<div class="wp-block-group alignfull winespring-stat-rail" style="margin-top:0;margin-bottom:0"><div class="stat-rail__shell"><!-- wp:group {"className":"winespring-stat-item stat-rail__item is-good"} -->
+<div class="wp-block-group winespring-stat-item stat-rail__item is-good"><div class="stat-rail__num"><?php esc_html_e( '3 steps', 'winespring' ); ?></div><div class="stat-rail__cap"><?php esc_html_e( 'To a complete routine', 'winespring' ); ?></div></div>
+<!-- /wp:group -->
 
-<!-- wp:aludra/stat-item {"number":"16","caption":"<?php echo esc_attr__( 'Products in the range', 'winespring' ); ?>"} -->
-<div class="wp-block-aludra-stat-item stat-rail__item"><div class="stat-rail__num">16</div><div class="stat-rail__cap"><?php esc_html_e( 'Products in the range', 'winespring' ); ?></div></div>
-<!-- /wp:aludra/stat-item -->
+<!-- wp:group {"className":"winespring-stat-item stat-rail__item"} -->
+<div class="wp-block-group winespring-stat-item stat-rail__item"><div class="stat-rail__num">16</div><div class="stat-rail__cap"><?php esc_html_e( 'Products in the range', 'winespring' ); ?></div></div>
+<!-- /wp:group -->
 
-<!-- wp:aludra/stat-item {"number":"<?php echo esc_attr__( '30 days', 'winespring' ); ?>","caption":"<?php echo esc_attr__( 'Free returns', 'winespring' ); ?>"} -->
-<div class="wp-block-aludra-stat-item stat-rail__item"><div class="stat-rail__num"><?php esc_html_e( '30 days', 'winespring' ); ?></div><div class="stat-rail__cap"><?php esc_html_e( 'Free returns', 'winespring' ); ?></div></div>
-<!-- /wp:aludra/stat-item --></div></div>
-<!-- /wp:aludra/stat-rail -->
+<!-- wp:group {"className":"winespring-stat-item stat-rail__item"} -->
+<div class="wp-block-group winespring-stat-item stat-rail__item"><div class="stat-rail__num"><?php esc_html_e( '30 days', 'winespring' ); ?></div><div class="stat-rail__cap"><?php esc_html_e( 'Free returns', 'winespring' ); ?></div></div>
+<!-- /wp:group --></div></div>
+<!-- /wp:group -->
 
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"96px","bottom":"96px","left":"24px","right":"24px"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"base","layout":{"type":"constrained","contentSize":"1200px","wideSize":"1200px"}} -->
 <div class="wp-block-group alignfull has-base-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:96px;padding-right:24px;padding-bottom:96px;padding-left:24px"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"48px","left":"64px"}}}} -->
