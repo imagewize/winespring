@@ -13,6 +13,10 @@ All notable changes to Winespring are documented in this file. Winespring was cr
   `aludra/sticky-add-to-cart`. The `winespring_strip_unavailable_aludra_blocks()` filter that removed
   those blocks at runtime is gone with them, and `winespring/home-store` is now registered whenever
   WooCommerce is active (it places a `woocommerce/product-collection`), not only when Aludra is installed.
+- **Store Home trust bar and stat rail validate and keep their styling without Aludra.** The core-group
+  versions held raw `<div>` wrappers that core/group cannot save, so the editor flagged five blocks as
+  invalid; they are now nested group and paragraph blocks. Their styles, which came from Aludra's block
+  stylesheets, now live in `style.css` (section 8).
 - **WordPress.org theme review: no more interference with WooCommerce's admin.** Removed
   `winespring_unregister_woocommerce_patterns()` (which unregistered all `woocommerce-blocks/*`
   patterns) and `winespring_disable_pattern_toolkit()` (which removed a `woocommerce_admin_features`

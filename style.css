@@ -384,7 +384,7 @@ body .winespring-header--dark .wp-block-site-logo {
 .winespring-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item__content {
 	display: block;
 	font-family: var(--wp--preset--font-family--display);
-	font-size: var(--wp--preset--font-size--large);
+	font-size: var(--wp--preset--font-size--base);
 	padding: 0.9rem 0;
 }
 
@@ -718,7 +718,7 @@ body .winespring-header--dark .wp-block-site-logo {
 .single .entry-content blockquote {
 	border-left: 3px solid var(--wp--preset--color--primary);
 	font-family: var(--wp--preset--font-family--display);
-	font-size: var(--wp--preset--font-size--large);
+	font-size: var(--wp--preset--font-size--base);
 	font-weight: 500;
 	letter-spacing: -0.02em;
 	line-height: 1.3;
@@ -1111,5 +1111,133 @@ main .wp-block-button__link:hover {
 	.winespring-tile:focus-within .winespring-art,
 	.wp-block-woocommerce-product-template .wc-block-product:hover .wc-block-components-product-image img {
 		transform: none;
+	}
+}
+
+/* -------------------------------------------------------------------------
+ * 8. Store Home bands
+ *
+ * The trust bar and stat rail in patterns/home-store.php are core groups, so
+ * their styling lives here rather than in a plugin: the pattern renders the
+ * same with or without Aludra installed.
+ * ------------------------------------------------------------------------- */
+
+/* 8.1 Trust bar
+ * ------------------------------------------------------------------------- */
+.winespring-trust-bar {
+	background: var(--wp--preset--color--base);
+	border-bottom: 1px solid var(--wp--preset--color--border-light);
+	padding: 18px 0;
+}
+
+.winespring-trust-bar .trust-bar__inner {
+	max-width: var(--wp--style--global--wide-size);
+	margin: 0 auto;
+	padding-left: var(--wp--preset--spacing--small);
+	padding-right: var(--wp--preset--spacing--small);
+}
+
+.winespring-trust-bar .trust-bar__inner > *,
+.winespring-trust-bar .trust-item > * {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.winespring-trust-bar .trust-bar__items.wp-block-group {
+	margin: 0;
+}
+
+.winespring-trust-bar .trust-item {
+	font-size: 13.5px;
+	font-weight: 500;
+	color: var(--wp--preset--color--main);
+	line-height: 1.4;
+}
+
+.winespring-trust-bar .trust-item .wp-block-image {
+	margin: 0;
+	flex-shrink: 0;
+}
+
+.winespring-trust-bar .trust-item .wp-block-image img {
+	width: 16px;
+	height: 16px;
+	display: block;
+}
+
+.winespring-trust-bar .trust-item p {
+	margin: 0;
+}
+
+@media (max-width: 640px) {
+	.winespring-trust-bar .trust-bar__items.wp-block-group {
+		justify-content: flex-start;
+		gap: 20px;
+	}
+}
+
+/* 8.2 Stat rail
+ * ------------------------------------------------------------------------- */
+.winespring-stat-rail {
+	--winespring-stat-rule: color-mix(in srgb, var(--wp--preset--color--base) 14%, transparent);
+
+	background: var(--wp--preset--color--main);
+	color: var(--wp--preset--color--base);
+	padding-top: clamp(2.5rem, 6vw, 4rem);
+}
+
+.winespring-stat-rail .stat-rail__shell {
+	max-width: var(--wp--style--global--wide-size);
+	margin: 0 auto;
+	padding-left: var(--wp--preset--spacing--small);
+	padding-right: var(--wp--preset--spacing--small);
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: minmax(0, 1fr);
+	border-top: 1px solid var(--winespring-stat-rule);
+}
+
+.winespring-stat-rail .stat-rail__item {
+	margin: 0;
+	padding: 1.5rem 1.25rem 1.75rem;
+}
+
+.winespring-stat-rail .stat-rail__item + .stat-rail__item {
+	border-left: 1px solid var(--winespring-stat-rule);
+}
+
+.winespring-stat-rail .stat-rail__num {
+	font-family: var(--wp--preset--font-family--display);
+	font-size: var(--wp--preset--font-size--base);
+	font-weight: 800;
+	letter-spacing: -0.04em;
+	line-height: 1;
+	margin: 0;
+}
+
+/* accent is tuned for light grounds; mix it toward base so it clears AA on the dark band. */
+.winespring-stat-rail .stat-rail__item.is-good .stat-rail__num {
+	color: color-mix(in oklch, var(--wp--preset--color--accent) 30%, var(--wp--preset--color--base));
+}
+
+.winespring-stat-rail .stat-rail__cap {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: var(--wp--preset--font-size--xx-small);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: color-mix(in srgb, var(--wp--preset--color--base) 60%, transparent);
+	margin-top: 0.5rem;
+	margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+	.winespring-stat-rail .stat-rail__shell {
+		grid-auto-flow: row;
+		grid-auto-columns: unset;
+	}
+
+	.winespring-stat-rail .stat-rail__item + .stat-rail__item {
+		border-left: 0;
+		border-top: 1px solid var(--winespring-stat-rule);
 	}
 }

@@ -73,7 +73,8 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:group -->
 
 <!-- wp:group {"align":"full","className":"winespring-trust-bar"} -->
-<div class="wp-block-group alignfull winespring-trust-bar"><div class="trust-bar__inner"><!-- wp:group {"className":"trust-bar__items","style":{"spacing":{"blockGap":"32px"}},"layout":{"type":"flex","flexWrap":"wrap","alignItems":"center","justifyContent":"center"}} -->
+<div class="wp-block-group alignfull winespring-trust-bar"><!-- wp:group {"className":"trust-bar__inner"} -->
+<div class="wp-block-group trust-bar__inner"><!-- wp:group {"className":"trust-bar__items","style":{"spacing":{"blockGap":"32px"}},"layout":{"type":"flex","flexWrap":"wrap","alignItems":"center","justifyContent":"center"}} -->
 <div class="wp-block-group trust-bar__items"><!-- wp:group {"className":"trust-item","style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","alignItems":"center","flexWrap":"nowrap"}} -->
 <div class="wp-block-group trust-item"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
 <figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/icons/truck.svg' ) ); ?>" alt=""/></figure>
@@ -113,7 +114,8 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <p><?php esc_html_e( 'Secure checkout', 'winespring' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
-<!-- /wp:group --></div></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"80px","bottom":"80px","left":"24px","right":"24px"},"margin":{"top":"0","bottom":"0"},"blockGap":"48px"}},"backgroundColor":"tertiary","layout":{"type":"constrained","contentSize":"1200px","wideSize":"1200px"}} -->
@@ -335,17 +337,37 @@ $kit_url  = $kit ? get_permalink( $kit ) : $shop_url;
 <!-- /wp:group -->
 
 <!-- wp:group {"align":"full","className":"winespring-stat-rail","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-<div class="wp-block-group alignfull winespring-stat-rail" style="margin-top:0;margin-bottom:0"><div class="stat-rail__shell"><!-- wp:group {"className":"winespring-stat-item stat-rail__item is-good"} -->
-<div class="wp-block-group winespring-stat-item stat-rail__item is-good"><div class="stat-rail__num"><?php esc_html_e( '3 steps', 'winespring' ); ?></div><div class="stat-rail__cap"><?php esc_html_e( 'To a complete routine', 'winespring' ); ?></div></div>
+<div class="wp-block-group alignfull winespring-stat-rail" style="margin-top:0;margin-bottom:0"><!-- wp:group {"className":"stat-rail__shell"} -->
+<div class="wp-block-group stat-rail__shell"><!-- wp:group {"className":"winespring-stat-item stat-rail__item is-good"} -->
+<div class="wp-block-group winespring-stat-item stat-rail__item is-good"><!-- wp:paragraph {"className":"stat-rail__num"} -->
+<p class="stat-rail__num"><?php esc_html_e( '3 steps', 'winespring' ); ?></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"stat-rail__cap"} -->
+<p class="stat-rail__cap"><?php esc_html_e( 'To a complete routine', 'winespring' ); ?></p>
+<!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"winespring-stat-item stat-rail__item"} -->
-<div class="wp-block-group winespring-stat-item stat-rail__item"><div class="stat-rail__num">16</div><div class="stat-rail__cap"><?php esc_html_e( 'Products in the range', 'winespring' ); ?></div></div>
+<div class="wp-block-group winespring-stat-item stat-rail__item"><!-- wp:paragraph {"className":"stat-rail__num"} -->
+<p class="stat-rail__num">16</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"stat-rail__cap"} -->
+<p class="stat-rail__cap"><?php esc_html_e( 'Products in the range', 'winespring' ); ?></p>
+<!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"winespring-stat-item stat-rail__item"} -->
-<div class="wp-block-group winespring-stat-item stat-rail__item"><div class="stat-rail__num"><?php esc_html_e( '30 days', 'winespring' ); ?></div><div class="stat-rail__cap"><?php esc_html_e( 'Free returns', 'winespring' ); ?></div></div>
-<!-- /wp:group --></div></div>
+<div class="wp-block-group winespring-stat-item stat-rail__item"><!-- wp:paragraph {"className":"stat-rail__num"} -->
+<p class="stat-rail__num"><?php esc_html_e( '30 days', 'winespring' ); ?></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"stat-rail__cap"} -->
+<p class="stat-rail__cap"><?php esc_html_e( 'Free returns', 'winespring' ); ?></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"96px","bottom":"96px","left":"24px","right":"24px"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"base","layout":{"type":"constrained","contentSize":"1200px","wideSize":"1200px"}} -->
