@@ -22,7 +22,7 @@ not required.
 - **Winespring ships five patterns, all in the `winespring-pages` category** (see CLAUDE.md "Why a
   small, curated set of patterns"). `home-core`, `page-about`, `page-contact` and `page-faq` must use
   **core blocks only** — a plugin block in them breaks the wp.org theme preview. `winespring/home-store`
-  uses Aludra blocks and must stay unregistered unless WooCommerce and Aludra's blocks are present.
+  places a `woocommerce/product-collection` and must stay unregistered unless WooCommerce is active.
   A small `patterns/` directory is the design; a growing library is not. Forks (e.g. Ixian) add their own; the validation harness
   in `package.json` covers all of them.
 - `templates/page.html` deliberately **omits** `post-title` — most pages are
