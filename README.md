@@ -26,6 +26,8 @@ Winespring is a full-site-editing (FSE) WordPress theme for **e-commerce**, buil
 
 It pairs with the [Aludra](https://wordpress.org/plugins/aludra/) block library (mega menu, carousel, FAQ tabs, store bands, and more), but doesn't require it — the theme is a plain block theme that works with core blocks and any block plugin.
 
+With Aludra 2.40.0 or later active, the store also gets Aludra's **Free Shipping Progress** bar in the announcement bar and a **Sticky Add to Cart** bar on product pages. Aludra adds them to Winespring's templates itself, through the WordPress Block Hooks API, so the theme ships no plugin blocks; switch either off under **Settings → Aludra → Store**. Without Aludra the announcement bar shows only its plain "Free returns within 30 days" line.
+
 > **Lineage:** Winespring is created from the [Aviendha](https://github.com/imagewize/aviendha) starter theme and focuses it on WooCommerce stores. It is a companion to Imagewize's [Elayne](https://github.com/imagewize/elayne) and [Nynaeve](https://github.com/imagewize/nynaeve) themes and replaces Elayne's store vertical for client e-commerce work. Like Elayne, it ships no custom blocks of its own — content blocks come from the shared Aludra plugin, per WordPress.org's theme-review rules.
 
 ## Requirements
