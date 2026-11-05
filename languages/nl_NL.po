@@ -200,20 +200,20 @@ msgstr "Klaar wanneer jij dat bent"
 
 #: patterns/home-store.php
 msgctxt "Pattern title"
-msgid "Store Home (Aludra + WooCommerce)"
-msgstr "Winkelhomepage (Aludra + WooCommerce)"
+msgid "Store Home"
+msgstr "Winkelhomepage"
 
 #: patterns/home-store.php
 msgctxt "Pattern description"
 msgid ""
-"A skincare store front page built from Aludra blocks: hero, trust bar, "
+"A store front page built from core and WooCommerce blocks: hero, trust bar, "
 "category cards, newest products, brand story, stats, reviews and a closing "
-"call to action. Registered only when Aludra and WooCommerce are active."
+"call to action. Registered only when WooCommerce is active."
 msgstr ""
-"Een voorpagina voor een huidverzorgingswinkel, opgebouwd uit Aludra-blokken: "
+"Een voorpagina voor een winkel, opgebouwd uit core- en WooCommerce-blokken: "
 "hero, vertrouwensbalk, categoriekaarten, nieuwste producten, merkverhaal, "
 "cijfers, reviews en een afsluitende oproep tot actie. Alleen geregistreerd "
-"als Aludra en WooCommerce actief zijn."
+"als WooCommerce actief is."
 
 #: patterns/home-store.php:29
 msgid "New: the Essentials Kit"

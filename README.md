@@ -22,9 +22,11 @@ A lean full-site-editing WooCommerce theme for client e-commerce stores.
 
 ## Description
 
-Winespring is a full-site-editing (FSE) WordPress theme for **e-commerce**, built to speed up client store builds. It provides a design system via `theme.json` (colors, typography, spacing, layout), WooCommerce block templates, and three style variations (`store`, `skincare` and `twilight`), and a small set of five page patterns (Core Home, About, Contact, FAQ and the Aludra-powered Store Home), but no pattern library — other pages are composed directly from blocks. Fork it per client, or use it as the shared base.
+Winespring is a full-site-editing (FSE) WordPress theme for **e-commerce**, built to speed up client store builds. It provides a design system via `theme.json` (colors, typography, spacing, layout), WooCommerce block templates, and three style variations (`store`, `skincare` and `twilight`), and a small set of five page patterns (Core Home, About, Contact, FAQ and a WooCommerce-powered Store Home), but no pattern library — other pages are composed directly from blocks. Fork it per client, or use it as the shared base.
 
-It pairs with the [Aludra](https://github.com/imagewize/aludra) block library (mega menu, carousel, FAQ tabs, store bands, and more), but doesn't require it — the theme is a plain block theme that works with core blocks and any block plugin.
+It pairs with the [Aludra](https://wordpress.org/plugins/aludra/) block library (mega menu, carousel, FAQ tabs, store bands, and more), but doesn't require it — the theme is a plain block theme that works with core blocks and any block plugin.
+
+With Aludra 2.40.0 or later active, the store also gets Aludra's **Free Shipping Progress** bar in the announcement bar and a **Sticky Add to Cart** bar on product pages. Aludra adds them to Winespring's templates itself, through the WordPress Block Hooks API, so the theme ships no plugin blocks; switch either off under **Settings → Aludra → Store**. Without Aludra the announcement bar shows only its plain "Free returns within 30 days" line.
 
 > **Lineage:** Winespring is created from the [Aviendha](https://github.com/imagewize/aviendha) starter theme and focuses it on WooCommerce stores. It is a companion to Imagewize's [Elayne](https://github.com/imagewize/elayne) and [Nynaeve](https://github.com/imagewize/nynaeve) themes and replaces Elayne's store vertical for client e-commerce work. Like Elayne, it ships no custom blocks of its own — content blocks come from the shared Aludra plugin, per WordPress.org's theme-review rules.
 
@@ -33,7 +35,7 @@ It pairs with the [Aludra](https://github.com/imagewize/aludra) block library (m
 - WordPress 6.9+
 - PHP 8.0+
 - WooCommerce (the point of the theme; templates degrade gracefully without it)
-- Aludra plugin 2.39+ (recommended, not required; the Store Home pattern, the free shipping bar and the sticky add to cart bar need it)
+- Aludra plugin (recommended, not required; its mega menu and extra blocks need it)
 
 ## Features
 
@@ -41,12 +43,12 @@ It pairs with the [Aludra](https://github.com/imagewize/aludra) block library (m
 - **Design system** — `theme.json` defines the color palette, typography, spacing, and border radii; color/spacing slugs match what Aludra's own block styles expect (`base`, `contrast`, `secondary`, `main`, `primary`, `accent`, `tertiary`, `border-light`)
 - **WooCommerce templates** — `templates/single-product.html`, `templates/archive-product.html`, `templates/product-search-results.html`, and `templates/coming-soon.html` are theme-provided; cart, checkout, and category-archive templates fall back to WooCommerce's own block-theme defaults. The product archive and search results ship a results count, catalog sorting, a filters sidebar (price, category, availability, rating) and an empty state; the single product template uses the block-based add to cart, with theme layouts for simple and variable products in `parts/`. The coming-soon template wraps WooCommerce's coming-soon block with the theme's header and footer.
 - **Plugin recommendation notice** — a dismissible notice on the Dashboard and Themes screens suggests WooCommerce and Aludra to users who can install plugins, only while one is missing; Dismiss hides it for good. `inc/plugin-recommendations.php`
-- **Degrades gracefully without WooCommerce** — with the plugin inactive, the store templates and the header's mini cart are filtered out rather than left to render as unsupported blocks. WooCommerce's own bundled `woocommerce-blocks/*` patterns are unregistered when it *is* active — the theme neither designed nor styles them, and they crowd out core's.
+- **Degrades gracefully without WooCommerce** — with the plugin inactive, the store templates and the header's mini cart are filtered out rather than left to render as unsupported blocks.
 - **Two page templates** — `page.html` (default) omits `post-title` since most pages get their title from a block's own heading; `page-with-title.html` (selectable per-page under Page → Template) adds the conventional title treatment.
 - **Style variations** — see `styles/` (`twilight.json` — dark, rose-accented; `store.json` — warm retail palette with self-hosted Cormorant Garamond and Jost; `skincare.json` — calm sage and cream palette with the same fonts) for alternate palettes on top of the same design system. Switch between them under **Appearance → Editor → Styles → Browse styles**.
-- **Five page patterns, no library** — in the **Winespring Pages** pattern category. `winespring/home-core` (**Core Home**), `page-about`, `page-contact` and `page-faq` are built from core blocks only and need no plugins; `home-core` lists products when WooCommerce is active and the latest posts otherwise. `winespring/home-store` (**Store Home (Aludra + WooCommerce)**) is a front page built from Aludra blocks and a WooCommerce product grid: hero, trust bar, category cards, newest products, story, stats, reviews and a closing call to action. It is registered only when WooCommerce is active **and** the Aludra plugin is installed — without Aludra it is hidden rather than inserting unsupported blocks. Everything else is block-first composition: core's own patterns stay registered, so the inserter is never empty.
+- **Five page patterns, no library** — in the **Winespring Pages** pattern category. `winespring/home-core` (**Core Home**), `page-about`, `page-contact` and `page-faq` are built from core blocks only and need no plugins; `home-core` lists products when WooCommerce is active and the latest posts otherwise. `winespring/home-store` (**Store Home**) is a front page built from core blocks and a WooCommerce product grid: hero, trust bar, category cards, newest products, story, stats, reviews and a closing call to action. It is registered only when WooCommerce is active — without it the pattern would insert an unsupported block. Everything else is block-first composition: core's own patterns stay registered, so the inserter is never empty.
 
-- **Store conversion extras** — an announcement bar above the header, a free shipping progress bar and a sticky add to cart bar (both Aludra blocks, removed automatically when Aludra is missing), New / Sold out / Low stock badges on product images, and sale badges that show the percentage saved
+- **Store conversion extras** — an announcement bar above the header, New / Sold out / Low stock badges on product images, and sale badges that show the percentage saved
 
 ## Installation
 
@@ -68,7 +70,7 @@ cd winespring-demo-content
 wp eval-file seed-skincare-products.php
 ```
 
-For the front page, install the [Aludra](https://github.com/imagewize/aludra) plugin (`composer require imagewize/aludra`), edit your Home page, insert the **Store Home** pattern (Patterns → Featured) and set the page as your static front page under **Settings → Reading**. Pick the **Skincare** style under **Appearance → Editor → Styles** to match the products.
+For the front page, edit your Home page, insert the **Store Home** pattern (Patterns → Featured) and set the page as your static front page under **Settings → Reading**. Install the [Aludra](https://wordpress.org/plugins/aludra/) plugin if you also want its mega menu and extra blocks. Pick the **Skincare** style under **Appearance → Editor → Styles** to match the products.
 
 ## Building a client store
 
@@ -89,7 +91,7 @@ winespring/
 ├── theme.json          # Design system: color, typography, spacing, layout
 ├── functions.php       # Theme setup, 'menu' template part area, WooCommerce hooks
 ├── templates/          # FSE templates (index, home, single, page, page-with-title, page-dark-header, archive, search, 404; WooCommerce: single-product, archive-product, product-search-results, order-confirmation, coming-soon)
-├── patterns/            # Store Home page pattern (needs Aludra + WooCommerce)
+├── patterns/            # Page patterns (Store Home needs WooCommerce)
 ├── parts/               # header, header-dark, footer, and simple/variable product add-to-cart layouts
 ├── styles/              # Style variations (store, skincare, twilight)
 ├── assets/

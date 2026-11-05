@@ -3,6 +3,37 @@
 All notable changes to Winespring are documented in this file. Winespring was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [1.9.0] - 2026-11-04
+
+### Fixed
+- **WordPress.org theme review (#295920): no more Aludra plugin blocks in shipped markup.** `patterns/home-store.php`
+  now builds its trust bar and stat rail from core `wp:group` blocks instead of `aludra/trust-bar`,
+  `aludra/stat-rail` and `aludra/stat-item`; `parts/announcement-bar.html` no longer references
+  `aludra/free-shipping-bar` and `templates/single-product.html` no longer references
+  `aludra/sticky-add-to-cart`. The `winespring_strip_unavailable_aludra_blocks()` filter that removed
+  those blocks at runtime is gone with them, and `winespring/home-store` is now registered whenever
+  WooCommerce is active (it places a `woocommerce/product-collection`), not only when Aludra is installed.
+- **Store Home trust bar and stat rail validate and keep their styling without Aludra.** The core-group
+  versions held raw `<div>` wrappers that core/group cannot save, so the editor flagged five blocks as
+  invalid; they are now nested group and paragraph blocks. Their styles, which came from Aludra's block
+  stylesheets, now live in `style.css` (section 8).
+- **WordPress.org theme review: no more interference with WooCommerce's admin.** Removed
+  `winespring_unregister_woocommerce_patterns()` (which unregistered all `woocommerce-blocks/*`
+  patterns) and `winespring_disable_pattern_toolkit()` (which removed a `woocommerce_admin_features`
+  entry).
+- **WordPress.org theme review: plugin references point at WordPress.org.** `readme.txt` links to Aludra
+  at https://wordpress.org/plugins/aludra/ instead of GitHub; the dismissible admin notice already
+  installs it by its WordPress.org slug.
+- **WordPress.org theme review: theme tags match the functionality shipped.** Dropped the `custom-logo`
+  and `custom-colors` tags (no matching support; the header uses the `wp:site-logo` block) and added
+  `add_theme_support( 'post-thumbnails' )` so the `featured-images` tag matches the
+  `wp:post-featured-image` blocks in the templates.
+
+### Changed
+- **Free shipping progress and sticky add to cart now come from Aludra 2.40.0 or later.** Aludra
+  inserts them into the announcement bar and the single product template through the Block Hooks API,
+  so the theme's own markup no longer names them. `readme.txt` says which Aludra version they need.
+
 ## [1.8.0] - 2026-10-28
 
 ### Added

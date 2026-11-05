@@ -448,7 +448,7 @@
  * writes its own track formula for every `columns-N`, each one assuming the
  * 1.25em gap, so any count the theme's own templates don't use fell back to it
  * and `auto-fill` dropped a column — four products set to four columns showed
- * three, then one. Aludra's store sections ask for four. N columns share N - 1
+ * three, then one. Some block libraries' store sections ask for four. N columns share N - 1
  * gaps, so each track gives up (N - 1) / N of one gap. The 150px floor is the
  * block's own, and is what folds these to two columns on a phone.
  */

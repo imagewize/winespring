@@ -10,7 +10,7 @@ It is a companion to Imagewize's **Elayne** and **Nynaeve** themes and is meant 
 store vertical for client store work. Like Aviendha it is deliberately minimal: **a small,
 curated set of patterns, not a library**. `theme.json`, WooCommerce block templates, and style variations (`styles/store.json`
 is the retail palette) form the design system; page content is composed directly from blocks (core
-blocks or the [Aludra](https://github.com/imagewize/aludra) block library).
+blocks or the [Aludra](https://wordpress.org/plugins/aludra/) block library).
 
 **Requirements:**
 - WordPress 6.9+
@@ -35,12 +35,11 @@ wp.org theme preview has patterns to show:
 - `winespring/home-core`, `page-about`, `page-contact`, `page-faq` — built from **core blocks only**, so they
   need no plugins. `home-core` lists products when WooCommerce is active and the latest posts otherwise.
   The Contact pattern leaves a placeholder for the owner's form plugin, since core has no form block.
-- `winespring/home-store` (**Store Home (Aludra + WooCommerce)**): the store front page built from Aludra
-  blocks and a WooCommerce product grid, with skincare copy and links resolved at render time (shop page,
-  `product_cat` slugs). It is registered only when WooCommerce is active and Aludra's blocks are registered
+- `winespring/home-store` (**Store Home**): the store front page built from core blocks and a WooCommerce
+  product grid, with skincare copy and links resolved at render time (shop page,
+  `product_cat` slugs). It is registered only when WooCommerce is active
   (`winespring_maybe_unregister_store_home_pattern()` in `functions.php`), since pattern files otherwise
-  register themselves and would insert unsupported blocks. Its colour panels are Aludra's own "replace
-  with a photo" placeholders, so it works without any images.
+  register themselves and would insert unsupported blocks.
 
 Keep the set small: add vertical-specific page patterns on a branch, not as a growing library. The
 pattern-validation harness (`@imwz/wp-pattern-sentinel`, `npm run validate`) covers all of them — see
@@ -178,7 +177,7 @@ carry `docs/` and `designs/` entries as a guard, so a stray file never reaches a
 
 Winespring is exercised on the `/winespring/` subsite of the local Trellis/Bedrock multisite at
 `~/code/imagewize.com/demo` (`http://demo.imagewize.test/winespring/`), alongside the
-[Aludra](https://github.com/imagewize/aludra) block library the content is composed from.
+[Aludra](https://wordpress.org/plugins/aludra/) block library the content is composed from.
 
 Both are pinned Composer dependencies there, **not** symlinks to these working copies. Do not cut
 a release to test a local change — sync instead, with `rsync-package-to-site` from

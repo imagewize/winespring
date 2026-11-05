@@ -1,10 +1,10 @@
 === Winespring WordPress Theme ===
 Contributors: Rhand
-Tags: e-commerce, full-site-editing, custom-colors, custom-logo, custom-menu, editor-style, featured-images, grid-layout, template-editing, translation-ready, wide-blocks
+Tags: e-commerce, full-site-editing, custom-menu, editor-style, featured-images, grid-layout, template-editing, translation-ready, wide-blocks
 Requires at least: 6.9
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.8.0
+Stable tag: 1.9.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -13,11 +13,16 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Winespring is a lean full-site-editing (FSE) theme for WooCommerce stores, built to speed up client
 e-commerce builds. It provides a design system via `theme.json` (colors, typography, spacing,
 layout), WooCommerce block templates, and style variations. It ships five page patterns (Core Home,
-About, Contact, FAQ and a store front page built from Aludra blocks); other page content is composed directly from blocks. Winespring is created from the Aviendha starter theme.
+About, Contact, FAQ and a store front page built from core and WooCommerce blocks); other page
+content is composed directly from blocks. Winespring is created from the Aviendha starter theme.
 
-Winespring pairs with the [Aludra](https://github.com/imagewize/aludra) block library (mega menu,
+Winespring pairs with the [Aludra](https://wordpress.org/plugins/aludra/) block library (mega menu,
 carousel, FAQ tabs, and more), but doesn't require it — the theme is a plain block theme that
 works with core blocks and any block plugin. WooCommerce is needed for the store templates.
+
+With Aludra 2.40.0 or later and WooCommerce active, a free shipping progress bar appears in the
+announcement bar and a sticky add to cart bar on single products. Aludra adds both itself, and you can
+remove either one in the Site Editor.
 
 = Key Features =
 
@@ -25,7 +30,7 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 * Solid design system via `theme.json` (colors, typography, spacing, layout)
 * WooCommerce block templates for single product and product archive
 * Style variations: Twilight (dark), Store (warm retail palette, self-hosted fonts) and Skincare (calm sage and cream, same fonts)
-* Five page patterns: Core Home, About, Contact and FAQ use core blocks only; Store Home needs Aludra and WooCommerce
+* Five page patterns: Core Home, About, Contact and FAQ use core blocks only; Store Home needs WooCommerce for its product grid
 * Pairs with the Aludra block library (mega menu, carousel, FAQ tabs, and more)
 * Translation-ready, with a bundled .pot file and a Dutch (nl_NL) translation
 * A dismissible notice suggests WooCommerce and Aludra, shown once to admins who can install plugins
@@ -34,10 +39,17 @@ works with core blocks and any block plugin. WooCommerce is needed for the store
 
 1. Upload the theme folder to `/wp-content/themes/`, or install via Appearance → Themes → Add New.
 2. Activate the theme through the 'Appearance' menu in WordPress.
-3. Optionally install and activate the Aludra plugin for mega menu, carousel, and other blocks.
+3. Optionally install and activate the [Aludra](https://wordpress.org/plugins/aludra/) plugin for mega menu, carousel, and other blocks.
 4. Install and activate WooCommerce for store functionality.
 
 == Changelog ==
+
+= 1.9.0 =
+* Fixed (WordPress.org theme review): the theme no longer references Aludra plugin blocks in its patterns, template parts or templates — Store Home, the announcement bar and the single product template now use core and WooCommerce blocks only, and the conditional stripping of unavailable Aludra blocks is removed.
+* Fixed (WordPress.org theme review): the theme no longer unregisters WooCommerce's bundled patterns and no longer disables WooCommerce admin features.
+* Changed: the free shipping progress bar and sticky add to cart bar now come from Aludra 2.40.0 or later, which adds them to the announcement bar and single product template itself.
+* Fixed (WordPress.org theme review): Aludra is now referenced via its WordPress.org plugin page (https://wordpress.org/plugins/aludra/).
+* Fixed (WordPress.org theme review): removed the `custom-logo` and `custom-colors` tags, which had no matching theme support, and added `post-thumbnails` support so the `featured-images` tag matches the templates' `wp:post-featured-image` blocks.
 
 = 1.8.0 =
 * Added: two filters for the sale badge percentage, `winespring_sale_badge_reference_price` and `winespring_sale_badge_show_percentage`. In the EU a "from" price must be the lowest price of the previous 30 days, which can be lower than the regular price. Defaults are unchanged.

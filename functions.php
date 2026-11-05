@@ -24,6 +24,9 @@ function winespring_setup() {
 	// Enqueue editor styles.
 	add_editor_style( 'style.css' );
 
+	// Featured images: the templates place wp:post-featured-image blocks.
+	add_theme_support( 'post-thumbnails' );
+
 	// WooCommerce.
 	add_theme_support( 'woocommerce' );
 	add_theme_support( 'wc-product-gallery-zoom' );
@@ -126,9 +129,6 @@ function winespring_woocommerce_template_part_slugs() {
  */
 function winespring_woocommerce_hooks() {
 	if ( class_exists( 'WooCommerce' ) ) {
-		add_action( 'init', __NAMESPACE__ . '\winespring_unregister_woocommerce_patterns', 999 );
-		add_filter( 'woocommerce_admin_features', __NAMESPACE__ . '\winespring_disable_pattern_toolkit' );
-
 		return;
 	}
 
@@ -137,45 +137,6 @@ function winespring_woocommerce_hooks() {
 	add_filter( 'get_block_file_template', __NAMESPACE__ . '\winespring_filter_woocommerce_file_template', 10, 3 );
 }
 add_action( 'after_setup_theme', __NAMESPACE__ . '\winespring_woocommerce_hooks' );
-
-/**
- * Remove Aludra's store blocks from templates and template parts when they are
- * not registered.
- *
- * The announcement bar and single product template place `aludra/free-shipping-bar`
- * and `aludra/sticky-add-to-cart`. Without the Aludra plugin (or without
- * WooCommerce, which keeps Aludra from registering them) they would render as
- * unsupported-block placeholders in the editor.
- *
- * @param \WP_Block_Template[]|\WP_Block_Template|null $templates Templates, or one template.
- * @return \WP_Block_Template[]|\WP_Block_Template|null Same, without unavailable blocks.
- */
-function winespring_strip_unavailable_aludra_blocks( $templates ) {
-	$registry = \WP_Block_Type_Registry::get_instance();
-	$missing  = array_filter(
-		array( 'free-shipping-bar', 'sticky-add-to-cart' ),
-		static function ( $block ) use ( $registry ) {
-			return ! $registry->is_registered( 'aludra/' . $block );
-		}
-	);
-
-	if ( ! $templates || ! $missing ) {
-		return $templates;
-	}
-
-	$pattern = '#<!--\s+wp:aludra/(?:' . implode( '|', $missing ) . ')\b.*?/-->\s*#s';
-	$list    = is_array( $templates ) ? $templates : array( $templates );
-
-	foreach ( $list as $template ) {
-		if ( $template instanceof \WP_Block_Template && is_string( $template->content ) ) {
-			$template->content = (string) preg_replace( $pattern, '', $template->content );
-		}
-	}
-
-	return $templates;
-}
-add_filter( 'get_block_templates', __NAMESPACE__ . '\winespring_strip_unavailable_aludra_blocks' );
-add_filter( 'get_block_file_template', __NAMESPACE__ . '\winespring_strip_unavailable_aludra_blocks' );
 
 /**
  * Hide the store templates, and the store blocks inside template parts, when
@@ -278,15 +239,13 @@ function winespring_add_to_cart_template_part_area( $areas ) {
 /**
  * Register the store home pattern only where it can render.
  *
- * `winespring/home-store` is built from Aludra blocks and a WooCommerce product
- * grid. Pattern files register themselves, so without both plugins it would be
- * offered in the inserter and insert unsupported blocks. Runs late on `init`,
- * after plugins have registered their blocks.
+ * `winespring/home-store` places a WooCommerce product collection, so without
+ * WooCommerce it would be offered in the inserter and insert an unsupported
+ * block. Pattern files register themselves, so it is unregistered again here
+ * when the plugin is inactive.
  */
 function winespring_maybe_unregister_store_home_pattern() {
-	$registry = \WP_Block_Type_Registry::get_instance();
-
-	if ( class_exists( 'WooCommerce' ) && $registry->is_registered( 'aludra/hero-split' ) ) {
+	if ( class_exists( 'WooCommerce' ) ) {
 		return;
 	}
 
@@ -295,40 +254,3 @@ function winespring_maybe_unregister_store_home_pattern() {
 	}
 }
 add_action( 'init', __NAMESPACE__ . '\winespring_maybe_unregister_store_home_pattern', 999 );
-
-/**
- * Unregister WooCommerce's bundled block patterns.
- *
- * Winespring's own pattern is `winespring/home-store`; WooCommerce registers a large set
- * which this theme neither designed nor styles, and which crowds out core's.
- * The `woocommerce/*` patterns are left alone — the coming soon templates
- * render them.
- */
-function winespring_unregister_woocommerce_patterns() {
-	$registry = \WP_Block_Patterns_Registry::get_instance();
-
-	foreach ( $registry->get_all_registered() as $pattern ) {
-		if ( isset( $pattern['name'] ) && 0 === strpos( $pattern['name'], 'woocommerce-blocks/' ) ) {
-			unregister_block_pattern( $pattern['name'] );
-		}
-	}
-}
-
-/**
- * Disable WooCommerce's full-composability pattern toolkit.
- *
- * Its onboarding flow offers to assemble pages from patterns and overwrite the
- * theme's templates, neither of which fits a theme that ships its own hand-built patterns.
- *
- * @param array $features Enabled WooCommerce admin features.
- * @return array Features without the pattern toolkit.
- */
-function winespring_disable_pattern_toolkit( $features ) {
-	$key = array_search( 'pattern-toolkit-full-composability', $features, true );
-
-	if ( false !== $key ) {
-		unset( $features[ $key ] );
-	}
-
-	return array_values( $features );
-}

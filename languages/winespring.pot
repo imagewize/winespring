@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Winespring 1.7.2\n"
+"Project-Id-Version: Winespring 1.9.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/winespring\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-18T06:09:04+00:00\n"
+"POT-Creation-Date: 2026-11-04T09:38:46+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: winespring\n"
@@ -40,23 +40,23 @@ msgstr ""
 msgid "https://imagewize.com"
 msgstr ""
 
-#: functions.php:45
+#: functions.php:48
 msgid "Menu"
 msgstr ""
 
-#: functions.php:46
+#: functions.php:49
 msgid "Template parts for navigation and mega menu content."
 msgstr ""
 
-#: functions.php:60
+#: functions.php:63
 msgid "Winespring Pages"
 msgstr ""
 
-#: functions.php:270
+#: functions.php:231
 msgid "Add to Cart + Options"
 msgstr ""
 
-#: functions.php:271
+#: functions.php:232
 msgid "Add to cart layouts for each product type."
 msgstr ""
 
@@ -81,20 +81,20 @@ msgid "Dismiss"
 msgstr ""
 
 #. translators: %d: discount percentage.
-#: inc/store-features.php:34
+#: inc/store-features.php:67
 #, php-format
 msgid "-%d%%"
 msgstr ""
 
-#: inc/store-features.php:60
+#: inc/store-features.php:93
 msgid "Sold out"
 msgstr ""
 
-#: inc/store-features.php:65
+#: inc/store-features.php:98
 msgid "Low stock"
 msgstr ""
 
-#: inc/store-features.php:73
+#: inc/store-features.php:106
 msgid "New"
 msgstr ""
 
@@ -176,12 +176,12 @@ msgstr ""
 
 #: patterns/home-store.php
 msgctxt "Pattern title"
-msgid "Store Home (Aludra + WooCommerce)"
+msgid "Store Home"
 msgstr ""
 
 #: patterns/home-store.php
 msgctxt "Pattern description"
-msgid "A skincare store front page built from Aludra blocks: hero, trust bar, category cards, newest products, brand story, stats, reviews and a closing call to action. Registered only when Aludra and WooCommerce are active."
+msgid "A store front page built from core and WooCommerce blocks: hero, trust bar, category cards, newest products, brand story, stats, reviews and a closing call to action. Registered only when WooCommerce is active."
 msgstr ""
 
 #: patterns/home-store.php:29
@@ -350,27 +350,22 @@ msgstr ""
 msgid "Shop moisturisers →"
 msgstr ""
 
-#: patterns/home-store.php:338
 #: patterns/home-store.php:339
 msgid "3 steps"
 msgstr ""
 
-#: patterns/home-store.php:338
 #: patterns/home-store.php:339
 msgid "To a complete routine"
 msgstr ""
 
-#: patterns/home-store.php:342
 #: patterns/home-store.php:343
 msgid "Products in the range"
 msgstr ""
 
-#: patterns/home-store.php:346
 #: patterns/home-store.php:347
 msgid "30 days"
 msgstr ""
 
-#: patterns/home-store.php:346
 #: patterns/home-store.php:347
 msgid "Free returns"
 msgstr ""

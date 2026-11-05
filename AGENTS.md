@@ -5,8 +5,8 @@ tools — direct HTML block markup and PHP), created from the Aviendha starter a
 client e-commerce builds. `theme.json` is the single source of truth for colors, typography, spacing,
 and layout. Winespring ships a **small, curated set of page patterns**, not a library: `home-core`,
 `page-about`, `page-contact` and `page-faq` (core blocks only, no plugins needed) and `home-store`
-(`winespring/home-store`), a store front page built from Aludra blocks, registered only when Aludra and
-WooCommerce are active. Other content is composed directly from blocks (core blocks or the Aludra block
+(`winespring/home-store`), a store front page built from core and WooCommerce blocks, registered only
+when WooCommerce is active. Other content is composed directly from blocks (core blocks or the Aludra block
 library).
 
 ## Project Structure & Module Organization
