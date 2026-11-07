@@ -4,7 +4,7 @@ Tags: e-commerce, full-site-editing, custom-menu, editor-style, featured-images,
 Requires at least: 6.9
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.9.0
+Stable tag: 1.9.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -43,6 +43,9 @@ remove either one in the Site Editor.
 4. Install and activate WooCommerce for store functionality.
 
 == Changelog ==
+
+= 1.9.1 =
+* Added: `assets/fonts/OFL.txt`, the SIL Open Font License text with the copyright notices for the bundled fonts (WordPress.org theme review).
 
 = 1.9.0 =
 * Fixed (WordPress.org theme review): the theme no longer references Aludra plugin blocks in its patterns, template parts or templates — Store Home, the announcement bar and the single product template now use core and WooCommerce blocks only, and the conditional stripping of unavailable Aludra blocks is removed.
