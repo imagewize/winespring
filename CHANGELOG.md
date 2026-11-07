@@ -3,6 +3,11 @@
 All notable changes to Winespring are documented in this file. Winespring was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [1.9.1] - 2026-11-07
+
+### Added
+- **OFL license text bundled with the fonts.** `assets/fonts/OFL.txt` carries the SIL Open Font License 1.1 and the copyright notice for Bricolage Grotesque, JetBrains Mono, Cormorant Garamond and Jost, as the license asks of redistributed font files (WordPress.org theme review #298772).
+
 ## [1.9.0] - 2026-11-04
 
 ### Fixed
