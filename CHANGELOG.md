@@ -3,6 +3,14 @@
 All notable changes to Winespring are documented in this file. Winespring was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [Unreleased]
+
+### Fixed
+- **Review form consent checkbox.** The "Save my name, email, and website in this browser…"
+  checkbox on the product review form was stretched by the form's `width: 100%` input rule and
+  pushed the label to the far right. Checkboxes are now excluded from that rule, and the consent
+  row lays out inline at the checkbox's natural size, with the label on one line when it fits.
+
 ## [1.9.2] - 2026-11-08
 
 Follow-up to the WordPress.org theme review notes (#298772, comment 8).
