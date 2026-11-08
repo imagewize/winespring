@@ -306,15 +306,16 @@ body .winespring-header--dark .wp-block-site-logo {
  * `.winespring-header__actions` (parts/header.html, parts/header-dark.html)
  * holds the icon group (search, account, cart) and the navigation block in that
  * source order, so the hamburger renders last — rightmost, with the icons
- * immediately before it — which is what a collapsed header (below 1024px, see
+ * immediately before it — which is what a collapsed header (below 1100px, see
  * §2.7) wants.
  *
- * Once the navigation goes inline at 1024px+, that same order would put the
+ * Once the navigation goes inline at 1100px+, that same order would put the
  * link row after the icons, which reads backwards for a desktop
- * masthead — so only there, pull it back in front with `order`.
+ * masthead — so only there, pull it back in front with `order`. The page-list
+ * fallback stays a hamburger at every width (§2.7), so it keeps its place.
  */
-@media (min-width: 1024px) {
-	.winespring-header__actions .wp-block-navigation {
+@media (min-width: 1100px) {
+	.winespring-header__actions .wp-block-navigation:not(:has(.wp-block-page-list)) {
 		order: -1;
 	}
 }
@@ -323,13 +324,13 @@ body .winespring-header--dark .wp-block-site-logo {
  * ------------------------------------------------------------------------- */
 
 /*
- * Raise the overlay breakpoint from core's 600px to 1024px.
+ * Raise the overlay breakpoint from core's 600px to 1100px.
  *
  * `overlayMenu: "mobile"` only takes the three keywords, so the width at which
  * the navigation collapses is not configurable — core hardcodes it in two rules
  * inside `@media (min-width: 600px)`: one flips `.wp-block-navigation__responsive-container`
  * from the hidden fixed-position overlay to an inline block, the other hides the
- * hamburger. Between 600px and 1024px that left the inline menu competing with
+ * hamburger. Between 600px and 1100px that left the inline menu competing with
  * the wordmark and the search, cart and account icons, and the row wrapped — a
  * 105px-tall masthead on a tablet.
  *
@@ -337,16 +338,64 @@ body .winespring-header--dark .wp-block-site-logo {
  * whole fix: everything else about the overlay, including the fixed positioning
  * it needs when open, already lives outside the media query.
  *
- * 1024px rather than a rounder 960px because the masthead's own contents decide
- * it: this menu's six items plus the wordmark and icons measured 973px, so
- * at 960px the row still wrapped. A longer menu would want this raised again.
+ * The masthead's own contents decide the number: the demo store's eight-item
+ * category menu plus the wordmark and icons measured 1004px, which no longer
+ * fit inside the padded row at the earlier 1024px breakpoint — the row wrapped
+ * onto a second line just above it. 1100px leaves room for that menu with a
+ * margin to spare. A longer menu would want this raised again.
  */
-@media (min-width: 600px) and (max-width: 1023px) {
+@media (min-width: 600px) and (max-width: 1099px) {
 	.winespring-header .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
 		display: none;
 	}
 
 	.winespring-header .wp-block-navigation__responsive-container-open:not(.always-shown) {
+		display: flex;
+	}
+}
+
+/*
+ * Keep the inline menu on one line.
+ *
+ * Core lets the top-level list wrap, so a menu wider than the space beside the
+ * wordmark broke into two or three rows and the masthead grew with it. The
+ * header is built for a short, curated menu — a store's top categories — so
+ * hold the list and each label on a single line instead.
+ */
+@media (min-width: 1100px) {
+	.winespring-header .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container {
+		flex-wrap: nowrap;
+	}
+
+	.winespring-header .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation-item__content {
+		white-space: nowrap;
+	}
+
+	.winespring-header .wp-block-site-title {
+		white-space: nowrap;
+	}
+}
+
+/*
+ * No menu assigned: collapse to the hamburger at every width.
+ *
+ * Until a menu is chosen, core fills the navigation block with a page list —
+ * every published page, nested or not. That list has no upper bound (a site
+ * with the Theme Unit Test data has two dozen top-level pages), so no
+ * breakpoint can keep it on one line beside the wordmark. The page list is the
+ * one case we can detect in CSS (`.wp-block-page-list` only renders for it), so
+ * route it to the overlay, which handles any length. Once a menu is assigned,
+ * the inline menu above takes over again.
+ *
+ * Same two declarations as the tablet band above, applied from 600px up.
+ * Where `:has()` is unsupported the fallback simply stays inline.
+ */
+@media (min-width: 600px) {
+	.winespring-header .wp-block-navigation:has(.wp-block-page-list) .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+		display: none;
+	}
+
+	.winespring-header .wp-block-navigation:has(.wp-block-page-list) .wp-block-navigation__responsive-container-open:not(.always-shown) {
 		display: flex;
 	}
 }
