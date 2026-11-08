@@ -4,7 +4,7 @@ Tags: e-commerce, full-site-editing, custom-menu, editor-style, featured-images,
 Requires at least: 6.9
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.9.1
+Stable tag: 1.9.2
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -43,6 +43,13 @@ remove either one in the Site Editor.
 4. Install and activate WooCommerce for store functionality.
 
 == Changelog ==
+
+= 1.9.2 =
+* Fixed: the header menu stays on one line; the inline menu starts at 1100px, and with no menu assigned the page-list fallback uses the hamburger at every width (WordPress.org theme review).
+* Fixed: pagination has space above and below it instead of sitting against the footer (WordPress.org theme review).
+* Changed: pagination is styled as pill-shaped page links with arrows, and turns arrow-only on phones.
+* Changed: the footer is laid out in two rows (site title, tagline and menu, then credits) and uses the site title instead of a hardcoded name.
+* Changed: the theme screenshot is regenerated from the Store Home with the default palette.
 
 = 1.9.1 =
 * Added: `assets/fonts/OFL.txt`, the SIL Open Font License text with the copyright notices for the bundled fonts (WordPress.org theme review).

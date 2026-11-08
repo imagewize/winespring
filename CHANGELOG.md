@@ -3,6 +3,30 @@
 All notable changes to Winespring are documented in this file. Winespring was created from
 [Aviendha](https://github.com/imagewize/aviendha) 1.18.4; earlier history lives in that repository.
 
+## [1.9.2] - 2026-11-08
+
+Follow-up to the WordPress.org theme review notes (#298772, comment 8).
+
+### Fixed
+- **Header menu stays on one line.** The inline menu's top-level list and labels no longer wrap,
+  and the inline menu now starts at 1100px (was 1024px): the demo store's eight-item menu needed
+  1004px and wrapped just above the old breakpoint. With no menu assigned, core's page-list
+  fallback lists every page, so it now collapses to the hamburger at every width instead of
+  wrapping onto three rows.
+- **Pagination spacing.** Query pagination on the blog, archive, search and product templates now
+  sits `large` below the content and `x-large` above the footer, instead of flush against it.
+
+### Changed
+- **Pagination styled as a theme control.** Page numbers and previous/next links are pill-shaped,
+  the current page is filled in `contrast` on `base`, and the links carry arrows. Below 600px
+  previous/next become arrow-only, keeping their accessible names, so the row fits on a phone.
+- **Footer layout.** Two rows: the site title and tagline beside a right-aligned, wrapping menu,
+  then a hairline and credits. The brand uses the site title block rather than a hardcoded
+  "Winespring", the hardcoded year is gone, and the footer menu lists top-level items only. Brand
+  and menu stack below 782px.
+- **Screenshot regenerated** from the Store Home with the theme's default palette and fonts, captured at 1500px wide and scaled to 1200×900 so the layout has margins at the edges. The
+  previous capture used the Skincare colours.
+
 ## [1.9.1] - 2026-11-07
 
 ### Added
