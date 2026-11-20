@@ -4,7 +4,7 @@ Tags: e-commerce, full-site-editing, custom-menu, editor-style, featured-images,
 Requires at least: 6.9
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.9.2
+Stable tag: 1.10.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -43,6 +43,12 @@ remove either one in the Site Editor.
 4. Install and activate WooCommerce for store functionality.
 
 == Changelog ==
+
+= 1.10.0 =
+* Added: Shop Home pattern (`winespring/home-shop`), a general-purpose WooCommerce front page with a product mosaic hero, mini-cart, category tiles, best sellers, promos and reviews. Registered only when WooCommerce is active.
+* Added: bundled SVG product illustrations and a chat icon for the Shop Home pattern.
+* Fixed: the review form's consent checkbox is no longer stretched across the form.
+* Changed: the theme screenshot now shows the Shop Home pattern.
 
 = 1.9.2 =
 * Fixed: the header menu stays on one line; the inline menu starts at 1100px, and with no menu assigned the page-list fallback uses the hamburger at every width (WordPress.org theme review).
@@ -152,7 +158,7 @@ The Apache License 2.0 is GPLv3-compatible.
 * License: CC0 1.0 Universal (public domain dedication)
 * License URI: https://creativecommons.org/publicdomain/zero/1.0/
 * Used in: `assets/illustrations/*.svg` and `assets/icons/*.svg`
-* Purpose: Original artwork created for this theme: the product illustrations and hero/story artwork used by the Store Home pattern, and its trust bar icons. The screenshot (`screenshot.png`) is a capture of the theme itself and uses the same artwork.
+* Purpose: Original artwork created for this theme: the product illustrations and hero/story artwork used by the Store Home and Shop Home patterns, and their trust bar icons. The screenshot (`screenshot.png`) is a capture of the theme itself and uses the same artwork.
 
 CC0 is GPL-compatible.
 

@@ -5,6 +5,21 @@ All notable changes to Winespring are documented in this file. Winespring was cr
 
 ## [Unreleased]
 
+## [1.10.0] - 2026-11-20
+
+### Added
+- **Shop Home pattern (`winespring/home-shop`).** A general-purpose WooCommerce front page, so the
+  theme no longer reads as skincare-only: indigo hero with a product mosaic and a static mini-cart,
+  trust bar, category tiles, a best-sellers product collection, sale and gift-card promos, reviews
+  and a closing call to action. Built from core blocks plus one `woocommerce/product-collection`,
+  using palette slugs only, so it follows the active style variation. Product art ships as eight
+  `assets/illustrations/shop-*.svg` files (and `assets/icons/chat.svg`), so it needs no images.
+  Registered only when WooCommerce is active, alongside `winespring/home-store`, which stays.
+
+### Changed
+- **Theme screenshot** is now the Shop Home hero, so the wp.org listing reads as a general
+  WooCommerce theme rather than a skincare store.
+
 ### Fixed
 - **Review form consent checkbox.** The "Save my name, email, and website in this browser…"
   checkbox on the product review form was stretched by the form's `width: 100%` input rule and
