@@ -237,20 +237,22 @@ function winespring_add_to_cart_template_part_area( $areas ) {
 }
 
 /**
- * Register the store home pattern only where it can render.
+ * Register the store home patterns only where they can render.
  *
- * `winespring/home-store` places a WooCommerce product collection, so without
- * WooCommerce it would be offered in the inserter and insert an unsupported
- * block. Pattern files register themselves, so it is unregistered again here
- * when the plugin is inactive.
+ * `winespring/home-store` and `winespring/home-shop` place a WooCommerce
+ * product collection, so without WooCommerce they would be offered in the
+ * inserter and insert an unsupported block. Pattern files register themselves,
+ * so they are unregistered again here when the plugin is inactive.
  */
 function winespring_maybe_unregister_store_home_pattern() {
 	if ( class_exists( 'WooCommerce' ) ) {
 		return;
 	}
 
-	if ( \WP_Block_Patterns_Registry::get_instance()->is_registered( 'winespring/home-store' ) ) {
-		unregister_block_pattern( 'winespring/home-store' );
+	foreach ( array( 'winespring/home-store', 'winespring/home-shop' ) as $pattern ) {
+		if ( \WP_Block_Patterns_Registry::get_instance()->is_registered( $pattern ) ) {
+			unregister_block_pattern( $pattern );
+		}
 	}
 }
 add_action( 'init', __NAMESPACE__ . '\winespring_maybe_unregister_store_home_pattern', 999 );
