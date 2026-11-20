@@ -25,11 +25,11 @@ $cat_url  = static function ( $slug ) use ( $shop_url ) {
 <div class="wp-block-group alignfull has-white-color has-indigo-background-color has-text-color has-background" style="margin-top:0;margin-bottom:0;padding-top:64px;padding-right:24px;padding-bottom:64px;padding-left:24px"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"40px","left":"56px"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"46%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:46%"><!-- wp:heading {"level":1,"style":{"typography":{"fontWeight":"700","lineHeight":"1"}},"textColor":"white","fontSize":"display"} -->
-<h1 class="wp-block-heading has-white-color has-text-color has-display-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( 'Everyday things, built to last.', 'winespring' ); ?></h1>
+<h1 class="wp-block-heading has-white-color has-text-color has-display-font-size" style="font-weight:700;line-height:1"><?php esc_html_e( 'Your products, front and centre.', 'winespring' ); ?></h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"24px"}}},"textColor":"tertiary","fontSize":"medium"} -->
-<p class="has-tertiary-color has-text-color has-medium-font-size" style="margin-top:24px"><?php esc_html_e( 'Home, fashion, tech and gifts from makers we trust, all in one cart.', 'winespring' ); ?></p>
+<p class="has-tertiary-color has-text-color has-medium-font-size" style="margin-top:24px"><?php esc_html_e( 'Browse by category, check out in a few clicks, and get free shipping over $75.', 'winespring' ); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"32px"}}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
@@ -43,7 +43,7 @@ $cat_url  = static function ( $slug ) use ( $shop_url ) {
 <!-- /wp:buttons -->
 
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"28px"}}},"textColor":"sand-deep","fontSize":"small"} -->
-<p class="has-sand-deep-color has-text-color has-small-font-size" style="margin-top:28px"><?php esc_html_e( '★★★★★ 4.8 out of 5 from 2,400 verified reviews', 'winespring' ); ?></p>
+<p class="has-sand-deep-color has-text-color has-small-font-size" style="margin-top:28px"><?php esc_html_e( 'Fast checkout, free shipping over $75 and 30-day returns', 'winespring' ); ?></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
