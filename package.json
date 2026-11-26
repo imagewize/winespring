@@ -1,6 +1,6 @@
 {
 	"name": "winespring",
-	"version": "1.10.0",
+	"version": "1.10.1",
 	"description": "A lean full-site-editing WooCommerce theme for WordPress, built for client e-commerce stores.",
 	"keywords": [
 		"WordPress",
@@ -20,6 +20,6 @@
 		"validate:clear-cache": "sentinel --clear-cache"
 	},
 	"dependencies": {
-		"@imwz/wp-pattern-sentinel": "^1.1.5"
+		"@imwz/wp-pattern-sentinel": "^1.2.2"
 	}
 }

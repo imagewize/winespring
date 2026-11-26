@@ -5,6 +5,21 @@ All notable changes to Winespring are documented in this file. Winespring was cr
 
 ## [Unreleased]
 
+## [1.10.1] - 2026-11-26
+
+### Changed
+- **`Tested up to` raised to WordPress 7.2.** Verified on the demo subsite
+  (`http://demo.imagewize.test/winespring/`) running 7.2-RC3 with WooCommerce 11.3.1 and Aludra
+  2.44.0 active: all 15 templates and 6 template parts register and render, all 6 patterns pass
+  Sentinel in the 7.2 editor, the WooCommerce templates (archive-product, single-product,
+  product-search-results, order-confirmation, coming-soon) open in the Site Editor with zero
+  invalid blocks, the cart/checkout/account pages render with zero warnings in the post editor,
+  the front end serves every page with no PHP notices, and all three style variations register
+  (the active one applies on the front end). No theme code changes were needed for 7.2.
+- **`@imwz/wp-pattern-sentinel` bumped `^1.1.5` → `^1.2.2`** (matching Elayne/Ixian; stays in
+  `dependencies`). Validation tooling only — nothing a production site runs. 1.2.x handles WP
+  7.2's block serialization, so pattern validation does not report false mismatches on 7.2.
+
 ## [1.10.0] - 2026-11-20
 
 ### Added
