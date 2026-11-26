@@ -2,9 +2,9 @@
 Contributors: Rhand
 Tags: e-commerce, full-site-editing, custom-menu, editor-style, featured-images, grid-layout, template-editing, translation-ready, wide-blocks
 Requires at least: 6.9
-Tested up to: 7.1
+Tested up to: 7.2
 Requires PHP: 8.0
-Stable tag: 1.10.0
+Stable tag: 1.10.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -43,6 +43,10 @@ remove either one in the Site Editor.
 4. Install and activate WooCommerce for store functionality.
 
 == Changelog ==
+
+= 1.10.1 =
+* Tested: confirmed compatible with WordPress 7.2 — verified on the demo subsite (demo.imagewize.test/winespring/) running 7.2-RC3 with WooCommerce active: all templates and patterns render and validate cleanly, the WooCommerce block templates work in the Site Editor and on the front end, and all style variations register.
+* Changed: bumped the `@imwz/wp-pattern-sentinel` pattern-validation dependency to `^1.2.2` (dev tooling only, no runtime impact).
 
 = 1.10.0 =
 * Added: Shop Home pattern (`winespring/home-shop`), a general-purpose WooCommerce front page with a product mosaic hero, mini-cart, category tiles, best sellers, promos and reviews. Registered only when WooCommerce is active.
